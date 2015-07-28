@@ -19,5 +19,8 @@ addSbtPlugin("com.typesafe.sbt" % "sbt-gzip" % "1.0.0")
 
 addSbtPlugin("com.typesafe.sbt" % "sbt-coffeescript" % "1.0.0")
 
-// This plugin automatically refreshes Chrome when you make changes to your app
-//addSbtPlugin("com.jamesward" %% "play-auto-refresh" % "0.0.11")
+addSbtPlugin("com.typesafe.sbt" % "sbt-js-engine" % "1.1.4-SNAPSHOT")
+
+addSbtPlugin("com.jamesward" % "play-auto-refresh" % "0.0.13")
+
+// addSbtPlugin("net.kindleit" %% "play2-scalate-compiler" % "0.1-SNAPSHOT")

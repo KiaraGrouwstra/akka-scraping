@@ -27,7 +27,8 @@ class Application(val cache: CacheApi) extends JadeController with Security { //
 
   /** Serves the index page, see views/index.scala.html */
   def index = Action {
-    Ok(views.html.index())
+    //Ok(views.html.index())
+    Ok(render("index.jade"))
   }
 
   /**

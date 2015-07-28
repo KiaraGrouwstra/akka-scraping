@@ -1,41 +1,30 @@
-@()doctype html
-html
-  head
-    title(data-ng-bind='pageTitle')
-    //- link(rel='shortcut icon', type='image/png', href='/assets/images/favicon.png')
-    //- link(rel='stylesheet', media='screen', href='/assets/lib/bootstrap/css/bootstrap.min.css')
-    //- link(rel='stylesheet', media='screen', href='/assets/stylesheets/main.css')
-    //- script(data-main='/assets/javascripts/main.js', type='text/javascript', src='/assets/lib/requirejs/require.min.js')
-    link(rel='shortcut icon', type='image/png', href='@routes.Assets.versioned("images/favicon.png")')
-    link(rel='stylesheet', media='screen', href='@routes.Assets.versioned("lib/bootstrap/css/bootstrap.css")')
-    // Add More CSS here
-    link(rel='stylesheet', media='screen', href='@routes.Assets.versioned("stylesheets/main.css")')
-    script(data-main='@routes.Assets.versioned("javascripts/main.js")', type='text/javascript', src='@routes.Assets.versioned("lib/requirejs/require.js")')
-  body
-    header.navbar.navbar-inverse.navbar-fixed-top.basics-nav(data-ng-controller='HeaderCtrl', data-ng-cloak='')
-      .container(data-ng-switch='!!user', data-ng-cloak='')
-        a.navbar-brand(href='#/') Play-Angular Seed
-        div(data-ng-switch-when='true')
-          ul.nav.navbar-nav.navbar-right
-            li.dropdown
-              a.dropdown-toggle(href='', data-toggle='dropdown')
-                span.glyphicon.glyphicon-user
-                |  {{user.name}}
-                b.caret
-              ul.dropdown-menu
-                li
-                  a(href='#/settings')
-                    span.glyphicon.glyphicon-cog
-                    |  Settings
-                li
-                  a(href='', data-ng-click='logout()')
-                    span.glyphicon.glyphicon-off
-                    |  Logout
-        div(data-ng-switch-when='false')
-          ul.nav.navbar-nav.pull-right
-            li
-              a(href='#/login') Login
-    // Main Content
-    .container(data-ng-cloak='')
-      div(data-ng-view='')
-    footer(data-ng-controller='FooterCtrl')
+extends layout
+
+block body
+  header.navbar.navbar-inverse.navbar-fixed-top.basics-nav(data-ng-controller='HeaderCtrl', data-ng-cloak='')
+    .container(data-ng-switch='!!user', data-ng-cloak='')
+      a.navbar-brand(href='#/') Play-Angular Seed
+      div(data-ng-switch-when='true')
+        ul.nav.navbar-nav.navbar-right
+          li.dropdown
+            a.dropdown-toggle(href='', data-toggle='dropdown')
+              span.glyphicon.glyphicon-user
+              |  {{user.name}}
+              b.caret
+            ul.dropdown-menu
+              li
+                a(href='#/settings')
+                  span.glyphicon.glyphicon-cog
+                  |  Settings
+              li
+                a(href='', data-ng-click='logout()')
+                  span.glyphicon.glyphicon-off
+                  |  Logout
+      div(data-ng-switch-when='false')
+        ul.nav.navbar-nav.pull-right
+          li
+            a(href='#/login') Login
+  // Main Content
+  .container(data-ng-cloak='')
+    div(data-ng-view='')
+  footer(data-ng-controller='FooterCtrl')

@@ -1,4 +1,5 @@
 import WebKeys._
+import play.PlayImport.PlayKeys.playRunHooks
 
 // TODO Replace with your project's/module's name
 name := "play-angular-require-seed"
@@ -16,13 +17,20 @@ lazy val root = (project in file(".")).enablePlugins(PlayScala)
 // Dependencies
 libraryDependencies ++= Seq(
   //Jade: https://gist.github.com/geetchandratre/5705523
-  "de.neuland" % "jade4j" % "0.3.11" from "https://raw.github.com/neuland/jade4j/master/releases/de/neuland/jade4j/0.3.11/jade4j-0.3.11.jar",
-  "com.googlecode.concurrentlinkedhashmap" % "concurrentlinkedhashmap-lru" % "1.3.1",
-  "org.apache.commons" % "commons-jexl" % "2.1.1",
+  // "de.neuland" % "jade4j" % "0.3.11" from "https://raw.github.com/neuland/jade4j/master/releases/de/neuland/jade4j/0.3.11/jade4j-0.3.11.jar",
+  // "com.googlecode.concurrentlinkedhashmap" % "concurrentlinkedhashmap-lru" % "1.3.1",
+  // "org.apache.commons" % "commons-jexl" % "2.1.1",
+
+  //Scalate
+  // "com.github.tototoshi" %% "play-scalate" % "0.2.0-SNAPSHOT",
+  // "org.scalatra.scalate" %% "scalate-core" % "1.7.0",
+  // "org.scala-lang" % "scala-compiler" % scalaVersion.value
 
   filters,
   cache,
   // WebJars (i.e. client-side) dependencies
+  "org.webjars.bower" % "es5-shim" % "4.1.8",
+  "org.webjars.bower" % "es6-shim" % "0.27.1",
   "org.webjars" % "requirejs" % "2.1.14-1",
   "org.webjars" % "jquery" % "1.11.1",
   "org.webjars" % "bootstrap" % "3.3.5" exclude("org.webjars", "jquery"),
@@ -88,3 +96,6 @@ RjsKeys.paths += ("jsRoutes" -> ("/jsroutes" -> "empty:"))
 
 // All work and no play...
 emojiLogs
+
+// run gulp
+playRunHooks += RunSubProcess("gulp")

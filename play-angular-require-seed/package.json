@@ -1,0 +1,28 @@
+{
+	"name": "application-name",
+	"version": "0.0.1",
+	"private": true,
+	"dependencies": {
+		"jade": "latest"
+	},
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-jade": "latest",
+    "jshint": "latest",
+    "browserify": "latest",
+    "mocha": "latest"
+  },
+  "config": {
+    "reporter": "xunit"
+  },
+  "scripts": {
+    "lint": "jshint **.js",
+    "build": "browserify index.js > myproject.min.js",
+    "test": "mocha test/ --reporter $npm_package_config_reporter",
+    "test:xunit": "npm run test -- --reporter xunit",
+
+    "prepublish": "npm run build # also runs npm run prebuild",
+    "prebuild": "npm run test # also runs npm run pretest",
+    "pretest": "npm run lint"
+  }
+}
