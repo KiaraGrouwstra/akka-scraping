@@ -1,0 +1,15 @@
+.page-header
+  h1
+    | Log In 
+    small Use any email/password
+form(name='form')
+  fieldset
+    .form-group
+      label(for='email') Email address
+      input.form-control(type='email', data-ng-model='credentials.email', placeholder='E-Mail', required='')
+      br
+    .form-group
+      label(for='password') Password
+      input.form-control(type='password', data-ng-model='credentials.password', placeholder='Password', required='')
+      br
+      button.btn.btn-primary(data-ng-disabled='form.$invalid', data-ng-click='login(credentials)') Log In

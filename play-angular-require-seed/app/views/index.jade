@@ -1,4 +1,4 @@
-doctype html
+@()doctype html
 html
   head
     title(data-ng-bind='pageTitle')
@@ -8,6 +8,7 @@ html
     //- script(data-main='/assets/javascripts/main.js', type='text/javascript', src='/assets/lib/requirejs/require.min.js')
     link(rel='shortcut icon', type='image/png', href='@routes.Assets.versioned("images/favicon.png")')
     link(rel='stylesheet', media='screen', href='@routes.Assets.versioned("lib/bootstrap/css/bootstrap.css")')
+    // Add More CSS here
     link(rel='stylesheet', media='screen', href='@routes.Assets.versioned("stylesheets/main.css")')
     script(data-main='@routes.Assets.versioned("javascripts/main.js")', type='text/javascript', src='@routes.Assets.versioned("lib/requirejs/require.js")')
   body
@@ -34,6 +35,7 @@ html
           ul.nav.navbar-nav.pull-right
             li
               a(href='#/login') Login
+    // Main Content
     .container(data-ng-cloak='')
       div(data-ng-view='')
     footer(data-ng-controller='FooterCtrl')
