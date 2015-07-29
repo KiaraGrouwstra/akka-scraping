@@ -5,6 +5,10 @@
 # Home page
 GET           /                    controllers.Application.index()
 
+# Gulp
+# GET     /ui         com.github.mmizutani.playgulp.Gulp.index
+# ->      /ui/        gulp.Routes
+
 # JavaScript routes object
 GET           /jsroutes.js         controllers.Application.jsRoutes()
 

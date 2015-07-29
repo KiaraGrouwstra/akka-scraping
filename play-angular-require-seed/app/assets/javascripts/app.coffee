@@ -11,7 +11,7 @@ define [
   'home'
   'user'
   'dashboard'
-], (angular) ->
+], (angular) ->   #, home, user, dashboard
   'use strict'
   # We must already declare most dependencies here (except for common), or the submodules' routes
   # will not be resolved

@@ -1,5 +1,6 @@
 import WebKeys._
 import play.PlayImport.PlayKeys.playRunHooks
+import Gulp._
 
 // TODO Replace with your project's/module's name
 name := "play-angular-require-seed"
@@ -36,8 +37,13 @@ libraryDependencies ++= Seq(
   "org.webjars" % "bootstrap" % "3.3.5" exclude("org.webjars", "jquery"),
   "org.webjars" % "angularjs" % "1.4.3" exclude("org.webjars", "jquery"),
   "org.webjars" % "angular-ui" % "0.4.0-3",
+  //http://angular-ui.github.io/bootstrap/
   "org.webjars" % "angular-ui-bootstrap" % "0.13.0",
+  //https://material.angularjs.org/latest/#/demo/
+  //https://github.com/heyflock/angular-bootstrap-material
   "org.webjars" % "angular-material" % "0.10.1-rc3",
+  //http://fezvrasta.github.io/bootstrap-material-design/
+  //http://fezvrasta.github.io/bootstrap-material-design/bootstrap-elements.html
   "org.webjars" % "bootstrap-material-design" % "0.3.0",
   //"org.webjars" % "underscorejs" % "1.6.0-3",
   "org.webjars" % "lodash" % "3.9.0",
@@ -95,7 +101,12 @@ RjsKeys.paths += ("jsRoutes" -> ("/jsroutes" -> "empty:"))
 // JshintKeys.config := ".jshintrc"
 
 // All work and no play...
-emojiLogs
+// emojiLogs
 
 // run gulp
-playRunHooks += RunSubProcess("gulp")
+//playRunHooks += RunSubProcess("gulp")
+
+// import se.woodenstake.SbtGulpTask
+// SbtGulpTask.gulpTaskSettings
+
+playRunHooks <+= baseDirectory.map(base => Gulp(base))

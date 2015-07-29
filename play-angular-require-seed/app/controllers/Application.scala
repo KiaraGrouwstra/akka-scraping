@@ -8,11 +8,12 @@ import play.api.libs.functional.syntax._
 import play.api.libs.json.Reads._
 import play.api.libs.json._
 import play.api.mvc._
+//import java.io.File
 
 import scala.concurrent.duration._
 
 /** Application controller, handles authentication */
-class Application(val cache: CacheApi) extends JadeController with Security { //Controller
+class Application(val cache: CacheApi) extends Controller with Security { //JadeController
 
   val cacheDuration = 1.day
 
@@ -27,8 +28,10 @@ class Application(val cache: CacheApi) extends JadeController with Security { //
 
   /** Serves the index page, see views/index.scala.html */
   def index = Action {
-    //Ok(views.html.index())
-    Ok(render("index.jade"))
+    Ok(views.html.index())
+    // Ok(render("index.jade"))
+    //Ok(render("index.html"))
+    // Ok(new File("/assets/views/index.html"))
   }
 
   /**

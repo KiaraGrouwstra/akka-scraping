@@ -6,8 +6,13 @@
 		"jade": "latest"
 	},
   "devDependencies": {
+		"coffee-script": "latest",
     "gulp": "latest",
+		"gulp-sourcemaps": "latest",
     "gulp-jade": "latest",
+		"gulp-postcss": "latest",
+		"autoprefixer": "latest",
+		"autoprefixer-core": "latest",
     "jshint": "latest",
     "browserify": "latest",
     "mocha": "latest"

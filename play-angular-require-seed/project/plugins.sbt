@@ -19,8 +19,19 @@ addSbtPlugin("com.typesafe.sbt" % "sbt-gzip" % "1.0.0")
 
 addSbtPlugin("com.typesafe.sbt" % "sbt-coffeescript" % "1.0.0")
 
-addSbtPlugin("com.typesafe.sbt" % "sbt-js-engine" % "1.1.4-SNAPSHOT")
-
 addSbtPlugin("com.jamesward" % "play-auto-refresh" % "0.0.13")
 
 // addSbtPlugin("net.kindleit" %% "play2-scalate-compiler" % "0.1-SNAPSHOT")
+
+//addSbtPlugin("com.typesafe.sbt" % "sbt-js-engine" % "1.1.4-SNAPSHOT")
+
+//addSbtPlugin("com.github.mmizutani" % "sbt-play-gulp" % "0.0.1")
+
+// addSbtPlugin("se.woodenstake" %% "sbt-gulp-task" % "0.1")
+
+// lazy val sbtAutoprefixer = uri("git://github.com/matthewrennie/sbt-autoprefixer")
+// lazy val root = project.in(file(".")).enablePlugins(SbtWeb)
+// lazy val root = project.in(file(".")).dependsOn(sbtAutoprefixer)
+// pipelineStages in Assets := Seq(autoprefixer)
+// // AutoprefixerKeys.inlineSourceMap in Assets := true
+// // includeFilter in autoprefixer := GlobFilter("*.css"),

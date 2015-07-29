@@ -1,12 +1,15 @@
 logs
+node_modules
 project/project
 project/target
+public/assets
 target
 tmp
 .history
 dist
 /.idea
 /*.iml
+/*.html
 /out
 /.idea_modules
 /.classpath
