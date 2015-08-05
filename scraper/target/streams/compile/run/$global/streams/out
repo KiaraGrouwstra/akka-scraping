@@ -1,7 +1,7 @@
 [0m[[0minfo[0m] [0mRunning org.tycho.scraping.AkkaScraping [0m
 [0m[[0mdebug[0m] [0mWaiting for threads to exit or System.exit to be called.[0m
 [0m[[0mdebug[0m] [0m  Classpath:[0m
-[0m[[0mdebug[0m] [0m	D:\shared\Scala\akka-scraping\target\scala-2.11\classes[0m
+[0m[[0mdebug[0m] [0m	D:\shared\Scala\akka-scraping\scraper\target\scala-2.11\classes[0m
 [0m[[0mdebug[0m] [0m	C:\Users\T\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.7.jar[0m
 [0m[[0mdebug[0m] [0m	C:\Users\T\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.12.jar[0m
 [0m[[0mdebug[0m] [0m	C:\Users\T\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar[0m
@@ -33,8 +33,6 @@
 [0m[[0mdebug[0m] [0m	C:\Users\T\.ivy2\cache\com.typesafe.akka\akka-parsing-experimental_2.11\jars\akka-parsing-experimental_2.11-1.0.jar[0m
 [0m[[0mdebug[0m] [0m	C:\Users\T\.ivy2\cache\com.typesafe.akka\akka-http-experimental_2.11\jars\akka-http-experimental_2.11-1.0.jar[0m
 [0m[[0mdebug[0m] [0m	C:\Users\T\.ivy2\cache\com.etaty.rediscala\rediscala_2.11\jars\rediscala_2.11-1.4.0.jar[0m
-[0m[[0mdebug[0m] [0m	C:\Users\T\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.0.7.jar[0m
-[0m[[0mdebug[0m] [0m	C:\Users\T\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.0.7.jar[0m
 [0m[[0mdebug[0m] [0m	C:\Users\T\.ivy2\cache\redis.clients\jedis\jars\jedis-2.7.2.jar[0m
 [0m[[0mdebug[0m] [0m	C:\Users\T\.ivy2\cache\org.apache.commons\commons-pool2\jars\commons-pool2-2.3.jar[0m
 [0m[[0mdebug[0m] [0m	C:\Users\T\.ivy2\cache\io.scalac\reactive-rabbit_2.11\jars\reactive-rabbit_2.11-1.0.1.jar[0m
@@ -61,6 +59,20 @@
 [0m[[0mdebug[0m] [0m	C:\Users\T\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.10.jar[0m
 [0m[[0mdebug[0m] [0m	C:\Users\T\.ivy2\cache\javax.mail\mail\jars\mail-1.4.7.jar[0m
 [0m[[0mdebug[0m] [0m	C:\Users\T\.ivy2\cache\javax.activation\activation\jars\activation-1.1.jar[0m
+[0m[[0mdebug[0m] [0m	C:\Users\T\.ivy2\cache\org.apache.camel\camel-kafka\bundles\camel-kafka-2.15.2.jar[0m
+[0m[[0mdebug[0m] [0m	C:\Users\T\.ivy2\cache\org.apache.kafka\kafka_2.10\jars\kafka_2.10-0.8.2.0.jar[0m
+[0m[[0mdebug[0m] [0m	C:\Users\T\.ivy2\cache\org.apache.kafka\kafka-clients\jars\kafka-clients-0.8.2.0.jar[0m
+[0m[[0mdebug[0m] [0m	C:\Users\T\.ivy2\cache\net.jpountz.lz4\lz4\jars\lz4-1.2.0.jar[0m
+[0m[[0mdebug[0m] [0m	C:\Users\T\.ivy2\cache\org.xerial.snappy\snappy-java\bundles\snappy-java-1.1.1.6.jar[0m
+[0m[[0mdebug[0m] [0m	C:\Users\T\.ivy2\cache\com.yammer.metrics\metrics-core\jars\metrics-core-2.2.0.jar[0m
+[0m[[0mdebug[0m] [0m	C:\Users\T\.ivy2\cache\org.apache.zookeeper\zookeeper\jars\zookeeper-3.4.6.jar[0m
+[0m[[0mdebug[0m] [0m	C:\Users\T\.ivy2\cache\org.slf4j\slf4j-log4j12\jars\slf4j-log4j12-1.7.12.jar[0m
+[0m[[0mdebug[0m] [0m	C:\Users\T\.ivy2\cache\log4j\log4j\bundles\log4j-1.2.17.jar[0m
+[0m[[0mdebug[0m] [0m	C:\Users\T\.ivy2\cache\jline\jline\jars\jline-0.9.94.jar[0m
+[0m[[0mdebug[0m] [0m	D:\Program Files\activator-1.3.0\repository\junit\junit\4.11\jars\junit.jar[0m
+[0m[[0mdebug[0m] [0m	D:\Program Files\activator-1.3.0\repository\org.hamcrest\hamcrest-core\1.3\jars\hamcrest-core.jar[0m
+[0m[[0mdebug[0m] [0m	C:\Users\T\.ivy2\cache\net.sf.jopt-simple\jopt-simple\jars\jopt-simple-3.2.jar[0m
+[0m[[0mdebug[0m] [0m	C:\Users\T\.ivy2\cache\com.101tec\zkclient\jars\zkclient-0.3.jar[0m
 [0m[[0mdebug[0m] [0m	C:\Users\T\.ivy2\cache\org.apache.camel\camel-spring-redis\bundles\camel-spring-redis-2.15.2.jar[0m
 [0m[[0mdebug[0m] [0m	C:\Users\T\.ivy2\cache\org.springframework.data\spring-data-redis\jars\spring-data-redis-1.3.4.RELEASE.jar[0m
 [0m[[0mdebug[0m] [0m	C:\Users\T\.ivy2\cache\org.springframework\spring-context-support\jars\spring-context-support-4.1.6.RELEASE.jar[0m
@@ -73,4 +85,4 @@
 [0m[[0mdebug[0m] [0m	C:\Users\T\.ivy2\cache\org.springframework\spring-tx\jars\spring-tx-4.1.6.RELEASE.jar[0m
 [0m[[0mdebug[0m] [0mWaiting for thread run-main-0 to terminate.[0m
 [0m[[0mdebug[0m] [0m	Thread run-main-0 exited.[0m
-[0m[[0mdebug[0m] [0mWaiting for thread default-akka.actor.default-dispatcher-5 to terminate.[0m
+[0m[[0mdebug[0m] [0mWaiting for thread default-scheduler-1 to terminate.[0m

@@ -4,3 +4,36 @@ compile
 val i = 1 + 1
 a = 1
 1
+Uri("http://baidu.com")
+import scala.util.{Success, Failure}
+import scala.concurrent._
+import scala.concurrent.duration._
+import scala.reflect.ClassTag
+import org.apache.camel.Exchange
+import io.scalac.{amqp => rr}
+import akka._
+import akka.actor._
+import akka.camel._
+import akka.japi._
+import akka.japi.function._
+import akka.pattern._
+import akka.util._
+import akka.http._
+import akka.http.scaladsl._
+import akka.http.scaladsl.model._
+import akka.stream._
+import akka.stream.ActorMaterializer
+import akka.stream.actor._
+import akka.stream.actor.ActorPublisherMessage._
+import akka.stream.io._
+import akka.stream.stage._
+import akka.stream.scaladsl._
+import redis._
+import redis.commands._
+import redis.api.lists._
+import redis.clients.util._
+import redis.clients.jedis._
+//import scala.concurrent.ExecutionContext.Implicits.global
+import redis.actors._
+import redis.api.pubsub._
+import java.net.InetSocketAddress

@@ -7,22 +7,19 @@ jade = require('gulp-jade')
 #   watch: [ 'app/assets/**/*.*' ]
 
 gulp.task 'templates', ->
-  gulp.src('./app/**/*.jade').pipe(jade(locals: 'pretty': true)).pipe gulp.dest('./app/')
+  gulp.src('./app/**/*.jade').pipe(jade('pretty': true)).pipe gulp.dest('./app/')
   return
 
 gulp.task 'css', ->
   postcss = require('gulp-postcss')
-  # sourcemaps = require('gulp-sourcemaps')
   # autoprefixer = require('autoprefixer-core')
   autoprefixer = require('autoprefixer')
   gulp.src('./app/**/*.css')
-    # .pipe(sourcemaps.init())
     .pipe(postcss([
       require('cssnext')()
       require('cssnano')()
       autoprefixer(browsers: [ 'last 2 versions' ])
     ]))
-    # .pipe(sourcemaps.write('.'))
     .pipe gulp.dest('./app/')
 
 gulp.task 'build', ->

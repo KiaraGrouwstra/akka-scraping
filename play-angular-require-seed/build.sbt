@@ -15,17 +15,29 @@ scalaVersion in ThisBuild := "2.11.7"
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
 
+val akkaVersion = "2.3.12"
+val camelVersion = "2.15.2"
+val opRabbitVersion = "1.0.0-M12"
+
+resolvers ++= Seq(
+  "SpinGo OSS" at "http://spingo-oss.s3.amazonaws.com/repositories/releases"
+)
+
 // Dependencies
 libraryDependencies ++= Seq(
-  //Jade: https://gist.github.com/geetchandratre/5705523
-  // "de.neuland" % "jade4j" % "0.3.11" from "https://raw.github.com/neuland/jade4j/master/releases/de/neuland/jade4j/0.3.11/jade4j-0.3.11.jar",
-  // "com.googlecode.concurrentlinkedhashmap" % "concurrentlinkedhashmap-lru" % "1.3.1",
-  // "org.apache.commons" % "commons-jexl" % "2.1.1",
+  // op-rabbit for RabbitMQ
+  "com.spingo" %% "op-rabbit-core"        % opRabbitVersion,
+  "com.spingo" %% "op-rabbit-play-json"   % opRabbitVersion,
+  "com.spingo" %% "op-rabbit-json4s"      % opRabbitVersion,
+  // "com.spingo" %% "op-rabbit-airbrake"    % opRabbitVersion,
+  // "com.spingo" %% "op-rabbit-akka-stream" % opRabbitVersion,
+  "com.typesafe.akka" %% "akka-actor" % akkaVersion,
+  "com.typesafe.akka" %% "akka-remote" % akkaVersion,
 
-  //Scalate
-  // "com.github.tototoshi" %% "play-scalate" % "0.2.0-SNAPSHOT",
-  // "org.scalatra.scalate" %% "scalate-core" % "1.7.0",
-  // "org.scala-lang" % "scala-compiler" % scalaVersion.value
+  //Camel
+  // "org.apache.camel" % "camel-rabbitmq" % camelVersion,
+	// "org.apache.camel" % "camel-aws" % camelVersion,
+	// "org.apache.camel" % "camel-spring-redis" % camelVersion,
 
   filters,
   cache,

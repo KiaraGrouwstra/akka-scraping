@@ -1,9 +1,10 @@
 extends layout
 
 block body
-  header.navbar.navbar-inverse.navbar-fixed-top.basics-nav(data-ng-controller='HeaderCtrl', data-ng-cloak='')
+  // Header
+  header.navbar.navbar-fixed-top.basics-nav(data-ng-controller='HeaderCtrl', data-ng-cloak='')
     .container(data-ng-switch='!!user', data-ng-cloak='')
-      a.navbar-brand(href='#/') Play-Angular Seed
+      a.navbar-brand(href='#/') Scraper Input
       div(data-ng-switch-when='true')
         ul.nav.navbar-nav.navbar-right
           li.dropdown
@@ -24,19 +25,40 @@ block body
         ul.nav.navbar-nav.pull-right
           li
             a(href='#/login') Login
+
   // Main Content
   .container(data-ng-cloak='')
-    h2 To ensure that material-design theme is working, check out the buttons below.
-    h3.text-muted If you can see the ripple effect on clicking them, then you are good to go!
-    p.bs-component
-    a.btn.btn-default(href='javascript:void(0)') Default
-    a.btn.btn-primary(href='javascript:void(0)') Primary
-    a.btn.btn-success(href='javascript:void(0)') Success
-    a.btn.btn-info(href='javascript:void(0)') Info
-    a.btn.btn-warning(href='javascript:void(0)') Warning
-    a.btn.btn-danger(href='javascript:void(0)') Danger
-    a.btn.btn-link(href='javascript:void(0)') Link
-    // Home
-    div(data-ng-view='')
+    #my-actual-stuff
+    
+      // Flash alerts
+      | @List("success","info","warning","danger").map { alertType =>
+      .alert.alert-dismissible(role="alert", class="alert-@alertType", ng-show="@flash.get(alertType).isDefined")
+        button.close(type='button', data-dismiss='alert')
+          span(aria-hidden='true') ×
+        | @flash.get(alertType)
+      | }
 
+      h3 Examples:
+      ul
+        li http://baidu.com/
+        li http://taobao.com/
+        li http://qq.com/
+        li http://akka.io/
+        
+      form(action='/urls', method='POST')
+        textarea.form-control(rows='15', name='urls', placeholder='URLs here')
+        button.btn.btn-primary(type='submit') Submit
+        
+    // Angular: Home
+    //- div(data-ng-view='')
+    
+    //- # debug-params
+      ul @flash.data.map{ case(k,v) =>
+        li flash @k: @v
+        | }
+      ul @request.queryString.map{ case(k,v) =>
+        li get @k: @v
+        | }
+
+  // Footer
   footer(data-ng-controller='FooterCtrl')

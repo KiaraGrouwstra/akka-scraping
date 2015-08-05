@@ -9,8 +9,16 @@ import play.api.libs.json.Reads._
 import play.api.libs.json._
 import play.api.mvc._
 //import java.io.File
-
 import scala.concurrent.duration._
+import common.Global
+import akka.actor._
+import akka.remote._
+import com.thenewmotion.akka.rabbitmq._
+// import com.spingo.op_rabbit.PlayJsonSupport._
+// import com.spingo.op_rabbit._
+// import com.spingo.op_rabbit.consumer._
+// // import com.spingo.op_rabbit.subscription.Directives._
+import scala.concurrent.ExecutionContext.Implicits.global
 
 /** Application controller, handles authentication */
 class Application(val cache: CacheApi) extends Controller with Security { //JadeController
@@ -27,11 +35,30 @@ class Application(val cache: CacheApi) extends Controller with Security { //Jade
       .includeStatus(NOT_FOUND, 5.minutes.toSeconds.toInt)
 
   /** Serves the index page, see views/index.scala.html */
-  def index = Action {
+  def index = Action { implicit request =>
     Ok(views.html.index())
-    // Ok(render("index.jade"))
-    //Ok(render("index.html"))
-    // Ok(new File("/assets/views/index.html"))
+  }
+
+  def postUrls() = Action { implicit request =>
+    // request.body.asFormUrlEncoded.get.map{ case(k,v) =>
+    //   println(k + ": " + v.mkString)
+    // }
+
+    val input = request.body.asFormUrlEncoded.get.get("urls").get.mkString
+    // println(input)
+
+    // val urls = input.split("\\s+".r)
+    val urls = input.split("\r\n")
+    for (url <- urls) {
+      println("URL: " + url.trim)
+      // Global.rabbitMq ! QueueMessage(url.trim, queue = "urls")
+      def publish = (channel: Channel) => {
+        channel.basicPublish("", "urls", null, url.getBytes)
+      }
+      Global.channelActor ! ChannelMessage(publish, dropIfNoChannel = false)
+    }
+
+    Redirect("/").flashing("success" -> ("Done! Added " + urls.size.toString() + " urls!"))
   }
 
   /**

@@ -12,6 +12,9 @@ GET           /                    controllers.Application.index()
 # JavaScript routes object
 GET           /jsroutes.js         controllers.Application.jsRoutes()
 
+# URL submission
+POST           /urls         controllers.Application.postUrls()
+
 # Routes used by Angular
 # ~~~~
 

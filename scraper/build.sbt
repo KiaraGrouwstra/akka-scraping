@@ -9,7 +9,6 @@ resolvers += "rediscala" at "http://dl.bintray.com/etaty/maven"
 
 // % "provided"
 libraryDependencies ++= Seq(
-	"com.typesafe.akka" % "akka" % "2.2.0-RC2",
 	"com.typesafe.akka" %% "akka-actor" % akkaVersion,
 	"com.typesafe.akka" %% "akka-remote" % akkaVersion,
 	"com.typesafe.akka" %% "akka-camel" % akkaVersion,
@@ -22,12 +21,14 @@ libraryDependencies ++= Seq(
 	"com.typesafe.akka" %% "akka-http-core-experimental" % "1.0",
 	"com.typesafe.akka" %% "akka-http-experimental" % "1.0",
 	"com.etaty.rediscala" %% "rediscala" % "1.4.0",
-	"ch.qos.logback" % "logback-classic" % "1.0.7",
 	"redis.clients" % "jedis" % "2.7.2",
 	"io.scalac" %% "reactive-rabbit" % "1.0.1",
+	// "ch.qos.logback" % "logback-classic" % "1.0.7",
 	"org.apache.camel" % "camel-rabbitmq" % camelVersion,
 	"org.apache.camel" % "camel-aws" % camelVersion,
-	"org.apache.camel" % "camel-spring-redis" % camelVersion
+	"org.apache.camel" % "camel-kafka" % camelVersion,
+	"org.apache.camel" % "camel-spring-redis" % camelVersion,
+	"com.typesafe.akka" % "akka" % "2.2.0-RC2"
 )
 
 mergeStrategy in assembly := {
