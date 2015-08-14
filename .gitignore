@@ -28,6 +28,7 @@ lib_managed/
 src_managed/
 project/boot/
 project/plugins/project/
+.sbtserver.lock
 
 # Scala-IDE specific
 .scala_dependencies
@@ -52,3 +53,7 @@ server.pid
 dist/
 .cache
 RUNNING_PID
+
+compile/
+$global/
+

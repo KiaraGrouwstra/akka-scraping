@@ -37,3 +37,5 @@ import redis.clients.jedis._
 import redis.actors._
 import redis.api.pubsub._
 import java.net.InetSocketAddress
+run
+~run

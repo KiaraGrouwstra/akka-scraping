@@ -1,11 +1,15 @@
 package org.tycho.scraping
 
+//conflicted
+import io.scalac.{amqp => rr}
+
+//scala
 import scala.util.{Success, Failure}
 import scala.concurrent._
 import scala.concurrent.duration._
 import scala.reflect.ClassTag
-import org.apache.camel.Exchange
-import io.scalac.{amqp => rr}
+
+//akka
 import akka._
 import akka.actor._
 import akka.camel._
@@ -23,6 +27,7 @@ import akka.stream.actor.ActorPublisherMessage._
 import akka.stream.io._
 import akka.stream.stage._
 import akka.stream.scaladsl._
+//redis
 import redis._
 import redis.commands._
 import redis.api.lists._
@@ -31,28 +36,41 @@ import redis.clients.jedis._
 //import scala.concurrent.ExecutionContext.Implicits.global
 import redis.actors._
 import redis.api.pubsub._
+//reactive-kafka
+import akka.actor.ActorSystem
+import akka.stream.ActorMaterializer
+import akka.stream.scaladsl.{Sink, Source}
+import kafka.serializer.{StringDecoder, StringEncoder}
+import com.softwaremill.react.kafka.{ReactiveKafka, ProducerProperties, ConsumerProperties}
+//raw kafka
+// import java.util.Arrays
+// import java.util.List
+import java.util.Properties
+// import kafka.message._
+// import kafka.producer._
+// import kafka.producer.{Producer, ProducerData}
+// import kafka.clients.producer._
+import org.apache.kafka.clients.producer._
+import org.apache.kafka.common.serialization._
+
+//shapeless
+//import shapeless._, poly._, syntax.std.tuple._
+//import shapeless._
+//import poly._
+//import syntax.std.tuple._
+
+//misc
 import java.net.InetSocketAddress
+import org.apache.camel.Exchange
+//import myUtils._
+//import org.tycho.scraping._
+import org.tycho.scraping.myUtils._
 
-/*
-//serializing classes to send over the wire
-case class SimpleResponse(url: String, status: String, encoding: String, body: String)
-
-object SimpleResponse {
-	//this serialization sucks, recheck Spark stuff for some real solution
-	implicit val byteStringFormatter = new ByteStringFormatter[SimpleResponse] {
-		def serialize(data: SimpleResponse): ByteString = {
-			//...
-		}
-
-		def deserialize(bs: ByteString): SimpleResponse = {
-			//...
-		}
-	}
-}
-*/
+//marshall/seriale with (akka-http-)spray-json
+//case class SimpleResponse(url: String, status: String, encoding: String, body: String)
 
 //consuming from queues through Camel
-class QueueConsumer() extends Consumer with ActorPublisher[String] {
+class QueueConsumer() extends akka.camel.Consumer with ActorPublisher[String] {
 	//def endpointUri = "spring-redis://localhost:6379?command=SUBSCRIBE&channels=mychannel"	//&listenerContainer=#listenerContainer
 	def endpointUri = "rabbitmq://localhost:5672/urls?queue=urls&routingKey=urls&autoDelete=false&username=test&password=test"
 	//SQS/ElasticMQ: should redirect sqs.REGION.amazonaws.com to http://localhost:9324/, but in %SystemRoot%\System32\drivers\etc\hosts fails...
@@ -62,18 +80,19 @@ class QueueConsumer() extends Consumer with ActorPublisher[String] {
 		case msg: CamelMessage => {
 			implicit val camelContext = CamelExtension(context.system).context
 			println("Camel message: " + msg.bodyAs[String])
-			onNext(msg.bodyAs[String])
+			if (isActive && totalDemand > 0)
+				onNext(msg.bodyAs[String])
 		}
 		case msg: ActorPublisherMessage.Cancel => {
-			println(msg.getClass + ": the stream subscriber (" + sender() + ") canceled the subscription.")
-			context.stop(self)
+			println("The stream canceled the subscription.")
+			// context.stop(self)
 			// onError()
 			// onComplete()
 			// system.shutdown()
-			// Runtime.getRuntime.exit(0)
+			Runtime.getRuntime.exit(0)
 		}
 		case msg: ActorPublisherMessage.Request => {
-			println(msg.getClass + ": the stream subscriber (" + sender() + ") wants more!")
+			println("The stream wants more!")
 			// deliverBuf()
 			// http://doc.akka.io/docs/akka-stream-and-http-experimental/1.0-M2/scala/stream-integrations.html
 		}
@@ -83,16 +102,21 @@ class QueueConsumer() extends Consumer with ActorPublisher[String] {
 	}
 }
 
+abstract class MyActorSubscriber extends ActorSubscriber {
+	import ActorSubscriberMessage._
+	val MaxQueueSize = 10
+	var queue = Map.empty[Int, ActorRef]
+	override val requestStrategy = new MaxInFlightRequestStrategy(max = MaxQueueSize) {
+		override def inFlightInternally: Int = queue.size
+	}
+}
+
 //Camel actor sink
-class ActorSink extends ActorSubscriber with Producer {
+class ActorSink extends MyActorSubscriber with akka.camel.Producer {
 	// http://camel.apache.org/kafka.html
 	def endpointUri = "kafka://server:port?zookeeperHost=localhost&zookeeperPort=2181&topic=dumps"  //&groupId=&partitioner=&clientId=
 	// override def transformOutgoingMessage ...
 	// override def routeResponse ...
-
-	import ActorSubscriberMessage._
-	val MaxQueueSize = 10
-	var queue = Map.empty[Int, ActorRef]
 
 	// val router = {
 	// 	val routees = Vector.fill(3) {
@@ -100,10 +124,6 @@ class ActorSink extends ActorSubscriber with Producer {
 	// 	}
 	// 	Router(RoundRobinRoutingLogic(), routees)
 	// }
-
-	override val requestStrategy = new MaxInFlightRequestStrategy(max = MaxQueueSize) {
-		override def inFlightInternally: Int = queue.size
-	}
 
 	// def receive = {
 	// 	case OnNext(Msg(id, replyTo)) =>
@@ -114,6 +134,59 @@ class ActorSink extends ActorSubscriber with Producer {
 	// 		queue(id) ! Done(id)
 	// 		queue -= id
 	// }
+}
+
+class rawKafkaSink extends MyActorSubscriber {
+
+  // case OnNext(Msg(id, replyTo)) =>
+//  queue += (id -> replyTo)
+//  assert(queue.size <= MaxQueueSize, s"queued too many: ${queue.size}")
+//  router.route(Work(id), self)
+
+//       val props = map2Props(Map(
+//         "zk.connect" -> "127.0.0.1:2181",
+//         "serializer.class" -> "kafka.serializer.StringEncoder"
+//       ))
+  // val config = new ProducerConfig(props)
+  // val producer = new kafka.producer.Producer[String, String](config)
+  // // val data = new kafka.producer.ProducerData[String, String]("dumps", "test-message")
+  // // val data = new kafka.producer.ProducerData("dumps", "test-message")
+  // val data = new ProducerData("dumps", "test-message")
+  // producer.send(data)
+
+  val producer = {
+    val props = map2Props(Map(
+      "bootstrap.servers" -> "localhost:9092",
+      "client.id" -> "DemoProducer",
+  //  "key.serializer" -> classOf[IntegerSerializer].getName(),
+      "key.serializer" -> classOf[StringSerializer].getName(),
+      "value.serializer" -> classOf[StringSerializer].getName()
+     ))
+    new KafkaProducer[String, String](props)
+  }
+  val topic = "dumps"
+  
+	def receive = {
+		case akka.stream.actor.ActorSubscriberMessage.OnNext(msg) => {
+      
+      //      val body = msg.toString()
+      val (url: String, body: String) = msg
+      val key = url
+
+			println("Sending message [" + body + "] to topic [" + topic + "]!")
+			producer.send(new ProducerRecord[String, String](topic, key, body)).get()
+			// async callback: https://github.com/apache/kafka/blob/43b92f8b1ce8140c432edf11b0c842f5fbe04120/examples/src/main/java/kafka/examples/Producer.java
+			// producer.send(new ProducerRecord[Integer, String](topic, messageNo, messageStr), new DemoCallBack(startTime, messageNo, messageStr))
+			println("Sent!")
+		}
+    case msg: ActorSubscriberMessage.OnError => {
+      println("Received an OnError: " + msg)
+      Runtime.getRuntime.exit(0)
+    }
+		case msg => {
+			println("ERROR, got a: " + msg.getClass)
+		}
+	}
 }
 
 object AkkaScraping {
@@ -167,7 +240,7 @@ object AkkaScraping {
 		}
 	}
 
-	def fetcher(): Flow[String, HttpResponse, Unit] = {
+	def fetcher(): Flow[String, (String, HttpResponse), Unit] = {
 		import akka.http.scaladsl.model._
 		import akka.http.scaladsl.Http
 		var parallelism = 4
@@ -181,45 +254,56 @@ object AkkaScraping {
 			val req = HttpRequest(uri = url).withHeaders(headers)
 			println("time: " + System.nanoTime() / 1000000000.0)
 			println(s"fetching $url")
-			Http().singleRequest(req)
+      val fut = Http().singleRequest(req)
+      fut.map((resp: HttpResponse) => (url, resp))
 			})
 		})
 	}
 
-	def decode = (resp: HttpResponse) => {
-	tryCatch(()=>{
-	// println("{")
-	println("status: " + resp.status.toString())
-	val enc = resp.encoding.value match {
-		case "identity" => "UTF-8"
-		case s => s
-	}
-	println("encoding: [" + enc + "]")
-	resp.headers.foreach(h =>
-		println("header: " + h.value())
-	)
-	println("type: " + resp.entity.contentType)
-	//import scala.concurrent.ExecutionContext.Implicits.global
-	val body = resp
-		.entity.getDataBytes().asScala
-		.map( _.decodeString(enc) )
-		.runFold("") { case (s1, s2) => s1 + s2 }
-		// .onComplete {
-		// 	case Success(s: String) => s //println("body: " + s)
-		// 	case Success(x) => { val s = "unknown: " + x; println(s); s }
-		// 	case Failure(ex) => { val s = "error: " + ex; println(s); s }
-		// }
-	// println("}")
-	// val redis = RedisClient()
-	// redis.rpush("dumps", enc)
-		body
-		})
-	}
+//	def decode(resp: HttpResponse): Future[String] = {
+//    //...
+//	}
 
 	// def handleResp = (resp: HttpResponse) => {
-	def decoder(): Flow[HttpResponse, String, Unit] = {
-		Flow[HttpResponse]
-		.mapAsync(4)(decode)
+	def decoder(): Flow[(String, HttpResponse), (String, String), Unit] = {
+		Flow[(String, HttpResponse)]
+//    .mapAsync(4)((url: String, resp: HttpResponse) => {
+//    .mapAsync(4)(((url: String, resp: HttpResponse)) => {
+//    .mapAsync(4)( case (url: String, resp: HttpResponse) => {
+//    .mapAsync(4)((tpl: Tuple) => {
+    .mapAsync(4)((tpl: Tuple2[String, HttpResponse]) => {
+  tryCatch(()=>{
+    val (url: String, resp: HttpResponse) = tpl
+//  tpl match { case (url: String, resp: HttpResponse) => {
+  println("{")
+  println("status: " + resp.status.toString())
+  val enc = resp.encoding.value match {
+    case "identity" => "UTF-8"
+    case s => s
+  }
+  println("encoding: [" + enc + "]")
+  resp.headers.foreach(h =>
+    println("header: " + h.value())
+  )
+  println("type: " + resp.entity.contentType)
+  //import scala.concurrent.ExecutionContext.Implicits.global
+  val body = resp
+    .entity.getDataBytes().asScala
+    .map( _.decodeString(enc) )
+    .runFold("") { case (s1, s2) => s1 + s2 }
+    // .onComplete {
+    //  case Success(s: String) => s //println("body: " + s)
+    //  case Success(x) => { val s = "unknown: " + x; println(s); s }
+    //  case Failure(ex) => { val s = "error: " + ex; println(s); s }
+    // }
+  println("}")
+  // val redis = RedisClient()
+  // redis.rpush("dumps", enc)
+//    (url, body)
+    body.map((s: String) => (url, s))
+//    }}
+    })
+  })
 	}
 
 	def reactiveRabbitSource(): Source[String, Unit] = {
@@ -238,6 +322,25 @@ object AkkaScraping {
 		//val exchange = Sink(rmq.publish(exchange = "dumps", routingKey = "resp"))
 		Source(rmq.consume(queue = "urls")).map(_.message.body.decodeString("UTF-8"))
 	}
+
+	val kafka = new ReactiveKafka()
+
+	def kafkaSource(topic: String) = Source(kafka.consume(ConsumerProperties(
+	  brokerList = "localhost:9092",
+	  zooKeeperHost = "localhost:2181",
+		topic = topic,
+	  groupId = "groupName",
+	  decoder = new StringDecoder()
+	)))
+
+	def kafkaSink(topic: String) = Sink(kafka.publish(ProducerProperties(
+	  brokerList = "localhost:9092",
+		topic = topic,
+	  clientId = "groupName",
+	  encoder = new StringEncoder()
+	)))
+
+	// Source(publisher).map(_.toUpperCase).to(Sink(subscriber)).run()
 
 	def main(args: Array[String]): Unit = {
 		//import system.dispatcher
@@ -265,14 +368,22 @@ object AkkaScraping {
 		// Source(List("http://akka.io/", "http://baidu.com/"))
 
 		.via(fetcher)
+
 		// .runForeach(resp => decode(resp))
-		// .onComplete({
-			// case _ =>
-		// 		// system.shutdown()
-		// 		// Runtime.getRuntime.exit(0)
-		// })
+
 		.via(decoder)
-		.to(Sink.actorSubscriber[String](Props(classOf[ActorSink])))
+		// .runForeach(println)
+		// .runWith(Sink.foreach(println))
+		// .to(Sink.actorSubscriber[String](Props(classOf[ActorSink])))
+		.to(Sink.actorSubscriber[(String, String)](Props(classOf[rawKafkaSink])))
+		// .to(kafkaSink("dumps"))
+		.run()
+
+		// .onComplete({
+		// 	case _ =>
+		// 		system.shutdown()
+		// 		Runtime.getRuntime.exit(0)
+		// })
 
 	}
 }
