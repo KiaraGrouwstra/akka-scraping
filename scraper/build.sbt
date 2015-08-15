@@ -18,6 +18,7 @@ resolvers ++= Seq(
 libraryDependencies ++= Seq(
 	// akka
 	"com.typesafe.akka" %% "akka-actor" % akkaVersion,
+	"com.typesafe.akka" %% "akka-contrib" % akkaVersion,
 	"com.typesafe.akka" %% "akka-remote" % akkaVersion,
 	"com.typesafe.akka" %% "akka-camel" % akkaVersion,
 	"com.typesafe.akka" %% "akka-kernel" % akkaVersion,

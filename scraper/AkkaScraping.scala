@@ -65,12 +65,44 @@ import org.apache.camel.Exchange
 //import myUtils._
 //import org.tycho.scraping._
 import org.tycho.scraping.myUtils._
+import akka.contrib.throttle._
+import akka.contrib.throttle.Throttler._
+//import akka.util.duration._
+//import akka.pattern.throttle.Throttler._
+//import java.util.concurrent.TimeUnit._
+import scala.concurrent.duration.{ Duration, FiniteDuration }
 
 //marshall/seriale with (akka-http-)spray-json
 //case class SimpleResponse(url: String, status: String, encoding: String, body: String)
 
+//silly shell class acting as the start of the stream -- the domain-specific stuff before this (url grabbing and throttling) I wanna do in regular actors, cuz not sure how to do those using streams.
+class StreamConnector() extends ActorPublisher[String] {
+  def receive = {
+    case msg: String => {
+      onNext(msg)
+    }
+    case msg: ActorPublisherMessage.Cancel => {
+      println("The stream canceled the subscription.")
+      // context.stop(self)
+      // onError()
+      // onComplete()
+      // system.shutdown()
+      Runtime.getRuntime.exit(0)
+    }
+    case msg: ActorPublisherMessage.Request => {
+      println("The stream wants more!")
+      // deliverBuf()
+      // http://doc.akka.io/docs/akka-stream-and-http-experimental/1.0-M2/scala/stream-integrations.html
+    }
+    case msg => {
+      println("ERROR, got a: " + msg.getClass)
+    }
+  }
+}
+
 //consuming from queues through Camel
-class QueueConsumer() extends akka.camel.Consumer with ActorPublisher[String] {
+class QueueConsumer(dest: ActorRef) extends akka.camel.Consumer {
+//class QueueConsumer() extends akka.camel.Consumer with ActorPublisher[String] {
 	//def endpointUri = "spring-redis://localhost:6379?command=SUBSCRIBE&channels=mychannel"	//&listenerContainer=#listenerContainer
 	def endpointUri = "rabbitmq://localhost:5672/urls?queue=urls&routingKey=urls&autoDelete=false&username=test&password=test"
 	//SQS/ElasticMQ: should redirect sqs.REGION.amazonaws.com to http://localhost:9324/, but in %SystemRoot%\System32\drivers\etc\hosts fails...
@@ -80,22 +112,23 @@ class QueueConsumer() extends akka.camel.Consumer with ActorPublisher[String] {
 		case msg: CamelMessage => {
 			implicit val camelContext = CamelExtension(context.system).context
 			println("Camel message: " + msg.bodyAs[String])
-			if (isActive && totalDemand > 0)
-				onNext(msg.bodyAs[String])
+//			if (isActive && totalDemand > 0)  // seems these were specific to ActorPublisher...
+//				onNext(msg.bodyAs[String])
+        dest ! msg.bodyAs[String]
 		}
-		case msg: ActorPublisherMessage.Cancel => {
-			println("The stream canceled the subscription.")
-			// context.stop(self)
-			// onError()
-			// onComplete()
-			// system.shutdown()
-			Runtime.getRuntime.exit(0)
-		}
-		case msg: ActorPublisherMessage.Request => {
-			println("The stream wants more!")
-			// deliverBuf()
-			// http://doc.akka.io/docs/akka-stream-and-http-experimental/1.0-M2/scala/stream-integrations.html
-		}
+//		case msg: ActorPublisherMessage.Cancel => {
+//			println("The stream canceled the subscription.")
+//			// context.stop(self)
+//			// onError()
+//			// onComplete()
+//			// system.shutdown()
+//			Runtime.getRuntime.exit(0)
+//		}
+//		case msg: ActorPublisherMessage.Request => {
+//			println("The stream wants more!")
+//			// deliverBuf()
+//			// http://doc.akka.io/docs/akka-stream-and-http-experimental/1.0-M2/scala/stream-integrations.html
+//		}
 		case msg => {
 			println("ERROR, got a: " + msg.getClass)
 		}
@@ -173,11 +206,12 @@ class rawKafkaSink extends MyActorSubscriber {
       val (url: String, body: String) = msg
       val key = url
 
-			println("Sending message [" + body + "] to topic [" + topic + "]!")
+//      println("Sending message [" + body + "] to topic [" + topic + "]!")
+      println("Sending to topic [" + topic + "]!")
 			producer.send(new ProducerRecord[String, String](topic, key, body)).get()
 			// async callback: https://github.com/apache/kafka/blob/43b92f8b1ce8140c432edf11b0c842f5fbe04120/examples/src/main/java/kafka/examples/Producer.java
 			// producer.send(new ProducerRecord[Integer, String](topic, messageNo, messageStr), new DemoCallBack(startTime, messageNo, messageStr))
-			println("Sent!")
+//			println("Sent!")
 		}
     case msg: ActorSubscriberMessage.OnError => {
       println("Received an OnError: " + msg)
@@ -194,10 +228,16 @@ object AkkaScraping {
 	implicit val materializer = ActorMaterializer()
 	implicit val ec = system.dispatcher
 
-	val redditAPIRate = FiniteDuration(500, MILLISECONDS)
+	val throttlingRate = FiniteDuration(1000, MILLISECONDS)
 	val timeOut = FiniteDuration(10, SECONDS)
 
-	//throttling the easy way
+  //pick a way of throttling / rate limiting; I've got the tick-based way, limitGlobal + Limiter.scala, and TimerBasedThrottler (http://doc.akka.io/docs/akka/snapshot/contrib/throttle.html).
+  //my needs are low, so just pick whichever I can use for multiple domains by giving each input actor one of these.
+  //these delay getting messages to another actor though...
+  //which doesn't work with push-based data flows from queues since they don't require pushing.
+  //Instead buffer the fetching while preventing greed with small mailboxes?
+
+	//throttling the tick-based way
 	def throttle[T](rate: FiniteDuration): Flow[T, T, Unit] = {
 		Flow() { implicit b =>
 			import akka.stream.scaladsl.FlowGraph.Implicits._
@@ -207,7 +247,7 @@ object AkkaScraping {
 			(zip.in0, zip.out)
 		}.map(_._1)
 	}
-
+  
 	/*
 	//throttling the sophisticated way
 	def limitGlobal[T](limiter: ActorRef, maxAllowedWait: FiniteDuration): Flow[T, T, Unit] = {
@@ -245,7 +285,7 @@ object AkkaScraping {
 		import akka.http.scaladsl.Http
 		var parallelism = 4
 		Flow[String]
-		.via(throttle(redditAPIRate))
+		.via(throttle(throttlingRate))
 		.mapAsync(parallelism)((url: String) => {
 			tryCatch(()=>{
 			val headers = List(
@@ -256,6 +296,7 @@ object AkkaScraping {
 			println(s"fetching $url")
       val fut = Http().singleRequest(req)
       fut.map((resp: HttpResponse) => (url, resp))
+//      Future{ (url, url) }
 			})
 		})
 	}
@@ -275,17 +316,18 @@ object AkkaScraping {
   tryCatch(()=>{
     val (url: String, resp: HttpResponse) = tpl
 //  tpl match { case (url: String, resp: HttpResponse) => {
-  println("{")
-  println("status: " + resp.status.toString())
+//  println("{")
+//  println("status: " + resp.status.toString())
+  println(resp.status.toString() + " - " + url)
   val enc = resp.encoding.value match {
     case "identity" => "UTF-8"
     case s => s
   }
-  println("encoding: [" + enc + "]")
-  resp.headers.foreach(h =>
-    println("header: " + h.value())
-  )
-  println("type: " + resp.entity.contentType)
+//  println("encoding: [" + enc + "]")
+//  resp.headers.foreach(h =>
+//    println("header: " + h.value())
+//  )
+//  println("type: " + resp.entity.contentType)
   //import scala.concurrent.ExecutionContext.Implicits.global
   val body = resp
     .entity.getDataBytes().asScala
@@ -296,7 +338,7 @@ object AkkaScraping {
     //  case Success(x) => { val s = "unknown: " + x; println(s); s }
     //  case Failure(ex) => { val s = "error: " + ex; println(s); s }
     // }
-  println("}")
+//  println("}")
   // val redis = RedisClient()
   // redis.rpush("dumps", enc)
 //    (url, body)
@@ -348,7 +390,7 @@ object AkkaScraping {
 		//throttling the sophisticated way
 		//val limiterProps = Limiter.props(maxAvailableTokens = 10, tokenRefreshPeriod = new FiniteDuration(5, SECONDS), tokenRefreshAmount = 1)
 		//val limiter = system.actorOf(limiterProps, name = "testLimiter")
-		// limitGlobal(limiter, redditAPIRate) ~>
+		// limitGlobal(limiter, throttlingRate) ~>
 
 		//graphs the graphy way
 		/*
@@ -362,7 +404,13 @@ object AkkaScraping {
 		// reactiveRabbitSource()
 
 		// Camel way
-		Source.actorPublisher[String](Props(classOf[QueueConsumer]))
+//		Source.actorPublisher[String](Props(classOf[QueueConsumer]))
+    
+    // ActorPublisher connecting my regular domain-specific actors to the stream
+    val connectorActor = Props(classOf[StreamConnector])
+    
+    //now initiate the stream...
+    Source.actorPublisher[String](connectorActor)
 
 		// testy way
 		// Source(List("http://akka.io/", "http://baidu.com/"))
@@ -378,6 +426,15 @@ object AkkaScraping {
 		.to(Sink.actorSubscriber[(String, String)](Props(classOf[rawKafkaSink])))
 		// .to(kafkaSink("dumps"))
 		.run()
+    
+    println("Ran!")
+
+    //TimerBasedThrottler
+    // for each domain-specific queue...
+    val throttler = system.actorOf(Props(classOf[TimerBasedThrottler], 2 msgsPer 1.second))
+    throttler ! SetTarget(Some(connectorActor))
+    val camelActor = system.actorOf(Props(classOf[QueueConsumer], throttler))
+    //throttler ! "msg to send to that actor through this one"
 
 		// .onComplete({
 		// 	case _ =>

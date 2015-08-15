@@ -5,33 +5,13 @@ import org.apache.spark.streaming.StreamingContext.toPairDStreamFunctions
 
 class FlightsDumps extends SparkKafkaFlow("dumps") {
   
-//RDD: map, mapValues, filter, flatMap, pipe; stream-specific: aggregations by window
-//  override def processRDD[T](rdd: RDD[T]): RDD[T] = {
-////    println("Processing RDD from flights!")
-//    rdd
-//  }
+//RDD: keys/values, map/mapValues, flatMap/flatMapValues, filter, pipe; stream-specific: aggregations by window
+  override def processRDD[T](rdd: RDD[T]): RDD[T] = {
+    //Making a DataFrame is super cool, but Kafka kinda takes k/v pairs, so think of a different destination for this? Batch-only? 
+      rdd
+      .filter((k,v) => k contains "kayak.com")
+//      .mapValues((k,v) => """{"url":"$k","result":"$v"}""")
+//      .values
+  }
   
-//Iterator: map, filter, flatMap
-//  override def processPart[T](it: Iterator[T]): Iterator[T] = {
-////    println("Processing iterating partition from flights!")
-//    it
-//  }
-  
-//  override def processKV(tpl: Tuple2[String, String]): Tuple2[String, String] = {
-//    tpl match {
-//      case (k: String, v: String) => {
-////        println("Processing tuple from flights!")
-//        (k, v)
-//      }
-//      case (k, v: String) => {
-////        println("Processing keyless tuple from flights!")
-//        ("null", v)
-//      }
-//      case (k, v) => {
-////        println("unknown tuple from flights!")
-//        (k.toString(), v.toString())
-//      }
-//    }
-//  }
-
 }

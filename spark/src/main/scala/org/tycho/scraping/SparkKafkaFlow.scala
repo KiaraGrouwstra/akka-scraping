@@ -26,39 +26,38 @@ import org.apache.kafka.common.serialization._
 //kafka-storm example
 import com.twitter.bijection.Injection
 import com.twitter.bijection.avro.SpecificAvroCodecs
-//import kafka.message.MessageAndMetadata
-//import kafka.serializer.DefaultDecoder
 import org.apache.commons.io.FileUtils
 import scala.collection.mutable
 import scala.concurrent.duration._
 import scala.language.reflectiveCalls
 import org.apache.commons.pool2.impl.{GenericObjectPool, GenericObjectPoolConfig}
-//import com.miguno.kafkastorm.kafka.KafkaProducerApp
-/*
-import com.miguno.avro.Tweet
-import com.miguno.kafkastorm.integration.IntegrationTest
-import com.miguno.kafkastorm.kafka.{BaseKafkaProducerAppFactory, ConsumerTaskContext, KafkaProducerApp, PooledKafkaProducerAppFactory}
-import com.miguno.kafkastorm.logging.LazyLogging
-import com.miguno.kafkastorm.spark.serialization.KafkaSparkStreamingRegistrator
-import com.miguno.kafkastorm.testing.{EmbeddedKafkaZooKeeperCluster, KafkaTopic}
-*/
+//import com.miguno.avro.Tweet
 
 abstract class SparkKafkaFlow(inputTopic: String = "dumps") extends Serializable {
+//How do I detect dependent flows so I could batch reset them on change?
+  
+//  implicit class RDDStringPlus(val rdd: RDD[String]) {
+//      def parseJson(sqlContext: SqlContext) = sqlContext.read.json(rdd)
+//  }
+//  val sc: SparkContext // An existing SparkContext.
+//  val sqlContext = new org.apache.spark.sql.SQLContext(sc)
+//  // createSchemaRDD is used to implicitly convert an RDD to a SchemaRDD.
+//  import sqlContext.createSchemaRDD
   
   val kafkaBrokers = "127.0.0.1:9092"
 //  val inputTopic = "dumps"
   val outputTopic = this.getClass().getSimpleName()
   val producerKeySer = classOf[StringSerializer]  //IntegerSerializer
   val producerValSer = classOf[StringSerializer]
+  
   val producerProperties = Map(
     "bootstrap.servers" -> "localhost:9092",
     "client.id" -> "DemoProducer",
-//  "key.serializer" -> classOf[].getName(),
-//    "key.serializer" -> classOf[StringSerializer].getName(),
-//    "value.serializer" -> classOf[StringSerializer].getName()
     "key.serializer" -> producerKeySer.getName(),
     "value.serializer" -> producerValSer.getName()
-   )
+  )
+  
+  case class SrlzrSet[A,B](keySer: Class[_ <: Serializer[A]], valSer: Class[_ <: Serializer[B]])
   
 //  val sparkCheckpointRootDir = {
 //    val r = (new scala.util.Random).nextInt()
@@ -87,37 +86,11 @@ abstract class SparkKafkaFlow(inputTopic: String = "dumps") extends Serializable
     ssc
   }
 
-//  org.apache.spark.streaming.kafka.KafkaRDD
   def processRDD[T](rdd: RDD[T]): RDD[T] = {
-//  def processRDD(rdd: RDD[(String,String)]): RDD[(String,String)] = {
 //    println("Processing RDD from parent!")
     rdd
   }
   
-//  def processPart[T](it: Iterator[T]): Iterator[T] = {
-////  def processPart(it: Iterator[(String,String)]): Iterator[(String,String)] = {
-////    println("Processing iterating partition from parent!")
-//    it
-//  }
-//  
-//  def processKV(tpl: Tuple2[String, String]): Tuple2[String, String] = {
-//    tpl match {
-//      case (k: String, v: String) => {
-////        println("Processing tuple from parent!")
-//        (k, v)
-//      }
-//      case (k, v: String) => {
-////        println("Processing keyless tuple from parent!")
-//        ("null", v)
-//      }
-//      case (k, v) => {
-////        println("unknown tuple!")
-//        (k.toString(), v.toString())
-//      }
-//    }
-//  }
-
-//  def main(args: Array[String]) {
   def run() {
     val ssc = prepareSparkStreaming()
 
@@ -126,6 +99,9 @@ abstract class SparkKafkaFlow(inputTopic: String = "dumps") extends Serializable
 ///shared/spark-1.4.0-bin-hadoop2.6/bin/spark-submit --master local[*] --class org.tycho.fun.SparkKafka /shared/Scala/spark-kafka/target/scala-2.10/spark-kafka-assembly-0.1-SNAPSHOT.jar localhost:9092 test2
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+    //wait, weren't these part of the producer properties already?
+    val serSet = ssc.sparkContext.broadcast(SrlzrSet(producerKeySer, producerValSer))
+    
     val producerPool = {
       val pool = new KafkaProducerObjectPool(kafkaBrokers, outputTopic, producerProperties)
       ssc.sparkContext.broadcast(pool)
@@ -152,49 +128,29 @@ abstract class SparkKafkaFlow(inputTopic: String = "dumps") extends Serializable
 //        }
 //      }
       .foreachRDD { rdd =>
-//          println("rdd: " + rdd.toString())
-//        println(rdd.getClass())
-//        rdd
         processRDD(rdd)
         .foreachPartition { part =>
-//          println("part: " + part.toString())
-//          val p = producer.value  //.borrowObject()
-//          val p = producerPool.value.borrowObject()
-//          println("borrowing")
           val p = producerPool.value.getDelegate().borrowObject()
-          part
-//          processPart(part)
-          .foreach {
+          part.foreach {
 //            case tweet: Tweet =>
 //            val bytes = converter.value.apply(tweet)
             item =>
             val (k,v) = item
-//            val (k,v) = processKV(item)
             println("Sending message [" + k + ": " + v + "] to topic [" + outputTopic + "]!")
-//            p.send(new ProducerRecord[String, String](outputTopic, k, v)).get()
-//            p.send(k, v, Option(outputTopic))  //.get()
-//            val ser = new StringSerializer()
             p.send(
-//              ser.serialize("",k),
-//              ser.serialize("",v),
-//              producerKeySer.serialize("",k),
-//              producerValSer.serialize("",v),
-//              (new producerKeySer).serialize("",k),
-//              (new producerValSer).serialize("",v),
-              (new StringSerializer).serialize("",k),
-              (new StringSerializer).serialize("",v),
+              serSet.value.keySer.newInstance().serialize("",k),
+              serSet.value.valSer.newInstance().serialize("",v),
               Option(outputTopic)
             )  //.get()
-//              val props = map2Props(producerProperties)
-//              val p = new KafkaProducer[String, String](props)
-//              p.send(new ProducerRecord[String, String](outputTopic, k, v)).get()
           }
-//          println("returning")
-//          try {
-            // could failures here cause memory leaks?
+          try {
             producerPool.value.returnObject(p)
-//          }
-//          println("Active producers: " + producerPool.value.getNumActive() + ", idle producers: " + producerPool.value.getNumIdle())
+          } catch {
+            case msg: Exception => {
+//              println("EXCEPTION: " + msg)
+              println("Active producers: " + producerPool.value.getNumActive() + ", idle producers: " + producerPool.value.getNumIdle())
+            }
+          }
         }
       }
 

@@ -39,3 +39,4 @@ import redis.api.pubsub._
 import java.net.InetSocketAddress
 run
 ~run
+run
