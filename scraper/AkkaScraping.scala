@@ -72,67 +72,89 @@ import akka.contrib.throttle.Throttler._
 //import java.util.concurrent.TimeUnit._
 import scala.concurrent.duration.{ Duration, FiniteDuration }
 
-//marshall/seriale with (akka-http-)spray-json
+object AkkaScraping {
+
+//marshall/serialize with (akka-http-)spray-json
 //case class SimpleResponse(url: String, status: String, encoding: String, body: String)
 
-//silly shell class acting as the start of the stream -- the domain-specific stuff before this (url grabbing and throttling) I wanna do in regular actors, cuz not sure how to do those using streams.
-class StreamConnector() extends ActorPublisher[String] {
-  def receive = {
-    case msg: String => {
+implicit class PartialFunctionList[A,B](val lst: List[PartialFunction[A,B]]) {
+    def combine = lst reduceLeft (_ orElse _)
+}
+
+val elseCase: PartialFunction[Any, Unit] = {
+  case msg => {
+    println("ERROR, got a: " + msg.getClass.getSimpleName())
+  }
+}
+
+val cancelCase: PartialFunction[Any, Unit] = {
+  case msg: ActorPublisherMessage.Cancel => {
+    println("The stream canceled the subscription.")
+    // context.stop(self)
+    // onError()
+    // onComplete()
+    // system.shutdown()
+    Runtime.getRuntime.exit(0)
+  }
+}
+
+val requestCase: PartialFunction[Any, Unit] = {
+  case msg: ActorPublisherMessage.Request => {
+    println("The stream wants more!")
+    // deliverBuf()
+    // http://doc.akka.io/docs/akka-stream-and-http-experimental/1.0-M2/scala/stream-integrations.html
+  }
+}
+
+class MyActorPublisher[T]() extends ActorPublisher[T] {
+  val forwardCase: PartialFunction[Any, Unit] = {
+// Unfortunately due to type erasure I cannot properly make the case variable this way...
+// So hardcoding to string right now cuz that's what my only instance needs, but still need a better solution. :( 
+    case msg: T => {
       onNext(msg)
     }
-    case msg: ActorPublisherMessage.Cancel => {
-      println("The stream canceled the subscription.")
-      // context.stop(self)
-      // onError()
-      // onComplete()
-      // system.shutdown()
-      Runtime.getRuntime.exit(0)
-    }
-    case msg: ActorPublisherMessage.Request => {
-      println("The stream wants more!")
-      // deliverBuf()
-      // http://doc.akka.io/docs/akka-stream-and-http-experimental/1.0-M2/scala/stream-integrations.html
-    }
-    case msg => {
-      println("ERROR, got a: " + msg.getClass)
+  }
+  // Potentially never gets to the else case anymore, needs testing!...
+  val receive = List(forwardCase, cancelCase, requestCase, elseCase).combine
+}
+
+//Redefining for String here cuz otherwise it seems type erasure would ruin my pattern matching...
+class MyStringActorPublisher() extends MyActorPublisher[String] {
+  override val forwardCase: PartialFunction[Any, Unit] = {
+    case msg: String => {
+      onNext(msg)
     }
   }
 }
 
-//consuming from queues through Camel
-class QueueConsumer(dest: ActorRef) extends akka.camel.Consumer {
-//class QueueConsumer() extends akka.camel.Consumer with ActorPublisher[String] {
-	//def endpointUri = "spring-redis://localhost:6379?command=SUBSCRIBE&channels=mychannel"	//&listenerContainer=#listenerContainer
-	def endpointUri = "rabbitmq://localhost:5672/urls?queue=urls&routingKey=urls&autoDelete=false&username=test&password=test"
-	//SQS/ElasticMQ: should redirect sqs.REGION.amazonaws.com to http://localhost:9324/, but in %SystemRoot%\System32\drivers\etc\hosts fails...
-	// def endpointUri = "aws-sqs://urls?accessKey=1234&secretKey=1234&region=ap-southeast-1&amazonSQSEndpoint=sqs.ap-southeast-1.amazonaws.com"
+//silly shell class acting as the start of the stream -- the domain-specific stuff before this (url grabbing and throttling) I wanna do in regular actors, cuz not sure how to do those using streams.
+class StreamConnector() extends MyStringActorPublisher {}
 
-	def receive = {
-		case msg: CamelMessage => {
-			implicit val camelContext = CamelExtension(context.system).context
-			println("Camel message: " + msg.bodyAs[String])
-//			if (isActive && totalDemand > 0)  // seems these were specific to ActorPublisher...
-//				onNext(msg.bodyAs[String])
-        dest ! msg.bodyAs[String]
-		}
-//		case msg: ActorPublisherMessage.Cancel => {
-//			println("The stream canceled the subscription.")
-//			// context.stop(self)
-//			// onError()
-//			// onComplete()
-//			// system.shutdown()
-//			Runtime.getRuntime.exit(0)
-//		}
-//		case msg: ActorPublisherMessage.Request => {
-//			println("The stream wants more!")
-//			// deliverBuf()
-//			// http://doc.akka.io/docs/akka-stream-and-http-experimental/1.0-M2/scala/stream-integrations.html
-//		}
-		case msg => {
-			println("ERROR, got a: " + msg.getClass)
-		}
-	}
+abstract class MyCamelConsumer(fn: (CamelMessage) => Unit) extends akka.camel.Consumer {
+  val camelCase: PartialFunction[Any, Unit] = {
+    case msg: CamelMessage => {
+      implicit val camelContext = CamelExtension(context.system).context
+      println("Camel message: " + msg.bodyAs[String])
+      fn(msg)
+    }
+  }
+  val receive = List(camelCase, elseCase).combine
+}
+
+//consuming from queues through Camel
+class QueueConsumer(dest: ActorRef) extends MyCamelConsumer((msg: CamelMessage) => { implicit camelContext: org.apache.camel.CamelContext =>
+  dest ! msg.bodyAs[String]
+}) {
+  def endpointUri = "rabbitmq://localhost:5672/urls?queue=urls&routingKey=urls&autoDelete=false&username=test&password=test"
+}
+
+//Monitor RabbitMQ queue.created events through Camel
+class CreationMonitor(dest: ActorRef) extends MyCamelConsumer((msg: CamelMessage) => { implicit camelContext: org.apache.camel.CamelContext =>
+//        dest ! msg.bodyAs[String]
+      // I actually need to pass it the queue and throttling delay needed to create the appropriate QueueConsumer...
+//        dest ! ...
+}) {
+  def endpointUri = "rabbitmq://localhost:5672/queue.created?queue=queue.created&routingKey=queue.created&autoDelete=false&username=test&password=test"
 }
 
 abstract class MyActorSubscriber extends ActorSubscriber {
@@ -148,44 +170,9 @@ abstract class MyActorSubscriber extends ActorSubscriber {
 class ActorSink extends MyActorSubscriber with akka.camel.Producer {
 	// http://camel.apache.org/kafka.html
 	def endpointUri = "kafka://server:port?zookeeperHost=localhost&zookeeperPort=2181&topic=dumps"  //&groupId=&partitioner=&clientId=
-	// override def transformOutgoingMessage ...
-	// override def routeResponse ...
-
-	// val router = {
-	// 	val routees = Vector.fill(3) {
-	// 		ActorRefRoutee(context.actorOf(Props[Worker]))
-	// 	}
-	// 	Router(RoundRobinRoutingLogic(), routees)
-	// }
-
-	// def receive = {
-	// 	case OnNext(Msg(id, replyTo)) =>
-	// 		queue += (id -> replyTo)
-	// 		assert(queue.size <= MaxQueueSize, s"queued too many: ${queue.size}")
-	// 		router.route(Work(id), self)
-	// 	case Reply(id) =>
-	// 		queue(id) ! Done(id)
-	// 		queue -= id
-	// }
 }
 
 class rawKafkaSink extends MyActorSubscriber {
-
-  // case OnNext(Msg(id, replyTo)) =>
-//  queue += (id -> replyTo)
-//  assert(queue.size <= MaxQueueSize, s"queued too many: ${queue.size}")
-//  router.route(Work(id), self)
-
-//       val props = map2Props(Map(
-//         "zk.connect" -> "127.0.0.1:2181",
-//         "serializer.class" -> "kafka.serializer.StringEncoder"
-//       ))
-  // val config = new ProducerConfig(props)
-  // val producer = new kafka.producer.Producer[String, String](config)
-  // // val data = new kafka.producer.ProducerData[String, String]("dumps", "test-message")
-  // // val data = new kafka.producer.ProducerData("dumps", "test-message")
-  // val data = new ProducerData("dumps", "test-message")
-  // producer.send(data)
 
   val producer = {
     val props = map2Props(Map(
@@ -223,7 +210,7 @@ class rawKafkaSink extends MyActorSubscriber {
 	}
 }
 
-object AkkaScraping {
+//object AkkaScraping {
 	implicit val system = ActorSystem()
 	implicit val materializer = ActorMaterializer()
 	implicit val ec = system.dispatcher
@@ -308,14 +295,9 @@ object AkkaScraping {
 	// def handleResp = (resp: HttpResponse) => {
 	def decoder(): Flow[(String, HttpResponse), (String, String), Unit] = {
 		Flow[(String, HttpResponse)]
-//    .mapAsync(4)((url: String, resp: HttpResponse) => {
-//    .mapAsync(4)(((url: String, resp: HttpResponse)) => {
-//    .mapAsync(4)( case (url: String, resp: HttpResponse) => {
-//    .mapAsync(4)((tpl: Tuple) => {
     .mapAsync(4)((tpl: Tuple2[String, HttpResponse]) => {
   tryCatch(()=>{
     val (url: String, resp: HttpResponse) = tpl
-//  tpl match { case (url: String, resp: HttpResponse) => {
 //  println("{")
 //  println("status: " + resp.status.toString())
   println(resp.status.toString() + " - " + url)
@@ -333,17 +315,8 @@ object AkkaScraping {
     .entity.getDataBytes().asScala
     .map( _.decodeString(enc) )
     .runFold("") { case (s1, s2) => s1 + s2 }
-    // .onComplete {
-    //  case Success(s: String) => s //println("body: " + s)
-    //  case Success(x) => { val s = "unknown: " + x; println(s); s }
-    //  case Failure(ex) => { val s = "error: " + ex; println(s); s }
-    // }
 //  println("}")
-  // val redis = RedisClient()
-  // redis.rpush("dumps", enc)
-//    (url, body)
     body.map((s: String) => (url, s))
-//    }}
     })
   })
 	}
@@ -400,6 +373,9 @@ object AkkaScraping {
 		}.run()
 		*/
 
+    // testy way
+    // Source(List("http://akka.io/", "http://baidu.com/"))
+
 		// Reactive Rabbit way
 		// reactiveRabbitSource()
 
@@ -407,32 +383,27 @@ object AkkaScraping {
 //		Source.actorPublisher[String](Props(classOf[QueueConsumer]))
     
     // ActorPublisher connecting my regular domain-specific actors to the stream
-    val connectorActor = Props(classOf[StreamConnector])
-    
+    val connectorSource = Source.actorPublisher[String](Props(classOf[StreamConnector]))
     //now initiate the stream...
-    Source.actorPublisher[String](connectorActor)
-
-		// testy way
-		// Source(List("http://akka.io/", "http://baidu.com/"))
-
+    val connectorRef = Flow[String]
 		.via(fetcher)
-
 		// .runForeach(resp => decode(resp))
-
 		.via(decoder)
 		// .runForeach(println)
 		// .runWith(Sink.foreach(println))
 		// .to(Sink.actorSubscriber[String](Props(classOf[ActorSink])))
 		.to(Sink.actorSubscriber[(String, String)](Props(classOf[rawKafkaSink])))
 		// .to(kafkaSink("dumps"))
-		.run()
+//		.run()
+     .runWith(connectorSource)
+    
     
     println("Ran!")
 
     //TimerBasedThrottler
     // for each domain-specific queue...
     val throttler = system.actorOf(Props(classOf[TimerBasedThrottler], 2 msgsPer 1.second))
-    throttler ! SetTarget(Some(connectorActor))
+    throttler ! SetTarget(Some(connectorRef))
     val camelActor = system.actorOf(Props(classOf[QueueConsumer], throttler))
     //throttler ! "msg to send to that actor through this one"
 

@@ -38,7 +38,22 @@ class Application(val cache: CacheApi) extends Controller with Security { //Jade
   def index = Action { implicit request =>
     Ok(views.html.index())
   }
+  
+  val exchange = "urls"
+      
+//  def makeQueue(channel: Channel) {
+  def makeQueue(channel: Channel, name: String) {
+    val queue = channel.queueDeclare(name, false, false, false, null).getQueue
+//    val ok: com.rabbitmq.client.AMQP.Queue.BindOk =
+    channel.queueBind(queue, exchange, name)
+  }
 
+//  def publish = (channel: Channel) => {
+  def publish = (channel: Channel, routing_key: String, msg: String) => {
+//    channel.basicPublish(exchange, domain, null, url.getBytes)
+    channel.basicPublish(exchange, routing_key, null, msg.getBytes)
+  }
+  
   def postUrls() = Action { implicit request =>
     // request.body.asFormUrlEncoded.get.map{ case(k,v) =>
     //   println(k + ": " + v.mkString)
@@ -52,10 +67,18 @@ class Application(val cache: CacheApi) extends Controller with Security { //Jade
     for (url <- urls) {
       println("URL: " + url.trim)
       // Global.rabbitMq ! QueueMessage(url.trim, queue = "urls")
-      def publish = (channel: Channel) => {
-        channel.basicPublish("", "urls", null, url.getBytes)
-      }
-      Global.channelActor ! ChannelMessage(publish, dropIfNoChannel = false)
+      val uri = new URL(url)
+      val host = uri.getHost()
+      // TODO: strip off www(2?) and subdomains, i.e. just get the "\w+\.\w+$"...?
+      // but assumes 1 TLD, failing for dual ones like .co.uk, and for none (IP-based, localhost), though those should lack subs too...
+      // dual TLDs to pattern-match against: https://en.wikipedia.org/wiki/Second-level_domain
+      // http://stackoverflow.com/a/14662475/1502035
+      // on that topic I'll wanna block having people use my scraper for localhost, 127.0.0.1, 192.168.*.*...
+      val domain = host
+//      Global.channelActor ! ChannelMessage(makeQueue, dropIfNoChannel = false)
+      Global.channelActor ! ChannelMessage(makeQueue(_: Channel, domain), dropIfNoChannel = false)
+//      Global.channelActor ! ChannelMessage(publish, dropIfNoChannel = false)
+      Global.channelActor ! ChannelMessage(publish(_: Channel, domain, url), dropIfNoChannel = false)
     }
 
     Redirect("/").flashing("success" -> ("Done! Added " + urls.size.toString() + " urls!"))

@@ -29,13 +29,19 @@ object Global extends GlobalSettings {
   factory.setUsername(config.getString("username"))
   factory.setPassword(config.getString("password"))
   val connectionActor = system.actorOf(ConnectionActor.props(factory))
-  // def setupPublisher(channel: Channel, self: ActorRef) {
-  //   val queue = channel.queueDeclare().getQueue
-  //   channel.queueBind(queue, "amq.fanout", "")
-  // }
-  //could customize with ChannelActor.props(setupPublisher) to auto make/bind queue if channel new
+  // this function will be called each time new channel received
+  def setupPublisher(channel: Channel, self: ActorRef) {
+    //hm, I fear I'll wanna do this queue creation/binding for each URL domain received, not just once like this...
+//    val queue = channel.queueDeclare().getQueue
+//    val queue = channel.queueDeclare("queue_name", false, false, false, null).getQueue
+//    channel.queueBind(queue, "amq.fanout", "")
+  }
+  //could customize with ChannelActor.props(setupPublisher) to auto make/bind queue if channel new...
+  //... but that's pub/sub pattern while I want shared queue. Not to mention I wanna distinguish domains, not channels.
   // val channelActor: ActorRef = (connectionActor ! CreateChannel(ChannelActor.props()))
-  val channelActor: ActorRef = connectionActor.createChannel(ChannelActor.props())
+  println("Synchronously connecting to RabbitMQ!")
+  val channelActor: ActorRef = connectionActor.createChannel(ChannelActor.props(setupPublisher))
+  println("Connected!")
 
 
   override def beforeStart(app: Application) {
