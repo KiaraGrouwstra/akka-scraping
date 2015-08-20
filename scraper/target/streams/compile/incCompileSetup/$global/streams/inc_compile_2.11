@@ -19,33 +19,49 @@ name hashing:
 1 items
 0 -> true
 products:
-39 items
+55 items
 /vagrant/scala/akka-scraping/scraper/AkkaCamel.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/HttpConsumer$$anonfun$receive$1.class
 /vagrant/scala/akka-scraping/scraper/AkkaCamel.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/HttpConsumer.class
 /vagrant/scala/akka-scraping/scraper/AkkaCamel.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/HttpProducer.class
 /vagrant/scala/akka-scraping/scraper/AkkaCamel.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/HttpTransformer$$anonfun$receive$2$$anonfun$applyOrElse$1.class
 /vagrant/scala/akka-scraping/scraper/AkkaCamel.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/HttpTransformer$$anonfun$receive$2.class
 /vagrant/scala/akka-scraping/scraper/AkkaCamel.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/HttpTransformer.class
-/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/ActorSink.class
-/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$decoder$1$$anonfun$apply$3$$anonfun$1.class
-/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$decoder$1$$anonfun$apply$3$$anonfun$2.class
-/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$decoder$1$$anonfun$apply$3$$anonfun$apply$4.class
-/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$decoder$1$$anonfun$apply$3.class
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$1.class
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$2.class
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$3.class
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$decoder$1$$anonfun$apply$5$$anonfun$7.class
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$decoder$1$$anonfun$apply$5$$anonfun$8.class
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$decoder$1$$anonfun$apply$5$$anonfun$apply$6.class
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$decoder$1$$anonfun$apply$5.class
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$decoder$1.class
-/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$fetcher$1$$anonfun$apply$1$$anonfun$apply$2.class
-/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$fetcher$1$$anonfun$apply$1.class
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$fetcher$1$$anonfun$apply$3$$anonfun$apply$4.class
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$fetcher$1$$anonfun$apply$3.class
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$fetcher$1.class
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$reactiveRabbitSource$1.class
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$throttle$1.class
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$throttle$2.class
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$.class
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$ActorSink.class
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$CreationMonitor$$anonfun$$lessinit$greater$2$$anonfun$apply$2.class
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$CreationMonitor$$anonfun$$lessinit$greater$2.class
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$CreationMonitor.class
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$MyActorPublisher$$anonfun$4.class
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$MyActorPublisher.class
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$MyActorSubscriber$$anon$1.class
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$MyActorSubscriber.class
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$MyCamelConsumer$$anonfun$6.class
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$MyCamelConsumer.class
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$MyStringActorPublisher$$anonfun$5.class
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$MyStringActorPublisher.class
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$PartialFunctionList$$anonfun$combine$1.class
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$PartialFunctionList.class
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$QueueConsumer$$anonfun$$lessinit$greater$1$$anonfun$apply$1.class
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$QueueConsumer$$anonfun$$lessinit$greater$1.class
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$QueueConsumer.class
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$StreamConnector.class
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$rawKafkaSink$$anonfun$receive$1.class
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$rawKafkaSink.class
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping.class
-/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/MyActorSubscriber$$anon$1.class
-/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/MyActorSubscriber.class
-/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/QueueConsumer$$anonfun$receive$1.class
-/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/QueueConsumer.class
-/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/rawKafkaSink$$anonfun$receive$2.class
-/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/rawKafkaSink.class
 /vagrant/scala/akka-scraping/scraper/Limiter.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/Limiter$$anonfun$1.class
 /vagrant/scala/akka-scraping/scraper/Limiter.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/Limiter$$anonfun$2.class
 /vagrant/scala/akka-scraping/scraper/Limiter.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/Limiter$$anonfun$org$tycho$scraping$Limiter$$releaseWaiting$1.class
@@ -60,7 +76,7 @@ products:
 /vagrant/scala/akka-scraping/scraper/myUtils.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/myUtils$.class
 /vagrant/scala/akka-scraping/scraper/myUtils.scala -> /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/myUtils.class
 binary dependencies:
-22 items
+23 items
 /vagrant/scala/akka-scraping/scraper/AkkaCamel.scala -> /home/vagrant/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/jars/akka-actor_2.11-2.3.12.jar
 /vagrant/scala/akka-scraping/scraper/AkkaCamel.scala -> /home/vagrant/.ivy2/cache/com.typesafe.akka/akka-camel_2.11/jars/akka-camel_2.11-2.3.12.jar
 /vagrant/scala/akka-scraping/scraper/AkkaCamel.scala -> /home/vagrant/.ivy2/cache/org.apache.camel/camel-core/bundles/camel-core-2.15.2.jar
@@ -69,6 +85,7 @@ binary dependencies:
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /home/vagrant/.ivy2/cache/com.softwaremill/reactive-kafka_2.11/jars/reactive-kafka_2.11-0.7.0.jar
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /home/vagrant/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/jars/akka-actor_2.11-2.3.12.jar
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /home/vagrant/.ivy2/cache/com.typesafe.akka/akka-camel_2.11/jars/akka-camel_2.11-2.3.12.jar
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /home/vagrant/.ivy2/cache/com.typesafe.akka/akka-contrib_2.11/jars/akka-contrib_2.11-2.3.12.jar
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /home/vagrant/.ivy2/cache/com.typesafe.akka/akka-http-core-experimental_2.11/jars/akka-http-core-experimental_2.11-1.0.jar
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /home/vagrant/.ivy2/cache/com.typesafe.akka/akka-stream-experimental_2.11/jars/akka-stream-experimental_2.11-1.0.jar
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /home/vagrant/.ivy2/cache/io.scalac/reactive-rabbit_2.11/jars/reactive-rabbit_2.11-1.0.1.jar
@@ -101,33 +118,49 @@ inheritance internal dependencies:
 inheritance external dependencies:
 0 items
 class names:
-39 items
+55 items
 /vagrant/scala/akka-scraping/scraper/AkkaCamel.scala -> org.tycho.scraping.HttpConsumer
 /vagrant/scala/akka-scraping/scraper/AkkaCamel.scala -> org.tycho.scraping.HttpConsumer$$anonfun$receive$1
 /vagrant/scala/akka-scraping/scraper/AkkaCamel.scala -> org.tycho.scraping.HttpProducer
 /vagrant/scala/akka-scraping/scraper/AkkaCamel.scala -> org.tycho.scraping.HttpTransformer
 /vagrant/scala/akka-scraping/scraper/AkkaCamel.scala -> org.tycho.scraping.HttpTransformer$$anonfun$receive$2
 /vagrant/scala/akka-scraping/scraper/AkkaCamel.scala -> org.tycho.scraping.HttpTransformer$$anonfun$receive$2$$anonfun$applyOrElse$1
-/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.ActorSink
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.AkkaScraping
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.AkkaScraping$
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.AkkaScraping$$anonfun$1
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.AkkaScraping$$anonfun$2
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.AkkaScraping$$anonfun$3
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.AkkaScraping$$anonfun$decoder$1
-/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.AkkaScraping$$anonfun$decoder$1$$anonfun$apply$3
-/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.AkkaScraping$$anonfun$decoder$1$$anonfun$apply$3$$anonfun$1
-/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.AkkaScraping$$anonfun$decoder$1$$anonfun$apply$3$$anonfun$2
-/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.AkkaScraping$$anonfun$decoder$1$$anonfun$apply$3$$anonfun$apply$4
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.AkkaScraping$$anonfun$decoder$1$$anonfun$apply$5
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.AkkaScraping$$anonfun$decoder$1$$anonfun$apply$5$$anonfun$7
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.AkkaScraping$$anonfun$decoder$1$$anonfun$apply$5$$anonfun$8
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.AkkaScraping$$anonfun$decoder$1$$anonfun$apply$5$$anonfun$apply$6
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.AkkaScraping$$anonfun$fetcher$1
-/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.AkkaScraping$$anonfun$fetcher$1$$anonfun$apply$1
-/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.AkkaScraping$$anonfun$fetcher$1$$anonfun$apply$1$$anonfun$apply$2
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.AkkaScraping$$anonfun$fetcher$1$$anonfun$apply$3
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.AkkaScraping$$anonfun$fetcher$1$$anonfun$apply$3$$anonfun$apply$4
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.AkkaScraping$$anonfun$reactiveRabbitSource$1
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.AkkaScraping$$anonfun$throttle$1
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.AkkaScraping$$anonfun$throttle$2
-/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.MyActorSubscriber
-/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.MyActorSubscriber$$anon$1
-/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.QueueConsumer
-/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.QueueConsumer$$anonfun$receive$1
-/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.rawKafkaSink
-/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.rawKafkaSink$$anonfun$receive$2
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.AkkaScraping$ActorSink
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.AkkaScraping$CreationMonitor
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.AkkaScraping$CreationMonitor$$anonfun$$lessinit$greater$2
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.AkkaScraping$CreationMonitor$$anonfun$$lessinit$greater$2$$anonfun$apply$2
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.AkkaScraping$MyActorPublisher
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.AkkaScraping$MyActorPublisher$$anonfun$4
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.AkkaScraping$MyActorSubscriber
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.AkkaScraping$MyActorSubscriber$$anon$1
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.AkkaScraping$MyCamelConsumer
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.AkkaScraping$MyCamelConsumer$$anonfun$6
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.AkkaScraping$MyStringActorPublisher
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.AkkaScraping$MyStringActorPublisher$$anonfun$5
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.AkkaScraping$PartialFunctionList
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.AkkaScraping$PartialFunctionList$$anonfun$combine$1
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.AkkaScraping$QueueConsumer
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.AkkaScraping$QueueConsumer$$anonfun$$lessinit$greater$1
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.AkkaScraping$QueueConsumer$$anonfun$$lessinit$greater$1$$anonfun$apply$1
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.AkkaScraping$StreamConnector
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.AkkaScraping$rawKafkaSink
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org.tycho.scraping.AkkaScraping$rawKafkaSink$$anonfun$receive$1
 /vagrant/scala/akka-scraping/scraper/Limiter.scala -> org.tycho.scraping.Limiter
 /vagrant/scala/akka-scraping/scraper/Limiter.scala -> org.tycho.scraping.Limiter$
 /vagrant/scala/akka-scraping/scraper/Limiter.scala -> org.tycho.scraping.Limiter$$anonfun$1
@@ -142,7 +175,7 @@ class names:
 /vagrant/scala/akka-scraping/scraper/myUtils.scala -> org.tycho.scraping.myUtils$
 /vagrant/scala/akka-scraping/scraper/myUtils.scala -> org.tycho.scraping.myUtils$$anonfun$map2Props$1
 used names:
-382 items
+421 items
 /vagrant/scala/akka-scraping/scraper/AkkaCamel.scala -> !
 /vagrant/scala/akka-scraping/scraper/AkkaCamel.scala -> <init>
 /vagrant/scala/akka-scraping/scraper/AkkaCamel.scala -> A1
@@ -195,14 +228,14 @@ used names:
 /vagrant/scala/akka-scraping/scraper/AkkaCamel.scala -> unchecked
 /vagrant/scala/akka-scraping/scraper/AkkaCamel.scala -> x$1
 /vagrant/scala/akka-scraping/scraper/AkkaCamel.scala -> x$2
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> !
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> $anon
-/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> &&
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> +
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> ->
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> /
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> <init>
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> ==
-/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> >
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> A
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> A1
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> ActorMaterializer
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> ActorPublisher
@@ -213,15 +246,21 @@ used names:
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> ActorSubscriberMessage
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> ActorSystem
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> AkkaScraping
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> Any
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> AnyRef
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> Array
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> B
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> B1
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> CamelContext
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> CamelExtension
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> CamelMessage
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> ClassTag
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> Connection
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> ConnectionSettings
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> Consumer
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> ConsumerProperties
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> CreationMonitor
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> Duration
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> Exception
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> Exchange
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> Failure
@@ -237,12 +276,18 @@ used names:
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> InetSocketAddress
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> Int
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> KafkaProducer
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> List
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> Map
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> MaxInFlightRequestStrategy
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> MaxQueueSize
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> MyActorPublisher
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> MyActorSubscriber
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> MyCamelConsumer
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> MyStringActorPublisher
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> Nil
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> None
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> PartialFunction
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> PartialFunctionList
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> Predef
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> Producer
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> ProducerProperties
@@ -255,6 +300,7 @@ used names:
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> Seq
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> Sink
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> Source
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> StreamConnector
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> String
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> StringContext
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> StringDecoder
@@ -262,6 +308,7 @@ used names:
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> Success
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> System
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> T
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> Throttler
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> Tuple2
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> Unit
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> Uri
@@ -270,7 +317,9 @@ used names:
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> _2
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> _root_
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> actor
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> actorOf
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> actorPublisher
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> actorRef2Scala
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> actorSubscriber
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> actors
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> add
@@ -286,21 +335,29 @@ used names:
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> body
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> bodyAs
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> camel
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> camelCase
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> camelContext
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> cancelCase
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> clients
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> collection
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> com
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> combine
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> commands
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> common
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> concurrent
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> connectorRef
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> connectorSource
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> consume
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> context
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> contrib
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> decodeString
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> decoder
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> dest
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> dispatcher
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> duration
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> ec
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> element
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> elseCase
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> empty
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> enc
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> encoding
@@ -308,6 +365,8 @@ used names:
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> exit
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> f
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> fetcher
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> fn
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> forwardCase
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> function
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> fut
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> get
@@ -315,13 +374,13 @@ used names:
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> getDataBytes
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> getName
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> getRuntime
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> getSimpleName
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> headers
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> http
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> immutable
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> in0
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> in1
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> io
-/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> isActive
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> isInstanceOf
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> japi
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> java
@@ -330,6 +389,7 @@ used names:
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> key
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> lang
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> lists
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> lst
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> map
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> map2Props
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> mapAsync
@@ -338,11 +398,13 @@ used names:
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> message
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> model
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> msg
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> msgsPer
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> myUtils
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> nanoTime
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> ne
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> net
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> onNext
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> orElse
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> org
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> out
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> package
@@ -354,19 +416,24 @@ used names:
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> publish
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> pubsub
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> qual$1
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> qual$2
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> qual$3
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> queue
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> rate
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> rawKafkaSink
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> react
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> receive
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> redis
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> reduceLeft
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> reflect
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> req
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> requestCase
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> requestStrategy
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> resp
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> rmq
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> rr
-/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> run
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> runFold
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> runWith
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> s
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> s1
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> s2
@@ -374,6 +441,7 @@ used names:
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> scalac
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> scaladsl
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> scraping
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> second
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> send
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> serialization
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> serializer
@@ -386,12 +454,12 @@ used names:
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> stream
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> system
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> throttle
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> throttler
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> throttlingRate
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> timeOut
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> to
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> toString
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> topic
-/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> totalDemand
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> tpl
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> tryCatch
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> tycho
@@ -406,8 +474,12 @@ used names:
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> x$12
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> x$13
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> x$14
-/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> x$6
-/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> x$7
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> x$15
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> x$16
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> x$17
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> x$18
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> x$19
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> x$20
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> x$8
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> x$9
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> zip
@@ -526,21 +598,43 @@ used names:
 /vagrant/scala/akka-scraping/scraper/myUtils.scala -> util
 /vagrant/scala/akka-scraping/scraper/myUtils.scala -> v
 product stamps:
-39 items
-/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/ActorSink.class -> lastModified(1439627400000)
-/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$decoder$1$$anonfun$apply$3$$anonfun$1.class -> lastModified(1439627400000)
-/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$decoder$1$$anonfun$apply$3$$anonfun$2.class -> lastModified(1439627400000)
-/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$decoder$1$$anonfun$apply$3$$anonfun$apply$4.class -> lastModified(1439627400000)
-/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$decoder$1$$anonfun$apply$3.class -> lastModified(1439627400000)
-/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$decoder$1.class -> lastModified(1439627400000)
-/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$fetcher$1$$anonfun$apply$1$$anonfun$apply$2.class -> lastModified(1439627400000)
-/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$fetcher$1$$anonfun$apply$1.class -> lastModified(1439627400000)
-/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$fetcher$1.class -> lastModified(1439627400000)
-/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$reactiveRabbitSource$1.class -> lastModified(1439627400000)
-/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$throttle$1.class -> lastModified(1439627400000)
-/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$throttle$2.class -> lastModified(1439627400000)
-/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$.class -> lastModified(1439627400000)
-/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping.class -> lastModified(1439627400000)
+55 items
+/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$1.class -> lastModified(1439727253000)
+/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$2.class -> lastModified(1439727253000)
+/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$3.class -> lastModified(1439727253000)
+/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$decoder$1$$anonfun$apply$5$$anonfun$7.class -> lastModified(1439727253000)
+/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$decoder$1$$anonfun$apply$5$$anonfun$8.class -> lastModified(1439727253000)
+/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$decoder$1$$anonfun$apply$5$$anonfun$apply$6.class -> lastModified(1439727253000)
+/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$decoder$1$$anonfun$apply$5.class -> lastModified(1439727253000)
+/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$decoder$1.class -> lastModified(1439727253000)
+/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$fetcher$1$$anonfun$apply$3$$anonfun$apply$4.class -> lastModified(1439727253000)
+/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$fetcher$1$$anonfun$apply$3.class -> lastModified(1439727253000)
+/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$fetcher$1.class -> lastModified(1439727253000)
+/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$reactiveRabbitSource$1.class -> lastModified(1439727253000)
+/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$throttle$1.class -> lastModified(1439727253000)
+/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$$anonfun$throttle$2.class -> lastModified(1439727253000)
+/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$.class -> lastModified(1439727253000)
+/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$ActorSink.class -> lastModified(1439727253000)
+/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$CreationMonitor$$anonfun$$lessinit$greater$2$$anonfun$apply$2.class -> lastModified(1439727253000)
+/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$CreationMonitor$$anonfun$$lessinit$greater$2.class -> lastModified(1439727253000)
+/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$CreationMonitor.class -> lastModified(1439727253000)
+/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$MyActorPublisher$$anonfun$4.class -> lastModified(1439727253000)
+/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$MyActorPublisher.class -> lastModified(1439727253000)
+/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$MyActorSubscriber$$anon$1.class -> lastModified(1439727253000)
+/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$MyActorSubscriber.class -> lastModified(1439727253000)
+/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$MyCamelConsumer$$anonfun$6.class -> lastModified(1439727254000)
+/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$MyCamelConsumer.class -> lastModified(1439727253000)
+/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$MyStringActorPublisher$$anonfun$5.class -> lastModified(1439727254000)
+/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$MyStringActorPublisher.class -> lastModified(1439727254000)
+/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$PartialFunctionList$$anonfun$combine$1.class -> lastModified(1439727254000)
+/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$PartialFunctionList.class -> lastModified(1439727254000)
+/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$QueueConsumer$$anonfun$$lessinit$greater$1$$anonfun$apply$1.class -> lastModified(1439727254000)
+/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$QueueConsumer$$anonfun$$lessinit$greater$1.class -> lastModified(1439727254000)
+/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$QueueConsumer.class -> lastModified(1439727254000)
+/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$StreamConnector.class -> lastModified(1439727254000)
+/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$rawKafkaSink$$anonfun$receive$1.class -> lastModified(1439727254000)
+/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping$rawKafkaSink.class -> lastModified(1439727254000)
+/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/AkkaScraping.class -> lastModified(1439727253000)
 /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/HttpConsumer$$anonfun$receive$1.class -> lastModified(1438919144000)
 /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/HttpConsumer.class -> lastModified(1438919144000)
 /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/HttpProducer.class -> lastModified(1438919144000)
@@ -557,27 +651,22 @@ product stamps:
 /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/Limiter$ReplenishTokens$.class -> lastModified(1438919144000)
 /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/Limiter$WantToPass$.class -> lastModified(1438919144000)
 /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/Limiter.class -> lastModified(1438919144000)
-/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/MyActorSubscriber$$anon$1.class -> lastModified(1439627401000)
-/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/MyActorSubscriber.class -> lastModified(1439627401000)
-/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/QueueConsumer$$anonfun$receive$1.class -> lastModified(1439627401000)
-/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/QueueConsumer.class -> lastModified(1439627401000)
 /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/myUtils$$anonfun$map2Props$1.class -> lastModified(1438922316000)
 /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/myUtils$.class -> lastModified(1438922315000)
 /vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/myUtils.class -> lastModified(1438922315000)
-/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/rawKafkaSink$$anonfun$receive$2.class -> lastModified(1439627401000)
-/vagrant/scala/akka-scraping/scraper/target/scala-2.11/classes/org/tycho/scraping/rawKafkaSink.class -> lastModified(1439627401000)
 source stamps:
 5 items
 /vagrant/scala/akka-scraping/scraper/AkkaCamel.scala -> hash(203a969a574b4349ef4d0154053765e5195b4c95)
-/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> hash(489bebc6e91806962baca58f9980c7cbc6ee13cd)
+/vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> hash(788df8c3a7dec757eb17e0c5a6d1e0bf368b82a1)
 /vagrant/scala/akka-scraping/scraper/IntegerSerializer.java -> hash(f880b6468f4cd6588dec120ef67200b285682c4f)
 /vagrant/scala/akka-scraping/scraper/Limiter.scala -> hash(fe34512fe3d09c0f7a91e3cd2d7026ede297a0cf)
 /vagrant/scala/akka-scraping/scraper/myUtils.scala -> hash(bd8ad79e68c1ac8f3ab1fb7d38d68aea738744f0)
 binary stamps:
-11 items
+12 items
 /home/vagrant/.ivy2/cache/com.softwaremill/reactive-kafka_2.11/jars/reactive-kafka_2.11-0.7.0.jar -> lastModified(1437679018000)
 /home/vagrant/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/jars/akka-actor_2.11-2.3.12.jar -> lastModified(1436421519000)
 /home/vagrant/.ivy2/cache/com.typesafe.akka/akka-camel_2.11/jars/akka-camel_2.11-2.3.12.jar -> lastModified(1436421666000)
+/home/vagrant/.ivy2/cache/com.typesafe.akka/akka-contrib_2.11/jars/akka-contrib_2.11-2.3.12.jar -> lastModified(1436421733000)
 /home/vagrant/.ivy2/cache/com.typesafe.akka/akka-http-core-experimental_2.11/jars/akka-http-core-experimental_2.11-1.0.jar -> lastModified(1436957975000)
 /home/vagrant/.ivy2/cache/com.typesafe.akka/akka-stream-experimental_2.11/jars/akka-stream-experimental_2.11-1.0.jar -> lastModified(1436957884000)
 /home/vagrant/.ivy2/cache/io.scalac/reactive-rabbit_2.11/jars/reactive-rabbit_2.11-1.0.1.jar -> lastModified(1436450886000)
@@ -587,16 +676,17 @@ binary stamps:
 /home/vagrant/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar -> lastModified(1435004218000)
 /opt/jdk/jdk1.8.0_45/jre/lib/rt.jar -> lastModified(1428686542000)
 class names:
-11 items
+12 items
 /home/vagrant/.ivy2/cache/com.softwaremill/reactive-kafka_2.11/jars/reactive-kafka_2.11-0.7.0.jar -> com.softwaremill.react.kafka.ProducerProperties
-/home/vagrant/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/jars/akka-actor_2.11-2.3.12.jar -> akka.actor.ActorContext
+/home/vagrant/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/jars/akka-actor_2.11-2.3.12.jar -> akka.util.ByteString
 /home/vagrant/.ivy2/cache/com.typesafe.akka/akka-camel_2.11/jars/akka-camel_2.11-2.3.12.jar -> akka.camel.Consumer
-/home/vagrant/.ivy2/cache/com.typesafe.akka/akka-http-core-experimental_2.11/jars/akka-http-core-experimental_2.11-1.0.jar -> akka.http.scaladsl.HttpExt
+/home/vagrant/.ivy2/cache/com.typesafe.akka/akka-contrib_2.11/jars/akka-contrib_2.11-2.3.12.jar -> akka.contrib.throttle.Throttler$
+/home/vagrant/.ivy2/cache/com.typesafe.akka/akka-http-core-experimental_2.11/jars/akka-http-core-experimental_2.11-1.0.jar -> akka.http.scaladsl.model.RequestEntity
 /home/vagrant/.ivy2/cache/com.typesafe.akka/akka-stream-experimental_2.11/jars/akka-stream-experimental_2.11-1.0.jar -> akka.stream.actor.ActorPublisher
 /home/vagrant/.ivy2/cache/io.scalac/reactive-rabbit_2.11/jars/reactive-rabbit_2.11-1.0.1.jar -> io.scalac.amqp.ConnectionSettings$
 /home/vagrant/.ivy2/cache/org.apache.camel/camel-core/bundles/camel-core-2.15.2.jar -> org.apache.camel.Exchange
-/home/vagrant/.ivy2/cache/org.apache.kafka/kafka-clients/jars/kafka-clients-0.8.2.1.jar -> org.apache.kafka.clients.producer.ProducerRecord
-/home/vagrant/.ivy2/cache/org.apache.kafka/kafka_2.11/jars/kafka_2.11-0.8.2.1.jar -> kafka.serializer.StringEncoder$
+/home/vagrant/.ivy2/cache/org.apache.kafka/kafka-clients/jars/kafka-clients-0.8.2.1.jar -> org.apache.kafka.clients.producer.KafkaProducer
+/home/vagrant/.ivy2/cache/org.apache.kafka/kafka_2.11/jars/kafka_2.11-0.8.2.1.jar -> kafka.serializer.StringDecoder
 /home/vagrant/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar -> scala.Serializable
 /opt/jdk/jdk1.8.0_45/jre/lib/rt.jar -> java.lang.Object
 internal apis:
@@ -604,7 +694,7 @@ internal apis:
 /vagrant/scala/akka-scraping/scraper/AkkaCamel.scala -> 
 rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHAqu0DXAHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAADc3IAIHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoWw71InY4V88CAAJJAARoYXNoTAAEbmFtZXQAEkxqYXZhL2xhbmcvU3RyaW5nO3hwLi9WTnQADGNhbWVsQ29udGV4dHNxAH4ACwzDFB10AARzZWxmc3EAfgALglOHiHQAB2NvbnRleHR1cQB+AAkAAAAyc3EAfgAL6Vbh4HQAEW9uUm91dGVEZWZpbml0aW9uc3EAfgAL0/b+sHQABm5vdGlmeXNxAH4ACzL4DHZ0AAdwcm9kdWNlc3EAfgALt/RcUHQAB1JlY2VpdmVzcQB+AAvDSx9hdAALZW5kcG9pbnRVcmlzcQB+AAul9+VCdAAEd2FpdHNxAH4ACystpF10AA0kYXNJbnN0YW5jZU9mc3EAfgAL1O9L/XQABmVxdWFsc3NxAH4AC+Ci9Q10AA1oZWFkZXJzVG9Db3B5c3EAfgALOra4EXQADGFzSW5zdGFuY2VPZnNxAH4ACzgktZV0AA1yb3V0ZVJlc3BvbnNlc3EAfgALvd2Um3QADHN5bmNocm9uaXplZHNxAH4AC8J4m+90ABFhY3RpdmF0aW9uVGltZW91dHNxAH4AC0ViKI90AA0kaXNJbnN0YW5jZU9mc3EAfgALzGDf13QAB3JlY2VpdmVzcQB+AAuxJmMgdAAKcHJlUmVzdGFydHNxAH4AC05MdpB0AA1hcm91bmRSZWNlaXZlc3EAfgAL+myau3QAC3Bvc3RSZXN0YXJ0c3EAfgAL3duMt3QACHBvc3RTdG9wc3EAfgALMX6zR3QACW5vdGlmeUFsbHNxAH4AC5N191B0ABFhcm91bmRQb3N0UmVzdGFydHNxAH4AC9hpB8h0AAxpc0luc3RhbmNlT2ZzcQB+AAuTokyPdAAMSHR0cFByb2R1Y2Vyc3EAfgALw1V4bXQAEGFyb3VuZFByZVJlc3RhcnRzcQB+AAu3xZFEdAARdHJhbnNmb3JtUmVzcG9uc2VzcQB+AAvaxccIdAAOYXJvdW5kUG9zdFN0b3BzcQB+AAv1YxfxdAAGPGluaXQ+c3EAfgALWuUuwHQACHByZVN0YXJ0c3EAfgALn4L3ZnQACXVuaGFuZGxlZHNxAH4AC01Z+ot0AAI9PXNxAH4AC98EVjp0AAVjbG9uZXNxAH4AC3bB4uZ0AAxyZXBseVRpbWVvdXRzcQB+AAu9ajq2dAAYdHJhbnNmb3JtT3V0Z29pbmdNZXNzYWdlc3EAfgAL2LkQ5HQABnNlbmRlcnNxAH4AC4hdCmZ0AAh0b1N0cmluZ3NxAH4AC6uNjS50AAIhPXNxAH4ACwJpI2F0AAhnZXRDbGFzc3NxAH4ACwFwzJF0AA9IdHRwVHJhbnNmb3JtZXJzcQB+AAs/tbahdAAMSHR0cENvbnN1bWVyc3EAfgALDSX4gnQAAm5lc3EAfgALeAfLtnQAB2F1dG9BY2tzcQB+AAv7m8SOdAASc3VwZXJ2aXNvclN0cmF0ZWd5c3EAfgALPzvIwHQAAmVxc3EAfgALQlqFv3QABm9uZXdheXNxAH4ACy3x4u90AAIjI3NxAH4AC5zbDmZ0ABlnZXRSb3V0ZURlZmluaXRpb25IYW5kbGVyc3EAfgALsbPEWXQACGZpbmFsaXplc3EAfgALQFt1ZnQACGhhc2hDb2Rlc3EAfgALPeUWWXQADmFyb3VuZFByZVN0YXJ0c3EAfgALJY/FWnQABWNhbWVsc3IAE3hzYnRpLmFwaS5Tb3VyY2VBUEm5Xqf5KSM4pAIAAlsAC2RlZmluaXRpb25zdAAXW0x4c2J0aS9hcGkvRGVmaW5pdGlvbjtbAAhwYWNrYWdlc3QAFFtMeHNidGkvYXBpL1BhY2thZ2U7eHB1cgAXW0x4c2J0aS5hcGkuRGVmaW5pdGlvbjuIyVzntONeDgIAAHhwAAAAA3NyABN4c2J0aS5hcGkuQ2xhc3NMaWtlgzQcod+wl2wCAARMAA5kZWZpbml0aW9uVHlwZXQAGkx4c2J0aS9hcGkvRGVmaW5pdGlvblR5cGU7WwAQc2F2ZWRBbm5vdGF0aW9uc3QAE1tMamF2YS9sYW5nL1N0cmluZztMAAhzZWxmVHlwZXQAEEx4c2J0aS9hcGkvTGF6eTtMAAlzdHJ1Y3R1cmVxAH4AgXhyACF4c2J0aS5hcGkuUGFyYW1ldGVyaXplZERlZmluaXRpb275EW6x1VA84gIAAVsADnR5cGVQYXJhbWV0ZXJzdAAaW0x4c2J0aS9hcGkvVHlwZVBhcmFtZXRlcjt4cgAUeHNidGkuYXBpLkRlZmluaXRpb26HKhvocULjRgIABEwABmFjY2Vzc3QAEkx4c2J0aS9hcGkvQWNjZXNzO1sAC2Fubm90YXRpb25zdAAXW0x4c2J0aS9hcGkvQW5ub3RhdGlvbjtMAAltb2RpZmllcnN0ABVMeHNidGkvYXBpL01vZGlmaWVycztMAARuYW1lcQB+AAx4cHNyABB4c2J0aS5hcGkuUHVibGljulg9rmwtYEICAAB4cgAQeHNidGkuYXBpLkFjY2Vzc91imvgdYzFIAgAAeHB1cgAXW0x4c2J0aS5hcGkuQW5ub3RhdGlvbjvrl+sZEPaNSAIAAHhwAAAAAHNyABN4c2J0aS5hcGkuTW9kaWZpZXJzxxETIWmc3CQCAAFCAAVmbGFnc3hwAHQAH29yZy50eWNoby5zY3JhcGluZy5IdHRwQ29uc3VtZXJ1cgAaW0x4c2J0aS5hcGkuVHlwZVBhcmFtZXRlcjvZbSYPKJ3ytgIAAHhwAAAAAH5yABh4c2J0aS5hcGkuRGVmaW5pdGlvblR5cGUAAAAAAAAAABIAAHhyAA5qYXZhLmxhbmcuRW51bQAAAAAAAAAAEgAAeHB0AAhDbGFzc0RlZnVyABNbTGphdmEubGFuZy5TdHJpbmc7rdJW5+kde0cCAAB4cAAAAABzcgATeHNidGkuU2FmZUxhenkkSW1wbFACLpOXl0A/AgADWgAIYml0bWFwJDBMAAJfdHQAEkxqYXZhL2xhbmcvT2JqZWN0O0wABGV2YWx0ABFMc2NhbGEvRnVuY3Rpb24wO3hyABZ4c2J0aS5hcGkuQWJzdHJhY3RMYXp503e1AV+756ACAAB4cABwc3IAIHhzYnRpLlNhZmVMYXp5JCRhbm9uZnVuJHN0cmljdCQxAAAAAAAAAAACAAFMAAd2YWx1ZSQxcQB+AJp4cHNyABN4c2J0aS5hcGkuRW1wdHlUeXBlvP2eRkk7iSQCAAB4cgAUeHNidGkuYXBpLlNpbXBsZVR5cGVyeGKIISO/QAIAAHhyAA54c2J0aS5hcGkuVHlwZT9q2SEWSarKAgAAeHBzcQB+AJkBc3IAE3hzYnRpLmFwaS5TdHJ1Y3R1cmWpqvmAk2/YAAIAA0wACGRlY2xhcmVkcQB+AIFMAAlpbmhlcml0ZWRxAH4AgUwAB3BhcmVudHNxAH4AgXhxAH4AonNxAH4AmQF1cQB+AHwAAAAAcHNxAH4AmQF1cQB+AHwAAAAAcHNxAH4AmQF1cgARW0x4c2J0aS5hcGkuVHlwZTt0/6Vae/npQQIAAHhwAAAABXNyABR4c2J0aS5hcGkuUHJvamVjdGlvbvPSjVTpRaQtAgACTAACaWRxAH4ADEwABnByZWZpeHQAFkx4c2J0aS9hcGkvU2ltcGxlVHlwZTt4cQB+AKF0AAhDb25zdW1lcnNyABN4c2J0aS5hcGkuU2luZ2xldG9u/Kdf+M9W5EYCAAFMAARwYXRodAAQTHhzYnRpL2FwaS9QYXRoO3hxAH4AoXNyAA54c2J0aS5hcGkuUGF0aJs9XAjOpSeEAgABWwAKY29tcG9uZW50c3QAGltMeHNidGkvYXBpL1BhdGhDb21wb25lbnQ7eHB1cgAaW0x4c2J0aS5hcGkuUGF0aENvbXBvbmVudDtD2gl0LWcWdAIAAHhwAAAAA3NyAAx4c2J0aS5hcGkuSWSYMmyLN1PEQAIAAUwAAmlkcQB+AAx4cgAXeHNidGkuYXBpLlBhdGhDb21wb25lbnRfmiJbLoafvAIAAHhwdAAEYWtrYXNxAH4AunQABWNhbWVsc3IADnhzYnRpLmFwaS5UaGlz2wntpsxaQFwCAAB4cQB+ALtzcQB+AK50AAxDYW1lbFN1cHBvcnRxAH4AtHNxAH4ArnQABUFjdG9yc3EAfgCyc3EAfgC1dXEAfgC4AAAAA3NxAH4AunQABGFra2FzcQB+ALp0AAVhY3RvcnEAfgDBc3EAfgCudAAGT2JqZWN0c3EAfgCyc3EAfgC1dXEAfgC4AAAAA3NxAH4AunQABGphdmFzcQB+ALp0AARsYW5ncQB+AMFzcQB+AK50AANBbnlzcQB+ALJzcQB+ALV1cQB+ALgAAAACc3EAfgC6dAAFc2NhbGFxAH4AwXBwc3EAfgB+cQB+AIt1cQB+AIwAAAAAc3EAfgCOAHQAH29yZy50eWNoby5zY3JhcGluZy5IdHRwUHJvZHVjZXJ1cQB+AJEAAAAAcQB+AJV1cQB+AJcAAAAAc3EAfgCZAHBzcQB+AJ5xAH4Ao3NxAH4AmQFzcQB+AKVzcQB+AJkBdXEAfgB8AAAAAHBzcQB+AJkBdXEAfgB8AAAAAHBzcQB+AJkBdXEAfgCsAAAABnNxAH4ArnQACFByb2R1Y2Vyc3EAfgCyc3EAfgC1dXEAfgC4AAAAA3NxAH4AunQABGFra2FzcQB+ALp0AAVjYW1lbHEAfgDBc3EAfgCudAAPUHJvZHVjZXJTdXBwb3J0cQB+AO9zcQB+AK50AAxDYW1lbFN1cHBvcnRxAH4A73NxAH4ArnQABUFjdG9yc3EAfgCyc3EAfgC1dXEAfgC4AAAAA3NxAH4AunQABGFra2FzcQB+ALp0AAVhY3RvcnEAfgDBc3EAfgCucQB+AM5zcQB+ALJzcQB+ALV1cQB+ALgAAAADc3EAfgC6cQB+ANNzcQB+ALpxAH4A1XEAfgDBc3EAfgCucQB+ANdzcQB+ALJzcQB+ALV1cQB+ALgAAAACc3EAfgC6cQB+ANxxAH4AwXBwc3EAfgB+cQB+AIt1cQB+AIwAAAAAc3EAfgCOAHQAIm9yZy50eWNoby5zY3JhcGluZy5IdHRwVHJhbnNmb3JtZXJ1cQB+AJEAAAAAcQB+AJV1cQB+AJcAAAAAc3EAfgCZAHBzcQB+AJ5xAH4Ao3NxAH4AmQFzcQB+AKVzcQB+AJkBdXEAfgB8AAAAAHBzcQB+AJkBdXEAfgB8AAAAAHBzcQB+AJkBdXEAfgCsAAAAA3NxAH4ArnQABUFjdG9yc3EAfgCyc3EAfgC1dXEAfgC4AAAAA3NxAH4AunQABGFra2FzcQB+ALp0AAVhY3RvcnEAfgDBc3EAfgCucQB+AM5zcQB+ALJzcQB+ALV1cQB+ALgAAAADc3EAfgC6cQB+ANNzcQB+ALpxAH4A1XEAfgDBc3EAfgCucQB+ANdzcQB+ALJzcQB+ALV1cQB+ALgAAAACc3EAfgC6cQB+ANxxAH4AwXBwdXIAFFtMeHNidGkuYXBpLlBhY2thZ2U7WxMZN3CnJ6ECAAB4cAAAAANzcgAReHNidGkuYXBpLlBhY2thZ2V+WY/2rs45WAIAAUwABG5hbWVxAH4ADHhwdAAJb3JnLnR5Y2hvc3EAfgE0dAASb3JnLnR5Y2hvLnNjcmFwaW5nc3EAfgE0dAADb3Jnc3IAFXhzYnRpLmFwaS5Db21waWxhdGlvbu364MNq6KBCAgACSgAJc3RhcnRUaW1lWwAHb3V0cHV0c3QAGltMeHNidGkvYXBpL091dHB1dFNldHRpbmc7eHAAAAFPBkNrFHVyABpbTHhzYnRpLmFwaS5PdXRwdXRTZXR0aW5nO39qwvOnh6VCAgAAeHAAAAABc3IAF3hzYnRpLmFwaS5PdXRwdXRTZXR0aW5netmaR3T7HXsCAAJMAA9vdXRwdXREaXJlY3RvcnlxAH4ADEwAD3NvdXJjZURpcmVjdG9yeXEAfgAMeHB0AD4vdmFncmFudC9zY2FsYS9ha2thLXNjcmFwaW5nL3NjcmFwZXIvdGFyZ2V0L3NjYWxhLTIuMTEvY2xhc3Nlc3QAAS91cgACW0Ks8xf4BghU4AIAAHhwAAAAFCA6lppXS0NJ700BVAU3ZeUZW0yV
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> 
-rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHD9F5OgAHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAGc3IAIHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoWw71InY4V88CAAJJAARoYXNoTAAEbmFtZXQAEkxqYXZhL2xhbmcvU3RyaW5nO3hwQ2hwUXQAAmVjc3EAfgALs2KtT3QABnN5c3RlbXNxAH4ACwWKIcZ0AAxjYW1lbENvbnRleHRzcQB+AAsyPHjzdAAHY29udGV4dHNxAH4AC6CJAPZ0AARzZWxmc3EAfgALrpfyeHQADG1hdGVyaWFsaXplcnVxAH4ACQAAAFNzcQB+AAtM8N5YdAARb25Sb3V0ZURlZmluaXRpb25zcQB+AAsfJCFydAAGbm90aWZ5c3EAfgALwDaW5nQADE1heFF1ZXVlU2l6ZXNxAH4ACxZTKZ50AAdwcm9kdWNlc3EAfgAL8jV2z3QAB2RlY29kZXJzcQB+AAstbFkUdAAHUmVjZWl2ZXNxAH4AC9FqFk90AAZjYW5jZWxzcQB+AAtDT/ZTdAALaXNDb21wbGV0ZWRzcQB+AAvJqNIxdAAMQWtrYVNjcmFwaW5nc3EAfgAL9cCx4HQAC2VuZHBvaW50VXJpc3EAfgALJFl2enQABHdhaXRzcQB+AAs9t46udAAHcmVxdWVzdHNxAH4ACzWisxt0AA0kYXNJbnN0YW5jZU9mc3EAfgALeAv+j3QACmlzQ2FuY2VsZWRzcQB+AAs/YhgMdAALdG90YWxEZW1hbmRzcQB+AAtmYVUpdAAGZXF1YWxzc3EAfgALL5CCyHQAB2ZldGNoZXJzcQB+AAvMwsFNdAAFcXVldWVzcQB+AAs3ycIedAANaGVhZGVyc1RvQ29weXNxAH4AC3YT7aN0AAxhc0luc3RhbmNlT2ZzcQB+AAvD1cfpdAANcm91dGVSZXNwb25zZXNxAH4ACyt8efJ0AAxzeW5jaHJvbml6ZWRzcQB+AAvwXjDPdAARTXlBY3RvclN1YnNjcmliZXJzcQB+AAtVZxvldAARYWN0aXZhdGlvblRpbWVvdXRzcQB+AAv5nOK7dAANJGlzSW5zdGFuY2VPZnNxAH4ACwV8faB0AAdyZWNlaXZlc3EAfgAL6juUqXQACnByZVJlc3RhcnRzcQB+AAsO/HwkdAAJa2Fma2FTaW5rc3EAfgAL/gkw/HQADWFyb3VuZFJlY2VpdmVzcQB+AAsGK6RodAAPb25FcnJvclRoZW5TdG9wc3EAfgALA/g9rHQAC3Bvc3RSZXN0YXJ0c3EAfgALlI9MLXQABG1haW5zcQB+AAt8tn9FdAAIcG9zdFN0b3BzcQB+AAs4rHzIdAAJbm90aWZ5QWxsc3EAfgALY76e4HQAEWFyb3VuZFBvc3RSZXN0YXJ0c3EAfgALUcPDIXQAB3RpbWVPdXRzcQB+AAsSaGB2dAAMaXNJbnN0YW5jZU9mc3EAfgALfQftZHQAEGFyb3VuZFByZVJlc3RhcnRzcQB+AAudXmCsdAARdHJhbnNmb3JtUmVzcG9uc2VzcQB+AAtO5jU5dAAOYXJvdW5kUG9zdFN0b3BzcQB+AAv5dQ5ldAAUcmVhY3RpdmVSYWJiaXRTb3VyY2VzcQB+AAunkDiWdAAFa2Fma2FzcQB+AAu0f5K3dAAMcmF3S2Fma2FTaW5rc3EAfgALhzJk5XQABjxpbml0PnNxAH4AC10tWrZ0AAh0cnlDYXRjaHNxAH4ACwbrnSx0AAhwcmVTdGFydHNxAH4AC3dyQzZ0AAdvbkVycm9yc3EAfgALLxkrpXQACXVuaGFuZGxlZHNxAH4AC+6WYkR0AAhjYW5jZWxlZHNxAH4AC5WX+3p0AAI9PXNxAH4AC2UKstN0AA5pc0Vycm9yRW1pdHRlZHNxAH4AC+w/1Ud0AAVjbG9uZXNxAH4AC0kgDst0ABJyZW1haW5pbmdSZXF1ZXN0ZWRzcQB+AAvpCbn/dAAMcmVwbHlUaW1lb3V0c3EAfgAL7MDGS3QAEm9uQ29tcGxldGVUaGVuU3RvcHNxAH4AC3utWlB0ABh0cmFuc2Zvcm1PdXRnb2luZ01lc3NhZ2VzcQB+AAv9hyPvdAAOdGhyb3R0bGluZ1JhdGVzcQB+AAup2iCDdAAIaXNBY3RpdmVzcQB+AAs1awOjdAAJQWN0b3JTaW5rc3EAfgAL+aO9PnQABm9uTmV4dHNxAH4AC1lCl9B0AAZzZW5kZXJzcQB+AAsA1N+QdAAIdG9TdHJpbmdzcQB+AAsqkaaudAACIT1zcQB+AAshCp1fdAAFdG9waWNzcQB+AAu/rbOLdAAIZ2V0Q2xhc3NzcQB+AAv9yiN9dAAPcmVxdWVzdFN0cmF0ZWd5c3EAfgALuo8nOnQACm9uQ29tcGxldGVzcQB+AAtAEjicdAAIdGhyb3R0bGVzcQB+AAsk0GejdAACbmVzcQB+AAu7nd6FdAAHYXV0b0Fja3NxAH4AC5ZgtsZ0AAtrYWZrYVNvdXJjZXNxAH4ACzUt+op0ABJzdXBlcnZpc29yU3RyYXRlZ3lzcQB+AAviNhrNdAANUXVldWVDb25zdW1lcnNxAH4AC6rBK1B0AAJlcXNxAH4AC7ULxcp0AAZvbmV3YXlzcQB+AAugKT6FdAATc3Vic2NyaXB0aW9uVGltZW91dHNxAH4AC46irS50AAIjI3NxAH4ACwAfSPB0ABlnZXRSb3V0ZURlZmluaXRpb25IYW5kbGVyc3EAfgAL/bDnDXQACGZpbmFsaXplc3EAfgALt40EKnQACHByb2R1Y2Vyc3EAfgALSv06mHQACGhhc2hDb2Rlc3EAfgALbf/NfnQADmFyb3VuZFByZVN0YXJ0c3EAfgAL7VHFZXQABWNhbWVsc3IAE3hzYnRpLmFwaS5Tb3VyY2VBUEm5Xqf5KSM4pAIAAlsAC2RlZmluaXRpb25zdAAXW0x4c2J0aS9hcGkvRGVmaW5pdGlvbjtbAAhwYWNrYWdlc3QAFFtMeHNidGkvYXBpL1BhY2thZ2U7eHB1cgAXW0x4c2J0aS5hcGkuRGVmaW5pdGlvbjuIyVzntONeDgIAAHhwAAAABXNyABN4c2J0aS5hcGkuQ2xhc3NMaWtlgzQcod+wl2wCAARMAA5kZWZpbml0aW9uVHlwZXQAGkx4c2J0aS9hcGkvRGVmaW5pdGlvblR5cGU7WwAQc2F2ZWRBbm5vdGF0aW9uc3QAE1tMamF2YS9sYW5nL1N0cmluZztMAAhzZWxmVHlwZXQAEEx4c2J0aS9hcGkvTGF6eTtMAAlzdHJ1Y3R1cmVxAH4AyXhyACF4c2J0aS5hcGkuUGFyYW1ldGVyaXplZERlZmluaXRpb275EW6x1VA84gIAAVsADnR5cGVQYXJhbWV0ZXJzdAAaW0x4c2J0aS9hcGkvVHlwZVBhcmFtZXRlcjt4cgAUeHNidGkuYXBpLkRlZmluaXRpb26HKhvocULjRgIABEwABmFjY2Vzc3QAEkx4c2J0aS9hcGkvQWNjZXNzO1sAC2Fubm90YXRpb25zdAAXW0x4c2J0aS9hcGkvQW5ub3RhdGlvbjtMAAltb2RpZmllcnN0ABVMeHNidGkvYXBpL01vZGlmaWVycztMAARuYW1lcQB+AAx4cHNyABB4c2J0aS5hcGkuUHVibGljulg9rmwtYEICAAB4cgAQeHNidGkuYXBpLkFjY2Vzc91imvgdYzFIAgAAeHB1cgAXW0x4c2J0aS5hcGkuQW5ub3RhdGlvbjvrl+sZEPaNSAIAAHhwAAAAAHNyABN4c2J0aS5hcGkuTW9kaWZpZXJzxxETIWmc3CQCAAFCAAVmbGFnc3hwAHQAIG9yZy50eWNoby5zY3JhcGluZy5RdWV1ZUNvbnN1bWVydXIAGltMeHNidGkuYXBpLlR5cGVQYXJhbWV0ZXI72W0mDyid8rYCAAB4cAAAAAB+cgAYeHNidGkuYXBpLkRlZmluaXRpb25UeXBlAAAAAAAAAAASAAB4cgAOamF2YS5sYW5nLkVudW0AAAAAAAAAABIAAHhwdAAIQ2xhc3NEZWZ1cgATW0xqYXZhLmxhbmcuU3RyaW5nO63SVufpHXtHAgAAeHAAAAAAc3IAE3hzYnRpLlNhZmVMYXp5JEltcGxQAi6Tl5dAPwIAA1oACGJpdG1hcCQwTAACX3R0ABJMamF2YS9sYW5nL09iamVjdDtMAARldmFsdAARTHNjYWxhL0Z1bmN0aW9uMDt4cgAWeHNidGkuYXBpLkFic3RyYWN0TGF6edN3tQFfu+egAgAAeHABc3IAE3hzYnRpLmFwaS5FbXB0eVR5cGW8/Z5GSTuJJAIAAHhyABR4c2J0aS5hcGkuU2ltcGxlVHlwZXJ4YoghI79AAgAAeHIADnhzYnRpLmFwaS5UeXBlP2rZIRZJqsoCAAB4cHBzcQB+AOEBc3IAE3hzYnRpLmFwaS5TdHJ1Y3R1cmWpqvmAk2/YAAIAA0wACGRlY2xhcmVkcQB+AMlMAAlpbmhlcml0ZWRxAH4AyUwAB3BhcmVudHNxAH4AyXhxAH4A6HNxAH4A4QF1cQB+AMQAAAAAcHNxAH4A4QF1cQB+AMQAAAAAcHNxAH4A4QF1cgARW0x4c2J0aS5hcGkuVHlwZTt0/6Vae/npQQIAAHhwAAAABnNyABd4c2J0aS5hcGkuUGFyYW1ldGVyaXplZBZs7mkDybt/AgACTAAIYmFzZVR5cGV0ABZMeHNidGkvYXBpL1NpbXBsZVR5cGU7WwANdHlwZUFyZ3VtZW50c3QAEVtMeHNidGkvYXBpL1R5cGU7eHEAfgDnc3IAFHhzYnRpLmFwaS5Qcm9qZWN0aW9u89KNVOlFpC0CAAJMAAJpZHEAfgAMTAAGcHJlZml4cQB+APV4cQB+AOd0AA5BY3RvclB1Ymxpc2hlcnNyABN4c2J0aS5hcGkuU2luZ2xldG9u/Kdf+M9W5EYCAAFMAARwYXRodAAQTHhzYnRpL2FwaS9QYXRoO3hxAH4A53NyAA54c2J0aS5hcGkuUGF0aJs9XAjOpSeEAgABWwAKY29tcG9uZW50c3QAGltMeHNidGkvYXBpL1BhdGhDb21wb25lbnQ7eHB1cgAaW0x4c2J0aS5hcGkuUGF0aENvbXBvbmVudDtD2gl0LWcWdAIAAHhwAAAABHNyAAx4c2J0aS5hcGkuSWSYMmyLN1PEQAIAAUwAAmlkcQB+AAx4cgAXeHNidGkuYXBpLlBhdGhDb21wb25lbnRfmiJbLoafvAIAAHhwdAAEYWtrYXNxAH4BA3QABnN0cmVhbXNxAH4BA3QABWFjdG9yc3IADnhzYnRpLmFwaS5UaGlz2wntpsxaQFwCAAB4cQB+AQR1cQB+APIAAAABc3EAfgD4dAAGU3RyaW5nc3EAfgD7c3EAfgD+dXEAfgEBAAAAA3NxAH4BA3QABGphdmFzcQB+AQN0AARsYW5ncQB+AQxzcQB+APh0AAhDb25zdW1l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cQB+APIAAAACc3EAfgD4cQB+ASxxAH4CDnNxAH4A+HEAfgEucQB+AfdwcHVyABRbTHhzYnRpLmFwaS5QYWNrYWdlO1sTGTdwpyehAgAAeHAAAAADc3IAEXhzYnRpLmFwaS5QYWNrYWdlflmP9q7OOVgCAAFMAARuYW1lcQB+AAx4cHQACW9yZy50eWNob3NxAH4CG3QAEm9yZy50eWNoby5zY3JhcGluZ3NxAH4CG3QAA29yZ3NyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABTzB6k1t1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5cQB+AAxMAA9zb3VyY2VEaXJlY3RvcnlxAH4ADHhwdAA+L3ZhZ3JhbnQvc2NhbGEvYWtrYS1zY3JhcGluZy9zY3JhcGVyL3RhcmdldC9zY2FsYS0yLjExL2NsYXNzZXN0AAEvdXIAAltCrPMX+AYIVOACAAB4cAAAABRIm+vG6RgGliuspY+ZgMfLxu4TzQ==
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHCVaccLAHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAHc3IAIHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoWw71InY4V88CAAJJAARoYXNoTAAEbmFtZXQAEkxqYXZhL2xhbmcvU3RyaW5nO3hwQ2hwUXQAAmVjc3EAfgALs2KtT3QABnN5c3RlbXNxAH4AC7Mplb90ABNQYXJ0aWFsRnVuY3Rpb25MaXN0c3EAfgALGj1nNnQADGNhbWVsQ29udGV4dHNxAH4ACwkWN8R0AAdjb250ZXh0c3EAfgALMetDSHQABHNlbGZzcQB+AAuul/J4dAAMbWF0ZXJpYWxpemVydXEAfgAJAAAAX3NxAH4ACxleziB0AAtmb3J3YXJkQ2FzZXNxAH4AC6+XgPJ0ABFvblJvdXRlRGVmaW5pdGlvbnNxAH4AC9rJACR0AAZub3RpZnlzcQB+AAsRcH3ddAAMTWF4UXVldWVTaXplc3EAfgAL2uG013QAB3Byb2R1Y2VzcQB+AAvyNXbPdAAHZGVjb2RlcnNxAH4AC5tE6wV0AAdSZWNlaXZlc3EAfgAL22EtmHQABmNhbmNlbHNxAH4ACzWk+sF0AAtpc0NvbXBsZXRlZHNxAH4AC8mo0jF0AAxBa2thU2NyYXBpbmdzcQB+AAtRTUradAALZW5kcG9pbnRVcmlzcQB+AAtpRkpMdAAEd2FpdHNxAH4AC0NFvql0AAdyZXF1ZXN0c3EAfgALTJQuAnQADSRhc0luc3RhbmNlT2ZzcQB+AAubxk6qdAAKaXNDYW5jZWxlZHNxAH4AC9chwGF0AAt0b3RhbERlbWFuZHNxAH4AC/+rYfN0AA9NeUNhbWVsQ29uc3VtZXJzcQB+AAtzTygbdAAGZXF1YWxzc3EAfgALL5CCyHQAB2ZldGNoZXJzcQB+AAsEXWrVdAAFcXVldWVzcQB+AAtv7IOIdAAQTXlBY3RvclB1Ymxpc2hlcnNxAH4AC5hl5910AA1oZWFkZXJzVG9Db3B5c3EAfgALEE5LH3QADGFzSW5zdGFuY2VPZnNxAH4AC7A9oMR0AA1yb3V0ZVJlc3BvbnNlc3EAfgALiBf6SHQADHN5bmNocm9uaXplZHNxAH4AC2IQgqN0ABFNeUFjdG9yU3Vic2NyaWJlcnNxAH4AC0yOkbJ0ABFhY3RpdmF0aW9uVGltZW91dHNxAH4ACzijju90AA0kaXNJbnN0YW5jZU9mc3EAfgALw1CBbHQAC3JlcXVlc3RDYXNlc3EAfgALOqSsa3QAB3JlY2VpdmVzcQB+AAvTIopwdAAKcHJlUmVzdGFydHNxAH4ACw78fCR0AAlrYWZrYVNpbmtzcQB+AAvJUYYddAANYXJvdW5kUmVjZWl2ZXNxAH4AC24AefB0AA9vbkVycm9yVGhlblN0b3BzcQB+AAuCsDqadAALcG9zdFJlc3RhcnRzcQB+AAuUj0wtdAAEbWFpbnNxAH4AC7dPxXB0AAhwb3N0U3RvcHNxAH4AC/W783B0AAlub3RpZnlBbGxzcQB+AAux45usdAARYXJvdW5kUG9zdFJlc3RhcnRzcQB+AAtRw8MhdAAHdGltZU91dHNxAH4ACz80NJt0AAxpc0luc3RhbmNlT2ZzcQB+AAvt6GP/dAADbHN0c3EAfgALy4832nQAEGFyb3VuZFByZVJlc3RhcnRzcQB+AAuRc8YJdAARdHJhbnNmb3JtUmVzcG9uc2VzcQB+AAsYU9yKdAAOYXJvdW5kUG9zdFN0b3BzcQB+AAv5dQ5ldAAUcmVhY3RpdmVSYWJiaXRTb3VyY2VzcQB+AAunkDiWdAAFa2Fma2FzcQB+AAtwlv5hdAAMcmF3S2Fma2FTaW5rc3EAfgALKgRqYnQABjxpbml0PnNxAH4AC10tWrZ0AAh0cnlDYXRjaHNxAH4ACwDFtBl0AAhwcmVTdGFydHNxAH4AC8P8DZ10AAdvbkVycm9yc3EAfgAL1oywo3QACXVuaGFuZGxlZHNxAH4AC8ayIe90AAhjYW5jZWxlZHNxAH4AC1BVuyd0AAI9PXNxAH4AC1AI/GF0AA5pc0Vycm9yRW1pdHRlZHNxAH4ACwA169t0AAVjbG9uZXNxAH4AC2AMvLx0ABJyZW1haW5pbmdSZXF1ZXN0ZWRzcQB+AAsleV7/dAAMcmVwbHlUaW1lb3V0c3EAfgALGRL2wnQAEm9uQ29tcGxldGVUaGVuU3RvcHNxAH4AC12MLtd0AA9TdHJlYW1Db25uZWN0b3JzcQB+AAtlpVmtdAAYdHJhbnNmb3JtT3V0Z29pbmdNZXNzYWdlc3EAfgAL/Ycj73QADnRocm90dGxpbmdSYXRlc3EAfgALLB4x3HQACGlzQWN0aXZlc3EAfgALydXcFHQAB2NvbWJpbmVzcQB+AAv+K7ttdAAJQWN0b3JTaW5rc3EAfgALJf9VBXQABm9uTmV4dHNxAH4AC0ZTXeF0AAZzZW5kZXJzcQB+AAtN0wztdAAIdG9TdHJpbmdzcQB+AAuds+4+dAAPQ3JlYXRpb25Nb25pdG9yc3EAfgALdrsPKnQAAiE9c3EAfgAL5M91UXQABXRvcGljc3EAfgALA+Xbi3QACmNhbmNlbENhc2VzcQB+AAszqKyYdAAIZ2V0Q2xhc3NzcQB+AAtUMtRSdAAPcmVxdWVzdFN0cmF0ZWd5c3EAfgALxgbTXXQACm9uQ29tcGxldGVzcQB+AAtAEjicdAAIdGhyb3R0bGVzcQB+AAtXa0wrdAACbmVzcQB+AAvcZjptdAAHYXV0b0Fja3NxAH4AC+7efNR0ABZNeVN0cmluZ0FjdG9yUHVibGlzaGVyc3EAfgALlmC2xnQAC2thZmthU291cmNlc3EAfgALudNNt3QAEnN1cGVydmlzb3JTdHJhdGVneXNxAH4ACwyCGXt0AA1RdWV1ZUNvbnN1bWVyc3EAfgALLzPMNHQAAmVxc3EAfgAL7KiktnQABm9uZXdheXNxAH4AC1SZbCd0ABNzdWJzY3JpcHRpb25UaW1lb3V0c3EAfgALuJsiDnQAAiMjc3EAfgALk2LZP3QAGWdldFJvdXRlRGVmaW5pdGlvbkhhbmRsZXJzcQB+AAuR1qHUdAAIZmluYWxpemVzcQB+AAsLuV0ldAAIcHJvZHVjZXJzcQB+AAvsirZcdAAIZWxzZUNhc2VzcQB+AAtJ0aODdAAIaGFzaENvZGVzcQB+AAuFFdBSdAAOYXJvdW5kUHJlU3RhcnRzcQB+AAti2gLBdAAJY2FtZWxDYXNlc3EAfgALwWS9ynQABWNhbWVsc3IAE3hzYnRpLmFwaS5Tb3VyY2VBUEm5Xqf5KSM4pAIAAlsAC2RlZmluaXRpb25zdAAXW0x4c2J0aS9hcGkvRGVmaW5pdGlvbjtbAAhwYWNrYWdlc3QAFFtMeHNidGkvYXBpL1BhY2thZ2U7eHB1cgAXW0x4c2J0aS5hcGkuRGVmaW5pdGlvbjuIyVzntONeDgIAAHhwAAAAAXNyABN4c2J0aS5hcGkuQ2xhc3NMaWtlgzQcod+wl2wCAARMAA5kZWZpbml0aW9uVHlwZXQAGkx4c2J0aS9hcGkvRGVmaW5pdGlvblR5cGU7WwAQc2F2ZWRBbm5vdGF0aW9uc3QAE1tMamF2YS9sYW5nL1N0cmluZztMAAhzZWxmVHlwZXQAEEx4c2J0aS9hcGkvTGF6eTtMAAlzdHJ1Y3R1cmVxAH4A43hyACF4c2J0aS5hcGkuUGFyYW1ldGVyaXplZERlZmluaXRpb275EW6x1VA84gIAAVsADnR5cGVQYXJhbWV0ZXJzdAAaW0x4c2J0aS9hcGkvVHlwZVBhcmFtZXRlcjt4cgAUeHNidGkuYXBpLkRlZmluaXRpb26HKhvocULjRgIABEwABmFjY2Vzc3QAEkx4c2J0aS9hcGkvQWNjZXNzO1sAC2Fubm90YXRpb25zdAAXW0x4c2J0aS9hcGkvQW5ub3RhdGlvbjtMAAltb2RpZmllcnN0ABVMeHNidGkvYXBpL01vZGlmaWVycztMAARuYW1lcQB+AAx4cHNyABB4c2J0aS5hcGkuUHVibGljulg9rmwtYEICAAB4cgAQeHNidGkuYXBpLkFjY2Vzc91imvgdYzFIAgAAeHB1cgAXW0x4c2J0aS5hcGkuQW5ub3RhdGlvbjvrl+sZEPaNSAIAAHhwAAAAAHNyABN4c2J0aS5hcGkuTW9kaWZpZXJzxxETIWmc3CQCAAFCAAVmbGFnc3hwAHQAH29yZy50eWNoby5zY3JhcGluZy5Ba2thU2NyYXBpbmd1cgAaW0x4c2J0aS5hcGkuVHlwZVBhcmFtZXRlcjvZbSYPKJ3ytgIAAHhwAAAAAH5yABh4c2J0aS5hcGkuRGVmaW5pdGlvblR5cGUAAAAAAAAAABIAAHhyAA5qYXZhLmxhbmcuRW51bQAAAAAAAAAAEgAAeHB0AAZNb2R1bGV1cgATW0xqYXZhLmxhbmcuU3RyaW5nO63SVufpHXtHAgAAeHAAAAAAc3IAE3hzYnRpLlNhZmVMYXp5JEltcGxQAi6Tl5dAPwIAA1oACGJpdG1hcCQwTAACX3R0ABJMamF2YS9sYW5nL09iamVjdDtMAARldmFsdAARTHNjYWxhL0Z1bmN0aW9uMDt4cgAWeHNidGkuYXBpLkFic3RyYWN0TGF6edN3tQFfu+egAgAAeHAAcHNyACB4c2J0aS5TYWZlTGF6eSQkYW5vbmZ1biRzdHJpY3QkMQAAAAAAAAAAAgABTAAHdmFsdWUkMXEAfgD8eHBzcgATeHNidGkuYXBpLkVtcHR5VHlwZbz9nkZJO4kkAgAAeHIAFHhzYnRpLmFwaS5TaW1wbGVUeXBlcnhiiCEjv0ACAAB4cgAOeHNidGkuYXBpLlR5cGU/atkhFkmqygIAAHhwc3EAfgD7AHBzcQB+AQBzcgATeHNidGkuYXBpLlN0cnVjdHVyZamq+YCTb9gAAgADTAAIZGVjbGFyZWRxAH4A40wACWluaGVyaXRlZHEAfgDjTAAHcGFyZW50c3EAfgDjeHEAfgEEc3EAfgD7AHBzcQB+AQB1cQB+AN4AAAABc3IADXhzYnRpLmFwaS5EZWZSvp/ifLQ2aQIAAkwACnJldHVyblR5cGV0ABBMeHNidGkvYXBpL1R5cGU7WwAPdmFsdWVQYXJhbWV0ZXJzdAAaW0x4c2J0aS9hcGkvUGFyYW1ldGVyTGlzdDt4cQB+AORxAH4A7XVxAH4A7gAAAABzcQB+APAAcQB+AGN1cQB+APMAAAAAc3IAFHhzYnRpLmFwaS5Qcm9qZWN0aW9u89KNVOlFpC0CAAJMAAJpZHEAfgAMTAAGcHJlZml4dAAWTHhzYnRpL2FwaS9TaW1wbGVUeXBlO3hxAH4BA3QABFVuaXRzcgATeHNidGkuYXBpLlNpbmdsZXRvbvynX/jPVuRGAgABTAAEcGF0aHQAEEx4c2J0aS9hcGkvUGF0aDt4cQB+AQNzcgAOeHNidGkuYXBpLlBhdGibPVwIzqUnhAIAAVsACmNvbXBvbmVudHN0ABpbTHhzYnRpL2FwaS9QYXRoQ29tcG9uZW50O3hwdXIAGltMeHNidGkuYXBpLlBhdGhDb21wb25lbnQ7Q9oJdC1nFnQCAAB4cAAAAAJzcgAMeHNidGkuYXBpLklkmDJsizdTxEACAAFMAAJpZHEAfgAMeHIAF3hzYnRpLmFwaS5QYXRoQ29tcG9uZW50X5oiWy6Gn7wCAAB4cHQABXNjYWxhc3IADnhzYnRpLmFwaS5UaGlz2wntpsxaQFwCAAB4cQB+ASF1cgAaW0x4c2J0aS5hcGkuUGFyYW1ldGVyTGlzdDv10zod8rNw7gIAAHhwAAAAAXNyABd4c2J0aS5hcGkuUGFyYW1ldGVyTGlzdNbFvBxkSXTjAgACWgAKaXNJbXBsaWNpdFsACnBhcmFtZXRlcnN0ABxbTHhzYnRpL2FwaS9NZXRob2RQYXJhbWV0ZXI7eHAAdXIAHFtMeHNidGkuYXBpLk1ldGhvZFBhcmFtZXRlcjvPuMVdpd21bQIAAHhwAAAAAXNyABl4c2J0aS5hcGkuTWV0aG9kUGFyYW1ldGVyH0WuF9NJsOoCAARaAApoYXNEZWZhdWx0TAAIbW9kaWZpZXJ0AB1MeHNidGkvYXBpL1BhcmFtZXRlck1vZGlmaWVyO0wABG5hbWVxAH4ADEwAA3RwZXEAfgEOeHAAfnIAG3hzYnRpLmFwaS5QYXJhbWV0ZXJNb2RpZmllcgAAAAAAAAAAEgAAeHEAfgD2dAAFUGxhaW50AARhcmdzc3IAF3hzYnRpLmFwaS5QYXJhbWV0ZXJpemVkFmzuaQPJu38CAAJMAAhiYXNlVHlwZXEAfgEVWwANdHlwZUFyZ3VtZW50c3QAEVtMeHNidGkvYXBpL1R5cGU7eHEAfgEDc3EAfgEUdAAFQXJyYXlxAH4BGnVyABFbTHhzYnRpLmFwaS5UeXBlO3T/pVp7+elBAgAAeHAAAAABc3EAfgEUdAAGU3RyaW5nc3EAfgEYc3EAfgEbdXEAfgEeAAAAA3NxAH4BIHQABGphdmFzcQB+ASB0AARsYW5ncQB+ASVzcQB+APsAcHNxAH4BAHVxAH4A3gAAAABzcQB+APsAcHNxAH4BAHVxAH4BOQAAAAJzcQB+ARR0AAZPYmplY3RxAH4BPXNxAH4BFHQAA0FueXEAfgEadXIAFFtMeHNidGkuYXBpLlBhY2thZ2U7WxMZN3CnJ6ECAAB4cAAAAANzcgAReHNidGkuYXBpLlBhY2thZ2V+WY/2rs45WAIAAUwABG5hbWVxAH4ADHhwdAAJb3JnLnR5Y2hvc3EAfgFQdAASb3JnLnR5Y2hvLnNjcmFwaW5nc3EAfgFQdAADb3Jnc3IAFXhzYnRpLmFwaS5Db21waWxhdGlvbu364MNq6KBCAgACSgAJc3RhcnRUaW1lWwAHb3V0cHV0c3QAGltMeHNidGkvYXBpL091dHB1dFNldHRpbmc7eHAAAAFPNm40WnVyABpbTHhzYnRpLmFwaS5PdXRwdXRTZXR0aW5nO39qwvOnh6VCAgAAeHAAAAABc3IAF3hzYnRpLmFwaS5PdXRwdXRTZXR0aW5netmaR3T7HXsCAAJMAA9vdXRwdXREaXJlY3RvcnlxAH4ADEwAD3NvdXJjZURpcmVjdG9yeXEAfgAMeHB0AD4vdmFncmFudC9zY2FsYS9ha2thLXNjcmFwaW5nL3NjcmFwZXIvdGFyZ2V0L3NjYWxhLTIuMTEvY2xhc3Nlc3QAAS91cgACW0Ks8xf4BghU4AIAAHhwAAAAFHiN+MOn3sdX6xfgxabR4L82i4Kh
 /vagrant/scala/akka-scraping/scraper/IntegerSerializer.java -> 
 rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHC4IVHqAHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAAAHNyABN4c2J0aS5hcGkuU291cmNlQVBJuV6n+SkjOKQCAAJbAAtkZWZpbml0aW9uc3QAF1tMeHNidGkvYXBpL0RlZmluaXRpb247WwAIcGFja2FnZXN0ABRbTHhzYnRpL2FwaS9QYWNrYWdlO3hwdXIAF1tMeHNidGkuYXBpLkRlZmluaXRpb247iMlc57TjXg4CAAB4cAAAAAB1cgAUW0x4c2J0aS5hcGkuUGFja2FnZTtbExk3cKcnoQIAAHhwAAAAAHNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABTwZDaxR1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+ABp4cHQAPi92YWdyYW50L3NjYWxhL2Fra2Etc2NyYXBpbmcvc2NyYXBlci90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABL3VyAAJbQqzzF/gGCFTgAgAAeHAAAAAU+IC2Ro9M1liN7BIO9nIAsoVoLE8=
 /vagrant/scala/akka-scraping/scraper/Limiter.scala -> 
@@ -618,7 +708,7 @@ source infos:
 /vagrant/scala/akka-scraping/scraper/AkkaCamel.scala -> 
 AAAAAAAAAAA=
 /vagrant/scala/akka-scraping/scraper/AkkaScraping.scala -> 
-AAAAAAAAAAA=
+AAAAAgAAAQAAAHkAFCAgICBjYXNlIG1zZzogVCA9PiB7AQAADhMBAAAADgEADiAgICAgICAgICAgICAgAQA3L3ZhZ3JhbnQvc2NhbGEvYWtrYS1zY3JhcGluZy9zY3JhcGVyL0Fra2FTY3JhcGluZy5zY2FsYQEANy92YWdyYW50L3NjYWxhL2Fra2Etc2NyYXBpbmcvc2NyYXBlci9Ba2thU2NyYXBpbmcuc2NhbGEARmFic3RyYWN0IHR5cGUgcGF0dGVybiBUIGlzIHVuY2hlY2tlZCBzaW5jZSBpdCBpcyBlbGltaW5hdGVkIGJ5IGVyYXN1cmUBAAABAAAAeQAUICAgIGNhc2UgbXNnOiBUID0+IHsBAAAOEwEAAAAOAQAOICAgICAgICAgICAgICABADcvdmFncmFudC9zY2FsYS9ha2thLXNjcmFwaW5nL3NjcmFwZXIvQWtrYVNjcmFwaW5nLnNjYWxhAQA3L3ZhZ3JhbnQvc2NhbGEvYWtrYS1zY3JhcGluZy9zY3JhcGVyL0Fra2FTY3JhcGluZy5zY2FsYQBGYWJzdHJhY3QgdHlwZSBwYXR0ZXJuIFQgaXMgdW5jaGVja2VkIHNpbmNlIGl0IGlzIGVsaW1pbmF0ZWQgYnkgZXJhc3VyZQEAAAAA
 /vagrant/scala/akka-scraping/scraper/IntegerSerializer.java -> 
 AAAAAAAAAAA=
 /vagrant/scala/akka-scraping/scraper/Limiter.scala -> 
@@ -626,7 +716,7 @@ AAAAAAAAAAA=
 /vagrant/scala/akka-scraping/scraper/myUtils.scala -> 
 AAAAAAAAAAA=
 compilations:
-155 items
+161 items
 000 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABTrA1Sht1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAN0Q6XHNoYXJlZFxTY2FsYVxha2thLXNjcmFwaW5nXHRhcmdldFxzY2FsYS0yLjExXGNsYXNzZXN0AAEv
 001 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABTrA4FuR1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAN0Q6XHNoYXJlZFxTY2FsYVxha2thLXNjcmFwaW5nXHRhcmdldFxzY2FsYS0yLjExXGNsYXNzZXN0AAEv
 002 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABTrA7eQd1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAN0Q6XHNoYXJlZFxTY2FsYVxha2thLXNjcmFwaW5nXHRhcmdldFxzY2FsYS0yLjExXGNsYXNzZXN0AAEv
@@ -782,3 +872,9 @@ compilations:
 152 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABTyYN7HB1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAPi92YWdyYW50L3NjYWxhL2Fra2Etc2NyYXBpbmcvc2NyYXBlci90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABLw==
 153 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABTzB240B1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAPi92YWdyYW50L3NjYWxhL2Fra2Etc2NyYXBpbmcvc2NyYXBlci90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABLw==
 154 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABTzB6k1t1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAPi92YWdyYW50L3NjYWxhL2Fra2Etc2NyYXBpbmcvc2NyYXBlci90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABLw==
+155 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABTzFNbrh1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAPi92YWdyYW50L3NjYWxhL2Fra2Etc2NyYXBpbmcvc2NyYXBlci90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABLw==
+156 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABTzYwvq51cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAPi92YWdyYW50L3NjYWxhL2Fra2Etc2NyYXBpbmcvc2NyYXBlci90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABLw==
+157 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABTzY72JZ1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAPi92YWdyYW50L3NjYWxhL2Fra2Etc2NyYXBpbmcvc2NyYXBlci90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABLw==
+158 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABTzZh9QZ1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAPi92YWdyYW50L3NjYWxhL2Fra2Etc2NyYXBpbmcvc2NyYXBlci90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABLw==
+159 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABTzZqhfB1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAPi92YWdyYW50L3NjYWxhL2Fra2Etc2NyYXBpbmcvc2NyYXBlci90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABLw==
+160 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABTzZuNFp1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAPi92YWdyYW50L3NjYWxhL2Fra2Etc2NyYXBpbmcvc2NyYXBlci90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABLw==

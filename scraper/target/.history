@@ -40,3 +40,4 @@ import java.net.InetSocketAddress
 run
 ~run
 run
+compile

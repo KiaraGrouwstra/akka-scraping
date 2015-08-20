@@ -35,7 +35,7 @@ import org.apache.commons.pool2.impl.{GenericObjectPool, GenericObjectPoolConfig
 
 abstract class SparkKafkaFlow(inputTopic: String = "dumps") extends Serializable {
 //How do I detect dependent flows so I could batch reset them on change?
-  
+
 //  implicit class RDDStringPlus(val rdd: RDD[String]) {
 //      def parseJson(sqlContext: SqlContext) = sqlContext.read.json(rdd)
 //  }

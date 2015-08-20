@@ -1,4 +1,8 @@
 package org.tycho.scraping
+// Hm, Is there a way to convert classes to actors, functions to case classes/objects + corresponding Receive partials?
+// cases classes: https://github.com/julianpeeters/case-class-generator
+// case objects: just strings named after the no-param methods?
+// other non-case classes (such as strings) in receivers won't be created this way (all would be wrapped in method case classes), but that's fine I guess.
 
 //conflicted
 import io.scalac.{amqp => rr}
@@ -77,93 +81,132 @@ object AkkaScraping {
 //marshall/serialize with (akka-http-)spray-json
 //case class SimpleResponse(url: String, status: String, encoding: String, body: String)
 
-implicit class PartialFunctionList[A,B](val lst: List[PartialFunction[A,B]]) {
+implicit class ReceiveList(val lst: List[Actor.Receive]) {
     def combine = lst reduceLeft (_ orElse _)
 }
 
-val elseCase: PartialFunction[Any, Unit] = {
-  case msg => {
-    println("ERROR, got a: " + msg.getClass.getSimpleName())
+def caseFn[T](fn: T => Unit): Actor.Receive = {
+//def caseFn[T](fn: Any => Unit): Actor.Receive = {
+  case msg: T => {
+    fn(msg)
   }
 }
 
-val cancelCase: PartialFunction[Any, Unit] = {
-  case msg: ActorPublisherMessage.Cancel => {
-    println("The stream canceled the subscription.")
-    // context.stop(self)
-    // onError()
-    // onComplete()
-    // system.shutdown()
-    Runtime.getRuntime.exit(0)
-  }
+trait MyActor extends Actor {
+//  def cases: List[Any] = List(elseCase)
+  def cases: List[Actor.Receive] = List(elseCase).map(caseFn)
+  // extend as follows:
+//  override def cases = List(fooCase) ++ super.cases
+//  override def cases = List(fooCase).map(caseFn) ++ super.cases
+//  val receive = cases.map(caseFn).combine
+  val receive = cases.combine
+  //^ have all the actual thingies just be anonymous functions instead of making them case partials already.
 }
 
-val requestCase: PartialFunction[Any, Unit] = {
-  case msg: ActorPublisherMessage.Request => {
-    println("The stream wants more!")
-    // deliverBuf()
-    // http://doc.akka.io/docs/akka-stream-and-http-experimental/1.0-M2/scala/stream-integrations.html
-  }
+val elseCase = (msg: Any) => {
+  println("ERROR, got a: " + msg.getClass.getSimpleName())
 }
 
-class MyActorPublisher[T]() extends ActorPublisher[T] {
-  val forwardCase: PartialFunction[Any, Unit] = {
-// Unfortunately due to type erasure I cannot properly make the case variable this way...
-// So hardcoding to string right now cuz that's what my only instance needs, but still need a better solution. :( 
-    case msg: T => {
-      onNext(msg)
-    }
+val cancelCase = (msg: ActorPublisherMessage.Cancel) => {
+  println("The stream canceled the subscription.")
+  // context.stop(self)
+  // onError()
+  // onComplete()
+  // system.shutdown()
+  Runtime.getRuntime.exit(0)
+}
+
+val requestCase = (msg: ActorPublisherMessage.Request) => {
+  println("The stream wants more!")
+  // deliverBuf()
+  // http://doc.akka.io/docs/akka-stream-and-http-experimental/1.0-M2/scala/stream-integrations.html
+}
+
+class MyActorPublisher[T]() extends ActorPublisher[T] with MyActor {
+  val forwardCase = (msg: T) => {
+    // Unfortunately due to type erasure I cannot properly make the case variable this way...
+    // So hardcoding to string right now cuz that's what my only instance needs, but still need a better solution. :( 
+    onNext(msg)
   }
   // Potentially never gets to the else case anymore, needs testing!...
-  val receive = List(forwardCase, cancelCase, requestCase, elseCase).combine
+//  val receive = List(forwardCase, cancelCase, requestCase, elseCase).combine
+  override def cases = List(forwardCase, cancelCase, requestCase).map(caseFn) ++ super.cases
 }
 
 //Redefining for String here cuz otherwise it seems type erasure would ruin my pattern matching...
 class MyStringActorPublisher() extends MyActorPublisher[String] {
-  override val forwardCase: PartialFunction[Any, Unit] = {
-    case msg: String => {
-      onNext(msg)
-    }
+  override val forwardCase = (msg: String) => {
+    onNext(msg)
   }
 }
 
 //silly shell class acting as the start of the stream -- the domain-specific stuff before this (url grabbing and throttling) I wanna do in regular actors, cuz not sure how to do those using streams.
 class StreamConnector() extends MyStringActorPublisher {}
 
-abstract class MyCamelConsumer(fn: (CamelMessage) => Unit) extends akka.camel.Consumer {
-  val camelCase: PartialFunction[Any, Unit] = {
-    case msg: CamelMessage => {
-      implicit val camelContext = CamelExtension(context.system).context
-      println("Camel message: " + msg.bodyAs[String])
-      fn(msg)
-    }
+abstract class MyCamelConsumer(fn: (CamelMessage) => Unit) extends akka.camel.Consumer with MyActor {
+  val camelCase = (msg: CamelMessage) => {
+    implicit val camelContext = CamelExtension(context.system).context
+    println("Camel message: " + msg.bodyAs[String])
+    fn(msg)
   }
-  val receive = List(camelCase, elseCase).combine
+//  val receive = List(camelCase, elseCase).combine
+  override def cases = List(camelCase).map(caseFn) ++ super.cases
 }
 
 //consuming from queues through Camel
-class QueueConsumer(dest: ActorRef) extends MyCamelConsumer((msg: CamelMessage) => { implicit camelContext: org.apache.camel.CamelContext =>
+class QueueConsumer(queue: String, dest: ActorRef) extends MyCamelConsumer((msg: CamelMessage) => { implicit camelContext: org.apache.camel.CamelContext =>
   dest ! msg.bodyAs[String]
 }) {
-  def endpointUri = "rabbitmq://localhost:5672/urls?queue=urls&routingKey=urls&autoDelete=false&username=test&password=test"
+  def endpointUri = "rabbitmq://localhost:5672/" + queue + "?queue=" + queue + "&routingKey=" + queue + "&autoDelete=false&username=test&password=test"
 }
 
 //Monitor RabbitMQ queue.created events through Camel
-class CreationMonitor(dest: ActorRef) extends MyCamelConsumer((msg: CamelMessage) => { implicit camelContext: org.apache.camel.CamelContext =>
-//        dest ! msg.bodyAs[String]
-      // I actually need to pass it the queue and throttling delay needed to create the appropriate QueueConsumer...
-//        dest ! ...
+class CreationMonitor(sourceCreator: ActorRef) extends MyCamelConsumer((msg: CamelMessage) => { implicit camelContext: org.apache.camel.CamelContext =>
+//    msg.bodyAs[String]
+//      val queue = ...
+//      val rate = ...
+        sourceCreator ! ConsumerInfo(queue, rate)
 }) {
   def endpointUri = "rabbitmq://localhost:5672/queue.created?queue=queue.created&routingKey=queue.created&autoDelete=false&username=test&password=test"
 }
 
-abstract class MyActorSubscriber extends ActorSubscriber {
+case class ConsumerInfo(queue: String, rate: akka.contrib.throttle.Throttler.Rate)
+//actually create the needed actors for a domain
+//params: e.g. domain, 2 msgsPer 1.second; msgsPer: -> http://alvinalexander.com/java/jwarehouse/akka-2.3/akka-contrib/src/main/scala/akka/contrib/throttle/TimerBasedThrottler.scala.shtml
+//WAIT... these params need to be passed at call time, not at actor creation time...
+class SourceCreator(connectorRef: ActorRef) extends MyActor {
+  val infoCase = (ci: ConsumerInfo) => {
+    val throttler = system.actorOf(Props(classOf[TimerBasedThrottler], ci.rate))
+    throttler ! SetTarget(Some(connectorRef))
+    val camelActor = system.actorOf(Props(classOf[QueueConsumer], ci.queue, throttler))
+  }
+//  val receive = List(infoCase, elseCase).combine
+  override def cases = List(infoCase).map(caseFn) ++ super.cases
+}
+
+//Monitor RabbitMQ queue.deleted events through Camel
+class DeletionMonitor() extends MyCamelConsumer((msg: CamelMessage) => { implicit camelContext: org.apache.camel.CamelContext =>
+//        dest ! msg.bodyAs[String]
+      // I actually need to pass it the queue name for which to delete the appropriate QueueConsumer's + throttlers...
+      // ... but how can I find those anyway? Akka addresses? Should I predefine where my actors will be stored in the actor system based on these names?
+}) {
+  def endpointUri = "rabbitmq://localhost:5672/queue.deleted?queue=queue.deleted&routingKey=queue.deleted&autoDelete=false&username=test&password=test"
+}
+
+abstract class MyActorSubscriber extends ActorSubscriber with MyActor {
 	import ActorSubscriberMessage._
 	val MaxQueueSize = 10
 	var queue = Map.empty[Int, ActorRef]
 	override val requestStrategy = new MaxInFlightRequestStrategy(max = MaxQueueSize) {
 		override def inFlightInternally: Int = queue.size
 	}
+  
+  def errorCase = (msg: ActorSubscriberMessage.OnError) => {
+    println("Received an OnError: " + msg)
+    Runtime.getRuntime.exit(0)
+  }
+  
+  override def cases = List(errorCase).map(caseFn) ++ super.cases
 }
 
 //Camel actor sink
@@ -186,28 +229,21 @@ class rawKafkaSink extends MyActorSubscriber {
   }
   val topic = "dumps"
   
-	def receive = {
-		case akka.stream.actor.ActorSubscriberMessage.OnNext(msg) => {
-      
-      //      val body = msg.toString()
-      val (url: String, body: String) = msg
-      val key = url
-
-//      println("Sending message [" + body + "] to topic [" + topic + "]!")
-      println("Sending to topic [" + topic + "]!")
-			producer.send(new ProducerRecord[String, String](topic, key, body)).get()
-			// async callback: https://github.com/apache/kafka/blob/43b92f8b1ce8140c432edf11b0c842f5fbe04120/examples/src/main/java/kafka/examples/Producer.java
-			// producer.send(new ProducerRecord[Integer, String](topic, messageNo, messageStr), new DemoCallBack(startTime, messageNo, messageStr))
-//			println("Sent!")
-		}
-    case msg: ActorSubscriberMessage.OnError => {
-      println("Received an OnError: " + msg)
-      Runtime.getRuntime.exit(0)
-    }
-		case msg => {
-			println("ERROR, got a: " + msg.getClass)
-		}
-	}
+  def onNextCase(onNext: akka.stream.actor.ActorSubscriberMessage.OnNext): Unit = {
+    val msg = onNext.element 
+    //      val body = msg.toString()
+    val (url: String, body: String) = msg
+    val key = url
+    println("Sending message [" + body + "] to topic [" + topic + "]!")
+    producer.send(new ProducerRecord[String, String](topic, key, body))  //.get()
+    // async callback: https://github.com/apache/kafka/blob/43b92f8b1ce8140c432edf11b0c842f5fbe04120/examples/src/main/java/kafka/examples/Producer.java
+    // producer.send(new ProducerRecord[Integer, String](topic, messageNo, messageStr), new DemoCallBack(startTime, messageNo, messageStr))
+  }
+  
+//  override def cases = List(onNextCase).map(caseFn) ++ super.cases
+//  override def cases = List(onNextCase_).map(caseFn_) ++ super.cases
+  override def cases = caseFn(onNextCase) :: super.cases
+  
 }
 
 //object AkkaScraping {
@@ -399,19 +435,16 @@ class rawKafkaSink extends MyActorSubscriber {
     
     
     println("Ran!")
+    
+    val creator = system.actorOf(Props(classOf[SourceCreator], connectorRef))
+    val creationMonitor = system.actorOf(Props(classOf[CreationMonitor], creator))
+    val deletionMonitor = system.actorOf(Props(classOf[DeletionMonitor]))
 
-    //TimerBasedThrottler
-    // for each domain-specific queue...
-    val throttler = system.actorOf(Props(classOf[TimerBasedThrottler], 2 msgsPer 1.second))
-    throttler ! SetTarget(Some(connectorRef))
-    val camelActor = system.actorOf(Props(classOf[QueueConsumer], throttler))
-    //throttler ! "msg to send to that actor through this one"
-
-		// .onComplete({
-		// 	case _ =>
-		// 		system.shutdown()
-		// 		Runtime.getRuntime.exit(0)
-		// })
+    //create the initial domain-specific actors (also through SourceCreator), plus one-per-class monitoring ones
+    //poll http://localhost:15672/api/bindings with auth test:test; filter results by "source":"urls"; grab resulting `destination` or `routing_key`
+    //or poll queues endpoint?
+    //tell creator to actually make the appropriate actors based on this info.
+//    ...
 
 	}
 }
