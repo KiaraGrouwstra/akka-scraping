@@ -9,7 +9,11 @@ class FlightsDumps extends SparkKafkaFlow("dumps") {
   override def processRDD[T](rdd: RDD[T]): RDD[T] = {
     //Making a DataFrame is super cool, but Kafka kinda takes k/v pairs, so think of a different destination for this? Batch-only? 
       rdd
-      .filter((k,v) => k contains "kayak.com")
+//        .filter(_._1 contains "kayak.com")
+        .filter{case (k: String, _) => { k contains "kayak.com" }}
+//      .filter((k,v) => k contains "kayak.com")
+//        .filter(tpl: T => tpl._1.contains("kayak.com"))
+//      .filter(tpl: T => { tpl match { case (k,v) => { k contains "kayak.com"}}})
 //      .mapValues((k,v) => """{"url":"$k","result":"$v"}""")
 //      .values
   }

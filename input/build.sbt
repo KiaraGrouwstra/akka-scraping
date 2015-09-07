@@ -35,6 +35,8 @@ libraryDependencies ++= Seq(
   // "com.spingo" %% "op-rabbit-akka-stream" % opRabbitVersion,
   "com.typesafe.akka" %% "akka-actor" % akkaVersion,
   "com.typesafe.akka" %% "akka-remote" % akkaVersion,
+  //"com.typesafe.akka" %% "akka-http-core-experimental" % "1.0",
+  //"com.typesafe.akka" %% "akka-http-experimental" % "1.0",
 
   //Camel
   // "org.apache.camel" % "camel-rabbitmq" % camelVersion,

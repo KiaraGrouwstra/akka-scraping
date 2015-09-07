@@ -67,7 +67,7 @@ class Application(val cache: CacheApi) extends Controller with Security { //Jade
     for (url <- urls) {
       println("URL: " + url.trim)
       // Global.rabbitMq ! QueueMessage(url.trim, queue = "urls")
-      val uri = new URL(url)
+      val uri = new java.net.URL(url)
       val host = uri.getHost()
       // TODO: strip off www(2?) and subdomains, i.e. just get the "\w+\.\w+$"...?
       // but assumes 1 TLD, failing for dual ones like .co.uk, and for none (IP-based, localhost), though those should lack subs too...
