@@ -22,10 +22,19 @@ import akka.japi._
 import akka.japi.function._
 import akka.pattern._
 import akka.util._
-import akka.http._
-import akka.http.scaladsl._
-import akka.http.scaladsl.model._
-import akka.http.scaladsl.model.headers._
+import akka.io.IO
+
+//import akka.http._
+//import akka.http.scaladsl._
+//import akka.http.scaladsl.model._
+//import akka.http.scaladsl.model.headers._
+
+import _root_.spray.can.Http
+import _root_.spray.http._
+import _root_.spray.httpx.RequestBuilding._
+import _root_.spray.http.HttpMethods._
+import _root_.spray.http.HttpHeaders._
+
 import akka.stream._
 import akka.stream.ActorMaterializer
 import akka.stream.actor._
@@ -119,57 +128,6 @@ object AkkaScraping {
 //    (implicit ftp: FnToProduct.Aux[F, I => O], ffp: FnFromProduct[I => Option[O]])
 //    : ffp.Out = ffp(i => ftp(f)(i) andThen fut)
 
-// useless due to type loss, moved to macro
-////  val flw = (fn: Any) => {
-//  def flw[A,B](tupled: A => B) = {
-//    //: Flow[pars, ret, Unit]
-//    // val ret = getTypeTag(fn).tpe.typeArgs.last
-//  //  val tupled = fn.tupled
-//  //  val tupled = try { fn.tupled } catch { case e: Exception => fn }
-////    val tupled = fn match {
-//////      case f: scala.Function0[Any @unchecked] => f
-////      case f: scala.Function1[Any @unchecked,Any @unchecked] => f
-////      case f: scala.Function2[Any @unchecked,Any @unchecked,Any @unchecked] => f.tupled
-////  //    case f[A <: Any, B <: Any, C <: Any]: scala.Function2[A, B, C] => f.tupled
-////  //    case f: scala.Function3[Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked] => f.tupled
-////  //    case f: scala.Function3[Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked] => f.tupled
-////  //    case f: scala.Function4[Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked] => f.tupled
-////  //    case f: scala.Function5[Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked] => f.tupled
-////  //    case f: scala.Function6[Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked] => f.tupled
-////  //    case f: scala.Function7[Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked] => f.tupled
-////  //    case f: scala.Function8[Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked] => f.tupled
-////  //    case f: scala.Function9[Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked] => f.tupled
-////  //    case f: scala.Function10[Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked] => f.tupled
-////  //    case f: scala.Function11[Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked] => f.tupled
-////  //    case f: scala.Function12[Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked] => f.tupled
-////  //    case f: scala.Function13[Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked] => f.tupled
-////  //    case f: scala.Function14[Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked] => f.tupled
-////  //    case f: scala.Function15[Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked] => f.tupled
-////  //    case f: scala.Function16[Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked] => f.tupled
-////  //    case f: scala.Function17[Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked] => f.tupled
-////  //    case f: scala.Function18[Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked] => f.tupled
-////  //    case f: scala.Function19[Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked] => f.tupled
-////  //    case f: scala.Function20[Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked] => f.tupled
-////  //    case f: scala.Function21[Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked] => f.tupled
-////  //    case f: scala.Function22[Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked,Any @unchecked] => f.tupled
-////      case f => { throw new TypeNotHandledException("huh") }
-////    }
-//    //val pars = getTypeTag(tupled).tpe.typeArgs.init(0)
-//    val pars = getParTTag(tupled)
-//    val ret = getRetTTag(tupled)
-//    val futured = tupled
-////    val futured = tupled match {
-////      case (f: (A => Future[Any @unchecked])) => f
-////      case _ => { tupled andThen fut }
-//////      case _ => { wrapFut(tupled) }
-////    }
-//  //  val futured = if (ret.tpe <:< ru.typeOf[Future[Any]]) { tupled } else { tupled andThen fut }
-//    dynamicFlow(pars)
-//  //  .mapAsync(parallelism)(tupled)
-//    .mapAsync(parallelism)(futured)
-//  }
-
-
   class TypeNotHandledException(msg: String) extends RuntimeException(msg)
 
   //marshall/serialize with (akka-http-)spray-json
@@ -177,6 +135,17 @@ object AkkaScraping {
 
   implicit class ReceiveList(val lst: List[Actor.Receive]) {
     def combine = lst reduceLeft (_ orElse _)
+  }
+
+  implicit class ActorContextImpl(val context: ActorContext) {
+    def getOrMake(name: String, props: Props) = {
+      context.child(name) match {
+        case Some(ref) =>
+          ref
+        case None =>
+          context.actorOf(props, name)
+      }
+    }
   }
 
   def caseFn[T](fn: T => Unit)(implicit ct: ClassTag[T]): Actor.Receive = {
@@ -194,7 +163,7 @@ object AkkaScraping {
     def receive = cases.combine
 
     override def preStart() {
-      println("Created a " + this.getClass.getSimpleName() + ": " + self.path)
+//      println("Created a " + this.getClass.getSimpleName() + ": " + self.path)
     }
   }
 
@@ -204,70 +173,105 @@ object AkkaScraping {
     throw new TypeNotHandledException(s"ERROR, " + actor.getSimpleName() + " got " + msg.getClass.getSimpleName())
   }
 
-  val cancelCase = (msg: ActorPublisherMessage.Cancel) => {
-    println("The stream canceled the subscription.")
-  //  Runtime.getRuntime.exit(0)
-  }
-
-  val requestCase = (msg: ActorPublisherMessage.Request) => {
-    println("The stream wants " + msg.n + " more!")
-    // http://doc.akka.io/docs/akka-stream-and-http-experimental/1.0-M2/scala/stream-integrations.html
-  }
-
   //class MyActorPublisher[T:ClassTag]()(implicit ct: ClassTag[T]) extends ActorPublisher[T] with MyActor {
   //class MyActorPublisher[T:ClassTag]() extends ActorPublisher[T] with MyActor {
   class MyActorPublisher[T]() extends ActorPublisher[T] with MyActor {
-  //  val MaxBufferSize = 10
-  //  var buf = Vector.empty[T]
-  //
-  //  def receive = {
-  //    case job: Job if buf.size == MaxBufferSize =>
-  //      sender() ! JobDenied
-  //    case job: Job =>
-  //      sender() ! JobAccepted
-  //      if (buf.isEmpty && totalDemand > 0)
-  //        onNext(job)
-  //      else {
-  //        buf :+= job
-  //        deliverBuf()
-  //      }
-  //    case Request(_) =>
-  //      deliverBuf()
-  //    case Cancel =>
-  //      context.stop(self)
-  //  }
-  //
-  //  @tailrec final def deliverBuf(): Unit = {
-  //    if (totalDemand > 0) {
-  //      if (totalDemand <= Int.MaxValue) {
-  //        val (use, keep) = buf.splitAt(totalDemand.toInt)
-  //        buf = keep
-  //        use foreach onNext
-  //      } else {
-  //        val (use, keep) = buf.splitAt(Int.MaxValue)
-  //        buf = keep
-  //        use foreach onNext
-  //        deliverBuf()
-  //      }
-  //    }
-  //  }
+    val MaxBufferSize = 10
+    var buf = Vector.empty[T]
 
-    val forwardCase = (msg: T) => {
-  //  val forwardCase = ct(msg: T) => {
-      // fails due to erasure, so making hardcoded String child now but TODO: find fix
-      onNext(msg)
+//    val fullCase: Receive = {
+//      case msg: T if buf.size == MaxBufferSize => {
+//        //        sender() ! JobDenied
+//        // fuck, what can I do here to prevent the message from going lost? buffering just delays the overflow...
+////        sender() ! msg
+//        // wait, who says the sender knows how to bounce this message back here?
+//        Thread.sleep(100)
+//        self ! msg
+//        // TODO: find a fix, this approach is horrible.
+//      }
+//    }
+
+//    @tailrec
+    final def deliverBuf(): Unit = {
+      if (totalDemand > 0) {
+        if (totalDemand <= Int.MaxValue) {
+          val (use, keep) = buf.splitAt(totalDemand.toInt)
+          buf = keep
+          use foreach onNext
+        } else {
+          val (use, keep) = buf.splitAt(Int.MaxValue)
+          buf = keep
+          use foreach onNext
+          deliverBuf()
+        }
+      }
     }
-  //  override def cases = List(forwardCase, cancelCase, requestCase).map(caseFn(_)) ++ super.cases
-  //  override def cases = List(caseFn(forwardCase), caseFn(cancelCase), caseFn(requestCase)) ++ super.cases
+
+//    val forwardCase = (msg: T) => {
+//  //  val forwardCase = ct(msg: T) => {
+//      // fails due to erasure, so making hardcoded String child now but TODO: find fix
+////      onNext(msg)
+//      if (buf.isEmpty && totalDemand > 0)
+//        onNext(msg)
+//      else {
+//        buf :+= msg
+//        deliverBuf()
+//      }
+//    }
+
+    val cancelCase = (msg: ActorPublisherMessage.Cancel) => {
+      println("The stream canceled the subscription.")
+      //  Runtime.getRuntime.exit(0)
+      context.stop(self)
+    }
+
+    val requestCase = (msg: ActorPublisherMessage.Request) => {
+      println("The stream wants " + msg.n + " more!")
+      // http://doc.akka.io/docs/akka-stream-and-http-experimental/1.0-M2/scala/stream-integrations.html
+      deliverBuf()
+    }
+
+    // allow calling stream error/complete from outside by sending the respective messages here
+    def errorCase = (msg: ActorSubscriberMessage.OnError) => {
+      onError(msg.cause)
+    }
+
+    // TODO: keep getting "type OnComplete is not a member of object akka.stream.actor.ActorSubscriberMessage"... why?
+//    def onCompleteCase = (msg: ActorSubscriberMessage.OnComplete) => {
+    def onCompleteCase = (msg: ActorSubscriberMessage) => {
+      onComplete()
+    }
+
+//    override def cases = List(fullCase, caseFn(forwardCase), caseFn(cancelCase), caseFn(requestCase), caseFn(errorCase), caseFn(onCompleteCase)) ++ super.cases
   }
 
   //Redefining for String here cuz otherwise it seems type erasure would ruin my pattern matching...
   class MyStringActorPublisher() extends MyActorPublisher[String] {
-    override val forwardCase = (msg: String) => {
-      onNext(msg)
+//    override
+    val fullCase: Receive = {
+      case msg: String if buf.size == MaxBufferSize => {
+        //        sender() ! JobDenied
+        // fuck, what can I do here to prevent the message from going lost? buffering just delays the overflow...
+        //        sender() ! msg
+        // wait, who says the sender knows how to bounce this message back here?
+        Thread.sleep(100)
+        self ! msg
+        // TODO: find a fix, this approach is horrible.
+      }
+    }
+
+//    override
+    val forwardCase = (msg: String) => {
+//      onNext(msg)
+      if (buf.isEmpty && totalDemand > 0)
+        onNext(msg)
+      else {
+        buf :+= msg
+        deliverBuf()
+      }
     }
   //  override def cases = List(forwardCase, cancelCase, requestCase).map(caseFn(_)) ++ super.cases
-    override def cases = List(caseFn(forwardCase), caseFn(cancelCase), caseFn(requestCase)) ++ super.cases
+    override def cases = List(fullCase, caseFn(forwardCase), caseFn(cancelCase), caseFn(requestCase), caseFn(errorCase), caseFn(onCompleteCase)) ++ super.cases
   }
 
   //silly shell class acting as the start of the stream -- the domain-specific stuff before this (url grabbing and throttling) I wanna do in regular actors, cuz not sure how to do those using streams.
@@ -332,12 +336,13 @@ object AkkaScraping {
   class RRDeletionMonitor() extends MyActorSubscriber {
     override def onNextCase = (onNext: OnNext) => {
       val el = onNext.element
-      println("Deletion monitor got a " + el.getClass.getSimpleName() + ": " + el.toString())
+//      println("Deletion monitor got a " + el.getClass.getSimpleName() + ": " + el.toString())
       val queue = el.toString()
   //    println("Deletion monitor would like to delete " + queue)
       //TODO: how could I make any of this work with Reactive Streams stuff, like an Akka Stream based on that ReactiveRabbit org.reactivestreams.Publisher?
       //I can't PoisonPill them without an actor reference, but streams seem closed, and a Publisher for a Source doesn't give any. Putting it in a separate
       //ActorSystem to shutdown() that seems extreme? Further complicates things in terms of having to do cross-ActorSystem communication (akka remote?) too...
+      //SO answer: I ended up just going back to the simple java driver and writing a small wrapper for it to abstract over the blocking nature of the consumer.
     }
   }
 
@@ -345,7 +350,7 @@ object AkkaScraping {
   class RRCreationMonitor(sourceCreator: ActorRef) extends MyActorSubscriber {
     override def onNextCase = (onNext: OnNext) => {
       val el = onNext.element
-      println("Creation monitor got a " + el.getClass.getSimpleName() + ": " + el.toString())
+//      println("Creation monitor got a " + el.getClass.getSimpleName() + ": " + el.toString())
       val queue = el.toString()
   //    println("Creation monitor would like to create " + queue)
       val rate = 2 msgsPer 1.second  //TODO: make this variable
@@ -358,9 +363,9 @@ object AkkaScraping {
   //actually create the needed actors for a domain
   class SourceCreator(connectorRef: ActorRef) extends MyActor {
     val infoCase = (ci: ConsumerInfo) => {
-      println("Creator gonna create " + ci.queue + " with rate " + ci.rate)
+//      println("Creator gonna create " + ci.queue + " with " + ci.rate)
       //TODO: fix _ to a /
-      val throttler = system.actorOf(Props(classOf[TimerBasedThrottler], ci.rate), "throttler_" + ci.queue)
+      val throttler = context.getOrMake("throttler_" + ci.queue, Props(classOf[TimerBasedThrottler], ci.rate))
       throttler ! SetTarget(Some(connectorRef))
   //    val camelActor = system.actorOf(Props(classOf[RmqConsumer], throttler, ci.queue), "consumer_" + ci.queue)
       val rrSource =
@@ -369,12 +374,15 @@ object AkkaScraping {
       .map(_.message.body.decodeString("UTF-8"))
       .to(Sink.actorSubscriber[String](Props(classOf[ForwarderSink], throttler)))
       .run()
+      //TODO: how can I do manual acking here to ensure unhandled messages will return to the todo queue?
     }
     override def cases = List(infoCase).map(caseFn(_)) ++ super.cases
   }
 
   //initially split off from MyActorSubscriber from when CamelSink still did stream integration, so it could get the needed functionality with the `receive` override
   trait ActorSubscriberStrategy extends ActorSubscriber {
+    // MaxInFlightRequestStrategy is useful if messages are queued internally or delegated to other actors.
+    // WatermarkRequestStrategy is a good strategy if the actor performs work itself.
     val MaxQueueSize = 10
     var queue = Map.empty[Int, ActorRef]
     override val requestStrategy = new MaxInFlightRequestStrategy(max = MaxQueueSize) {
@@ -384,12 +392,12 @@ object AkkaScraping {
 
   trait MyActorSubscriber extends ActorSubscriberStrategy with MyActor {
 
-    def onNextCase = (onNext: OnNext) => {
-      // override
+    def onNextCase: OnNext => Unit = (onNext: OnNext) => {
+      throw new Exception("onNext undefined for " + this.getClass.getSimpleName())
     }
 
-    def errorCase = (msg: ActorSubscriberMessage.OnError) => {
-      println(this.getClass.getSimpleName() + " received an OnError: " + msg)
+    def errorCase = (onError: ActorSubscriberMessage.OnError) => {
+      println(this.getClass.getSimpleName() + " received an OnError: " + onError.cause)
   //    Runtime.getRuntime.exit(0)
     }
   //  def errorCase = (msg: OnError) => elseCase(this.getClass.getSimpleName()).apply(msg)
@@ -410,7 +418,7 @@ object AkkaScraping {
   class ForwarderSink(actor: ActorRef) extends MyActorSubscriber {
     override def onNextCase = (onNext: OnNext) => {
   //  def onNextCase(onNext: OnNext): Unit = {
-      println("Forwarding " + onNext.element)
+//      println("Forwarding " + onNext.element)
   //    actor forward onNext.element
       actor ! onNext.element
     }
@@ -448,33 +456,19 @@ object AkkaScraping {
     }
     val topic = "dumps"
 
-    def onNextCase(onNext: OnNext): Unit = {
-      //  def onNextCase = (onNext: OnNext): Unit => {
-      val msg = onNext.element
-      val (url: String, body: String) = msg
-      val key = url
-      println("RawKafkaSink got OnNext, sending message [" + body + "] to topic [" + topic + "]!")
-      producer.send(new ProducerRecord[String, String](topic, key, body))  //.get()
-      // async callback: https://github.com/apache/kafka/blob/43b92f8b1ce8140c432edf11b0c842f5fbe04120/examples/src/main/java/kafka/examples/Producer.java
-      // producer.send(new ProducerRecord[Integer, String](topic, messageNo, messageStr), new DemoCallBack(startTime, messageNo, messageStr))
-    }
-
     def tplCase(tpl: Tuple2[String, String]): Unit = {
   //  def tplCase = (tpl: Tuple2[String, String]): Unit => { //tpl =>
       //case (url: String, body: String) => {
         val (url: String, body: String) = tpl
         val key = url
-        println("RawKafkaSink got Tuple2, sending message [" + body + "] to topic [" + topic + "]!")
+        println("Storing [" + key + "] to Kafka topic [" + topic + "]!")
         producer.send(new ProducerRecord[String, String](topic, key, body)) //.get()
         // async callback: https://github.com/apache/kafka/blob/43b92f8b1ce8140c432edf11b0c842f5fbe04120/examples/src/main/java/kafka/examples/Producer.java
         // producer.send(new ProducerRecord[Integer, String](topic, messageNo, messageStr), new DemoCallBack(startTime, messageNo, messageStr))
       //}
     }
 
-    //  override def cases = List(onNextCase _).map(caseFn(_)) ++ super.cases
-  //  override def cases = List(onNextCase).map(caseFn(_)) ++ super.cases
-  //  override def cases = List(caseFn(onNextCase)) ++ super.cases
-      override def cases = List(caseFn(tplCase)) ++ super.cases
+    override def cases = List(caseFn(tplCase)) ++ super.cases
   }
 
 //object AkkaScraping {
@@ -483,7 +477,8 @@ object AkkaScraping {
 //	implicit val ec = system.dispatcher
 
 	val throttlingRate = FiniteDuration(1000, MILLISECONDS)
-	val timeOut = FiniteDuration(10, SECONDS)
+  val timeOut = FiniteDuration(10, SECONDS)
+  implicit val sprayTimeout: Timeout = Timeout(15.seconds)
 
   //pick a way of throttling / rate limiting; I've got the tick-based way, limitGlobal + Limiter.scala, and TimerBasedThrottler (http://doc.akka.io/docs/akka/snapshot/contrib/throttle.html).
   //my needs are low, so just pick whichever I can use for multiple domains by giving each input actor one of these.
@@ -517,17 +512,6 @@ object AkkaScraping {
 		})
 	}
 
-  // try using with flw(limitGlobal)
-	def limitGlobal[T](limiter: ActorRef, maxAllowedWait: FiniteDuration) = {
-		import akka.pattern.ask
-		import akka.util.Timeout
-    import system.dispatcher
-    implicit val triggerTimeout = Timeout(maxAllowedWait)
-    val limiterTriggerFuture = limiter ? Limiter.WantToPass
-    println("limiting")
-    limiterTriggerFuture.map((_) => element)
-	}
-
 	//def writeContents: Sink[HttpResponse, Unit] = //???
 
 	*/
@@ -546,96 +530,84 @@ object AkkaScraping {
 	}
 
 	def fetcher(): Flow[String, (String, HttpResponse), Unit] = {
-		import akka.http.scaladsl.model._
-		import akka.http.scaladsl.Http
+//		import akka.http.scaladsl.model._
+//		import akka.http.scaladsl.Http
 		Flow[String]
 		.via(throttle(throttlingRate))
 		.mapAsync(parallelism)((url: String) => {
 			tryCatch(()=>{
-			val headers = List(
-				//`Content-Type`(`application/json`)
-			)
-			val req = HttpRequest(uri = url).withHeaders(headers)
-			println("time: " + System.nanoTime() / 1000000000.0)
-			println(s"fetching $url")
-      val fut = Http().singleRequest(req)
-      fut.map((resp: HttpResponse) => (url, resp))
-//      Future{ (url, url) }
+        println(s"fetching $url")
+//  			println("time: " + System.nanoTime() / 1000000000.0)
+        val headers = List(
+          //`Content-Type`(`application/json`)
+        )
+        val req = HttpRequest(uri = url).withHeaders(headers)
+//        val fut = Http().singleRequest(req)
+//        val fut = (IO(_root_.spray.can.Http) ? req).mapTo[HttpResponse]
+        val fut: Future[_root_.spray.http.HttpResponse] = (IO(_root_.spray.can.Http) ? req).mapTo[HttpResponse]
+        fut.map((resp: HttpResponse) => (url, resp))
+        //Future{ (url, url) }
 			})
 		})
 	}
 
-  // try using with flw(fetcher)
-//  .via(throttle(throttlingRate))
-//  def fetcher(url: String) = {
-//    import akka.http.scaladsl.model._
-//    import akka.http.scaladsl.Http
-//    val headers = List(
-//      //`Content-Type`(`application/json`)
-//    )
-//    val req = HttpRequest(uri = url).withHeaders(headers)
-//    println("time: " + System.nanoTime() / 1000000000.0)
-//    println(s"fetching $url")
-//    val fut = Http().singleRequest(req)
-//    fut.map((resp: HttpResponse) => (url, resp))
-//    //      Future{ (url, url) }
-//  }
-
-  //	def decode(resp: HttpResponse): Future[String] = {
-//    //...
-//	}
+  def printResp(resp: HttpResponse, url: String) = {
+    resp.headers.foreach(h =>
+      println("header [" + h.lowercaseName + "]: " + h.value)
+    )
+//    println("type: " + resp.entity.contentType)
+  }
 
 	// def handleResp = (resp: HttpResponse) => {
 	def decoder(): Flow[(String, HttpResponse), (String, String), Unit] = {
 		Flow[(String, HttpResponse)]
     .mapAsync(4)((tpl: Tuple2[String, HttpResponse]) => {
-  tryCatch(()=>{
-    val (url: String, resp: HttpResponse) = tpl
-//  println("{")
-//  println("status: " + resp.status.toString())
-  println(resp.status.toString() + " - " + url)
-  val enc = resp.encoding.value match {
-    case "identity" => "UTF-8"
-    case s => s
-  }
-//  println("encoding: [" + enc + "]")
-//  resp.headers.foreach(h =>
-//    println("header: " + h.value())
-//  )
-//  println("type: " + resp.entity.contentType)
-  //import scala.concurrent.ExecutionContext.Implicits.global
-  val body = resp
-    .entity.getDataBytes().asScala
-    .map( _.decodeString(enc) )
-    .runFold("") { case (s1, s2) => s1 + s2 }
-//  println("}")
-    body.map((s: String) => (url, s))
+      tryCatch(()=> {
+        val (url: String, resp: HttpResponse) = tpl
+        //  println("{")
+        val enc = resp.encoding.value match {
+          case "identity" => "UTF-8"
+          case s => s
+        }
+        //  println("encoding: [" + enc + "]")
+        println(resp.status.toString() + " - " + url)
+        resp.status.intValue match {
+          case x if 200 until 299 contains x => {
+            //import scala.concurrent.ExecutionContext.Implicits.global
+//            val body = resp
+//              .entity.getDataBytes().asScala
+//              .map( _.decodeString(enc) )
+//              .runFold("") { case (s1, s2) => s1 + s2 }
+            val body = resp.entity.asString
+//            val body = resp.entity.data.asString
+            //  println("}")
+//            body.map((s: String) => (url, s))
+            Future((url, body))
+          }
+          case x if 300 until 399 contains x => {
+            //Nope, Spray's [`spray.can.host-connector.max-redirects`](http://spray.io/documentation/1.2.2/spray-can/http-client/) not merged into Akka Http
+            //Akka ticket: https://github.com/akka/akka/issues/15990
+            printResp(resp, url)
+            throw new Exception("Unhandled redirect at " + url)
+//            resp.getHeader("Location") match {
+//              case Some(h: HttpHeader) =>
+//                val location = h.value
+//                // TODO: feed this location url back to fetcher, can't return this.
+//                // ... or just ensure fetcher handles them
+//                throw new Exception("Unhandled redirect to " + location)
+//              case None =>
+//                throw new Exception("No location!")
+//            }
+          }
+          case _ => {
+            printResp(resp, url)
+            // drop it? cuz nothing to return.
+            throw new Exception("BadResponse: " + resp.status.toString() + " - " + url)
+          }
+        }
+      })
     })
-  })
 	}
-
-  // try using with flw(decoder)
-  def decoderFlw(url: String, resp: HttpResponse): Future[(String, String)] = {
-    //  println("{")
-    //  println("status: " + resp.status.toString())
-    println(resp.status.toString() + " - " + url)
-    val enc = resp.encoding.value match {
-      case "identity" => "UTF-8"
-      case s => s
-    }
-    //  println("encoding: [" + enc + "]")
-    //  resp.headers.foreach(h =>
-    //    println("header: " + h.value())
-    //  )
-    //  println("type: " + resp.entity.contentType)
-    //import scala.concurrent.ExecutionContext.Implicits.global
-    val body = resp
-      .entity.getDataBytes().asScala
-      .map( _.decodeString(enc) )
-      .runFold("") { case (s1, s2) => s1 + s2 }
-    //  println("}")
-    body.map((s: String) => (url, s))
-  }
 
   // Wait, was this the one that actually worked?
   // I think reason I wanted to try Camel with RabbitMQ was that regular actors I can just create more of on the fly, unlike stream components (I think...)
@@ -706,13 +678,6 @@ object AkkaScraping {
 
     val kafkaSink = system.actorOf(Props(classOf[RawKafkaSink]))
 
-    println("old: " + getTypeTag(decoder()).tpe)
-//    println("new: " + getTypeTag(flw((decoderFlw _).tupled)).tpe)
-//    println("macro: " + getTypeTag(flw{decoderFlw}).tpe)
-//    println("macro: " + getTypeTag(flw{val x = 17}).tpe)
-    println("macro: " + getTypeTag(flw{decoderFlw _}).tpe)
-//    println("macro: " + getTypeTag(flw("decoderFlw")).tpe)
-
     // testy way
     // Source(List("http://akka.io/", "http://baidu.com/"))
 
@@ -731,13 +696,7 @@ object AkkaScraping {
 //    .via(flw(fetcher _))
 		// .runForeach(resp => decode(resp))
 
-      // println types of both of these to understand what went wrong during the conversion...
 		.via(decoder)
-//    .via(flw(decoderFlw _))
-//    scala> ru.typeOf[Sink[(String, String),Any]] <:< ru.typeOf[Graph[SinkShape[Any],Any]]
-//    res10: Boolean = false
-//    scala> ru.typeOf[Sink[Any,Any]] <:< ru.typeOf[Graph[SinkShape[Any],Any]]
-//    res11: Boolean = true
 
 		// .runForeach(println)
 		// .runWith(Sink.foreach(println))
@@ -772,28 +731,35 @@ object AkkaScraping {
     //poll http://localhost:15672/api/bindings with auth test:test; filter results by "source":"urls"; grab resulting `destination` or `routing_key`
     //or poll queues endpoint?
     //tell creator to actually make the appropriate actors based on this info.
-    
+
     // copy from fetcher
     val url = "http://localhost:15672/api/bindings"
-    val authorization = headers.Authorization(BasicHttpCredentials("test", "test"))
-    val req = HttpRequest(uri = url, headers = List(authorization))
-    val fut = Http().singleRequest(req)
+    val creds = BasicHttpCredentials("test", "test")
+//    val authorization = headers.Authorization(creds)
+    val authorization = Authorization(creds)
+    val headers = List(authorization)
+    val req = HttpRequest(uri = url, headers = headers)
+//    val req = HttpRequest(uri = url)
+//      .withHeaders(headers)
+//      ~> addCredentials(creds)
+//    val fut = Http().singleRequest(req)
+    val fut = (IO(_root_.spray.can.Http) ? req).mapTo[HttpResponse]
 
 //    println("checking RabbitMQ API")
 //    val resp = fut.result(Duration(10, SECONDS))
     val resp = Await.result(fut, Duration(10, SECONDS))
     
     // copy from decoder
-    val enc = resp.encoding.value match {
-      case "identity" => "UTF-8"
-      case s => s
-    }
-    val joined = resp
-      .entity.getDataBytes().asScala
-      .map( _.decodeString(enc) )
-      .runFold("") { case (s1, s2) => s1 + s2 }
-
-    val body = Await.result(joined, Duration(10, SECONDS))
+//    val enc = resp.encoding.value match {
+//      case "identity" => "UTF-8"
+//      case s => s
+//    }
+//    val joined = resp
+//      .entity.getDataBytes().asScala
+//      .map( _.decodeString(enc) )
+//      .runFold("") { case (s1, s2) => s1 + s2 }
+//    val body = Await.result(joined, Duration(10, SECONDS))
+    val body = resp.entity.asString
 //    println(body)
     
     //val json = body.parseJson

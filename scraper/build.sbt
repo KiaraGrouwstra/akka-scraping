@@ -5,11 +5,12 @@ lazy val commonSettings = Seq(
 )
 
 val scalaVer = "2.11.7"
+val metaVersion = "0.1.0-SNAPSHOT"
 //val akkaVersion = "2.4.0-RC1"
 val akkaVersion = "2.3.12"
 val camelVersion = "2.15.2"	// Camel-Akka: 2.13.4
 val kafkaVersion = "0.8.2.1"
-val metaVersion = "0.1.0-SNAPSHOT"
+val sprayVersion = "1.3.3"
 
 lazy val core = (project in file(".")).
   dependsOn(macroSub).
@@ -43,9 +44,14 @@ lazy val core = (project in file(".")).
       "com.typesafe.akka" %% "akka-stream-experimental" % "1.0",
       "com.typesafe.akka" %% "akka-http-core-experimental" % "1.0",
       "com.typesafe.akka" %% "akka-http-experimental" % "1.0",
+
       //"com.typesafe.akka" %% "akka-http-spray-json" % "1.0",
       //^ can't find how to use this yet
-      //"io.spray" %%  "spray-json" % "1.3.2",
+      //"io.spray" %% "spray-json" % sprayVersion,
+      "io.spray" %% "spray-client" % sprayVersion,
+      "io.spray" %% "spray-httpx" % sprayVersion,
+      "io.spray" %% "spray-http" % sprayVersion,
+
       //"net.liftweb" %% "lift-json" % "3.0-M6",
       //"com.propensive" %% "rapture-json-json4s" % "1.1.0",
       //"com.owlike" % "genson" % "1.3",

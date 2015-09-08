@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.11.7 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-compiler;2.11.7 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@2eb5f0e7[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@50585d2d[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-compiler;2.11.7[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-compiler;2.11.7 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.11.7 [compile->runtime][0m
@@ -624,6 +624,350 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-http-experimental_2.11;1.0->com.typesafe.akka#akka-http-core-experimental_2.11;1.0 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-http-experimental_2.11;1.0->com.typesafe.akka#akka-http-core-experimental_2.11;1.0 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->com.typesafe.akka#akka-http-experimental_2.11;1.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-client_2.11;1.3.3 [compile->default(compile)][0m
+[0m[[0minfo[0m] [0mResolving io.spray#spray-client_2.11;1.3.3 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: io.spray#spray-client_2.11;1.3.3 {compile=[default(compile)]}[0m
+[0m[[0minfo[0m] [0mResolving io.spray#spray-client_2.11;1.3.3 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: io.spray#spray-client_2.11;1.3.3 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0m		tried /home/vagrant/.ivy2/local/io.spray/spray-client_2.11/1.3.3/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for io.spray#spray-client_2.11;1.3.3[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/ivy-releases/io.spray/spray-client_2.11/1.3.3/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://127.0.0.1:8081/nexus/content/groups/ivy-releases/io.spray/spray-client_2.11/1.3.3/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	my-ivy-proxy-releases: no ivy file found for io.spray#spray-client_2.11;1.3.3[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-client_2.11/1.3.3/spray-client_2.11-1.3.3.pom[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: found md file for io.spray#spray-client_2.11;1.3.3[0m
+[0m[[0mdebug[0m] [0m		=> http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-client_2.11/1.3.3/spray-client_2.11-1.3.3.pom (1.3.3)[0m
+[0m[[0mdebug[0m] [0mdownloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-client_2.11/1.3.3/spray-client_2.11-1.3.3.pom ...[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: downloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-client_2.11/1.3.3/spray-client_2.11-1.3.3.pom[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: downloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-client_2.11/1.3.3/spray-client_2.11-1.3.3.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-client_2.11/1.3.3/spray-client_2.11-1.3.3.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] io.spray#spray-client_2.11;1.3.3!spray-client_2.11.pom(pom.original) (398ms)[0m
+[0m[[0mdebug[0m] [0m		tried /home/vagrant/.ivy2/local/io.spray/spray-client_2.11/1.3.3/bundles/spray-client_2.11.jar[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/ivy-releases/io.spray/spray-client_2.11/1.3.3/bundles/spray-client_2.11.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://127.0.0.1:8081/nexus/content/groups/ivy-releases/io.spray/spray-client_2.11/1.3.3/bundles/spray-client_2.11.jar[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-client_2.11/1.3.3/spray-client_2.11-1.3.3.jar[0m
+[0m[[0mdebug[0m] [0m	found io.spray#spray-client_2.11;1.3.3 in my-maven-proxy-releases[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-client_2.11;1.3.3 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-client_2.11;1.3.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-can_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0minfo[0m] [0mResolving io.spray#spray-can_2.11;1.3.3 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: io.spray#spray-can_2.11;1.3.3 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0minfo[0m] [0mResolving io.spray#spray-can_2.11;1.3.3 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: io.spray#spray-can_2.11;1.3.3 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m		tried /home/vagrant/.ivy2/local/io.spray/spray-can_2.11/1.3.3/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for io.spray#spray-can_2.11;1.3.3[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/ivy-releases/io.spray/spray-can_2.11/1.3.3/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://127.0.0.1:8081/nexus/content/groups/ivy-releases/io.spray/spray-can_2.11/1.3.3/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	my-ivy-proxy-releases: no ivy file found for io.spray#spray-can_2.11;1.3.3[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-can_2.11/1.3.3/spray-can_2.11-1.3.3.pom[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: found md file for io.spray#spray-can_2.11;1.3.3[0m
+[0m[[0mdebug[0m] [0m		=> http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-can_2.11/1.3.3/spray-can_2.11-1.3.3.pom (1.3.3)[0m
+[0m[[0mdebug[0m] [0mdownloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-can_2.11/1.3.3/spray-can_2.11-1.3.3.pom ...[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: downloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-can_2.11/1.3.3/spray-can_2.11-1.3.3.pom[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: downloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-can_2.11/1.3.3/spray-can_2.11-1.3.3.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-can_2.11/1.3.3/spray-can_2.11-1.3.3.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] io.spray#spray-can_2.11;1.3.3!spray-can_2.11.pom(pom.original) (61ms)[0m
+[0m[[0mdebug[0m] [0m		tried /home/vagrant/.ivy2/local/io.spray/spray-can_2.11/1.3.3/bundles/spray-can_2.11.jar[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/ivy-releases/io.spray/spray-can_2.11/1.3.3/bundles/spray-can_2.11.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://127.0.0.1:8081/nexus/content/groups/ivy-releases/io.spray/spray-can_2.11/1.3.3/bundles/spray-can_2.11.jar[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-can_2.11/1.3.3/spray-can_2.11-1.3.3.jar[0m
+[0m[[0mdebug[0m] [0m	found io.spray#spray-can_2.11;1.3.3 in my-maven-proxy-releases[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-can_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-io_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0minfo[0m] [0mResolving io.spray#spray-io_2.11;1.3.3 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: io.spray#spray-io_2.11;1.3.3 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0minfo[0m] [0mResolving io.spray#spray-io_2.11;1.3.3 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: io.spray#spray-io_2.11;1.3.3 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m		tried /home/vagrant/.ivy2/local/io.spray/spray-io_2.11/1.3.3/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for io.spray#spray-io_2.11;1.3.3[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/ivy-releases/io.spray/spray-io_2.11/1.3.3/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://127.0.0.1:8081/nexus/content/groups/ivy-releases/io.spray/spray-io_2.11/1.3.3/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	my-ivy-proxy-releases: no ivy file found for io.spray#spray-io_2.11;1.3.3[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-io_2.11/1.3.3/spray-io_2.11-1.3.3.pom[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: found md file for io.spray#spray-io_2.11;1.3.3[0m
+[0m[[0mdebug[0m] [0m		=> http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-io_2.11/1.3.3/spray-io_2.11-1.3.3.pom (1.3.3)[0m
+[0m[[0mdebug[0m] [0mdownloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-io_2.11/1.3.3/spray-io_2.11-1.3.3.pom ...[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: downloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-io_2.11/1.3.3/spray-io_2.11-1.3.3.pom[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: downloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-io_2.11/1.3.3/spray-io_2.11-1.3.3.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-io_2.11/1.3.3/spray-io_2.11-1.3.3.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] io.spray#spray-io_2.11;1.3.3!spray-io_2.11.pom(pom.original) (59ms)[0m
+[0m[[0mdebug[0m] [0m		tried /home/vagrant/.ivy2/local/io.spray/spray-io_2.11/1.3.3/bundles/spray-io_2.11.jar[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/ivy-releases/io.spray/spray-io_2.11/1.3.3/bundles/spray-io_2.11.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://127.0.0.1:8081/nexus/content/groups/ivy-releases/io.spray/spray-io_2.11/1.3.3/bundles/spray-io_2.11.jar[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-io_2.11/1.3.3/spray-io_2.11-1.3.3.jar[0m
+[0m[[0mdebug[0m] [0m	found io.spray#spray-io_2.11;1.3.3 in my-maven-proxy-releases[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-io_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0minfo[0m] [0mResolving io.spray#spray-util_2.11;1.3.3 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: io.spray#spray-util_2.11;1.3.3 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0minfo[0m] [0mResolving io.spray#spray-util_2.11;1.3.3 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: io.spray#spray-util_2.11;1.3.3 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m		tried /home/vagrant/.ivy2/local/io.spray/spray-util_2.11/1.3.3/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for io.spray#spray-util_2.11;1.3.3[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/ivy-releases/io.spray/spray-util_2.11/1.3.3/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://127.0.0.1:8081/nexus/content/groups/ivy-releases/io.spray/spray-util_2.11/1.3.3/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	my-ivy-proxy-releases: no ivy file found for io.spray#spray-util_2.11;1.3.3[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-util_2.11/1.3.3/spray-util_2.11-1.3.3.pom[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: found md file for io.spray#spray-util_2.11;1.3.3[0m
+[0m[[0mdebug[0m] [0m		=> http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-util_2.11/1.3.3/spray-util_2.11-1.3.3.pom (1.3.3)[0m
+[0m[[0mdebug[0m] [0mdownloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-util_2.11/1.3.3/spray-util_2.11-1.3.3.pom ...[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: downloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-util_2.11/1.3.3/spray-util_2.11-1.3.3.pom[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: downloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-util_2.11/1.3.3/spray-util_2.11-1.3.3.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-util_2.11/1.3.3/spray-util_2.11-1.3.3.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] io.spray#spray-util_2.11;1.3.3!spray-util_2.11.pom(pom.original) (27ms)[0m
+[0m[[0mdebug[0m] [0m		tried /home/vagrant/.ivy2/local/io.spray/spray-util_2.11/1.3.3/bundles/spray-util_2.11.jar[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/ivy-releases/io.spray/spray-util_2.11/1.3.3/bundles/spray-util_2.11.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://127.0.0.1:8081/nexus/content/groups/ivy-releases/io.spray/spray-util_2.11/1.3.3/bundles/spray-util_2.11.jar[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-util_2.11/1.3.3/spray-util_2.11-1.3.3.jar[0m
+[0m[[0mdebug[0m] [0m	found io.spray#spray-util_2.11;1.3.3 in my-maven-proxy-releases[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-util_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-util_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-util_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-util_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-util_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-util_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-util_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0minfo[0m] [0mResolving io.spray#spray-http_2.11;1.3.3 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: io.spray#spray-http_2.11;1.3.3 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0minfo[0m] [0mResolving io.spray#spray-http_2.11;1.3.3 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: io.spray#spray-http_2.11;1.3.3 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m		tried /home/vagrant/.ivy2/local/io.spray/spray-http_2.11/1.3.3/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for io.spray#spray-http_2.11;1.3.3[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/ivy-releases/io.spray/spray-http_2.11/1.3.3/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://127.0.0.1:8081/nexus/content/groups/ivy-releases/io.spray/spray-http_2.11/1.3.3/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	my-ivy-proxy-releases: no ivy file found for io.spray#spray-http_2.11;1.3.3[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-http_2.11/1.3.3/spray-http_2.11-1.3.3.pom[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: found md file for io.spray#spray-http_2.11;1.3.3[0m
+[0m[[0mdebug[0m] [0m		=> http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-http_2.11/1.3.3/spray-http_2.11-1.3.3.pom (1.3.3)[0m
+[0m[[0mdebug[0m] [0mdownloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-http_2.11/1.3.3/spray-http_2.11-1.3.3.pom ...[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: downloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-http_2.11/1.3.3/spray-http_2.11-1.3.3.pom[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: downloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-http_2.11/1.3.3/spray-http_2.11-1.3.3.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-http_2.11/1.3.3/spray-http_2.11-1.3.3.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] io.spray#spray-http_2.11;1.3.3!spray-http_2.11.pom(pom.original) (54ms)[0m
+[0m[[0mdebug[0m] [0m		tried /home/vagrant/.ivy2/local/io.spray/spray-http_2.11/1.3.3/bundles/spray-http_2.11.jar[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/ivy-releases/io.spray/spray-http_2.11/1.3.3/bundles/spray-http_2.11.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://127.0.0.1:8081/nexus/content/groups/ivy-releases/io.spray/spray-http_2.11/1.3.3/bundles/spray-http_2.11.jar[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-http_2.11/1.3.3/spray-http_2.11-1.3.3.jar[0m
+[0m[[0mdebug[0m] [0m	found io.spray#spray-http_2.11;1.3.3 in my-maven-proxy-releases[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.parboiled#parboiled-scala_2.11;1.1.7 [compile->master(compile)][0m
+[0m[[0minfo[0m] [0mResolving org.parboiled#parboiled-scala_2.11;1.1.7 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.parboiled#parboiled-scala_2.11;1.1.7 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0minfo[0m] [0mResolving org.parboiled#parboiled-scala_2.11;1.1.7 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.parboiled#parboiled-scala_2.11;1.1.7 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m		tried /home/vagrant/.ivy2/local/org.parboiled/parboiled-scala_2.11/1.1.7/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for org.parboiled#parboiled-scala_2.11;1.1.7[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/ivy-releases/org.parboiled/parboiled-scala_2.11/1.1.7/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://127.0.0.1:8081/nexus/content/groups/ivy-releases/org.parboiled/parboiled-scala_2.11/1.1.7/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	my-ivy-proxy-releases: no ivy file found for org.parboiled#parboiled-scala_2.11;1.1.7[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/org/parboiled/parboiled-scala_2.11/1.1.7/parboiled-scala_2.11-1.1.7.pom[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: found md file for org.parboiled#parboiled-scala_2.11;1.1.7[0m
+[0m[[0mdebug[0m] [0m		=> http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/org/parboiled/parboiled-scala_2.11/1.1.7/parboiled-scala_2.11-1.1.7.pom (1.1.7)[0m
+[0m[[0mdebug[0m] [0mdownloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/org/parboiled/parboiled-scala_2.11/1.1.7/parboiled-scala_2.11-1.1.7.pom ...[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: downloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/org/parboiled/parboiled-scala_2.11/1.1.7/parboiled-scala_2.11-1.1.7.pom[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: downloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/org/parboiled/parboiled-scala_2.11/1.1.7/parboiled-scala_2.11-1.1.7.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/org/parboiled/parboiled-scala_2.11/1.1.7/parboiled-scala_2.11-1.1.7.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.parboiled#parboiled-scala_2.11;1.1.7!parboiled-scala_2.11.pom(pom.original) (1006ms)[0m
+[0m[[0mdebug[0m] [0m		tried /home/vagrant/.ivy2/local/org.parboiled/parboiled-scala_2.11/1.1.7/jars/parboiled-scala_2.11.jar[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/ivy-releases/org.parboiled/parboiled-scala_2.11/1.1.7/jars/parboiled-scala_2.11.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://127.0.0.1:8081/nexus/content/groups/ivy-releases/org.parboiled/parboiled-scala_2.11/1.1.7/jars/parboiled-scala_2.11.jar[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/org/parboiled/parboiled-scala_2.11/1.1.7/parboiled-scala_2.11-1.1.7.jar[0m
+[0m[[0mdebug[0m] [0m	found org.parboiled#parboiled-scala_2.11;1.1.7 in my-maven-proxy-releases[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.parboiled#parboiled-scala_2.11;1.1.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.scala-lang#scala-library;2.11.5 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.scala-lang#scala-library;2.11.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.parboiled#parboiled-core;1.1.7 [compile->master(compile)][0m
+[0m[[0minfo[0m] [0mResolving org.parboiled#parboiled-core;1.1.7 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.parboiled#parboiled-core;1.1.7 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0minfo[0m] [0mResolving org.parboiled#parboiled-core;1.1.7 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.parboiled#parboiled-core;1.1.7 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m		tried /home/vagrant/.ivy2/local/org.parboiled/parboiled-core/1.1.7/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for org.parboiled#parboiled-core;1.1.7[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/ivy-releases/org.parboiled/parboiled-core/1.1.7/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://127.0.0.1:8081/nexus/content/groups/ivy-releases/org.parboiled/parboiled-core/1.1.7/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	my-ivy-proxy-releases: no ivy file found for org.parboiled#parboiled-core;1.1.7[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/org/parboiled/parboiled-core/1.1.7/parboiled-core-1.1.7.pom[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: found md file for org.parboiled#parboiled-core;1.1.7[0m
+[0m[[0mdebug[0m] [0m		=> http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/org/parboiled/parboiled-core/1.1.7/parboiled-core-1.1.7.pom (1.1.7)[0m
+[0m[[0mdebug[0m] [0mdownloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/org/parboiled/parboiled-core/1.1.7/parboiled-core-1.1.7.pom ...[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: downloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/org/parboiled/parboiled-core/1.1.7/parboiled-core-1.1.7.pom[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: downloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/org/parboiled/parboiled-core/1.1.7/parboiled-core-1.1.7.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/org/parboiled/parboiled-core/1.1.7/parboiled-core-1.1.7.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.parboiled#parboiled-core;1.1.7!parboiled-core.pom(pom.original) (1038ms)[0m
+[0m[[0mdebug[0m] [0m		tried /home/vagrant/.ivy2/local/org.parboiled/parboiled-core/1.1.7/jars/parboiled-core.jar[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/ivy-releases/org.parboiled/parboiled-core/1.1.7/jars/parboiled-core.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://127.0.0.1:8081/nexus/content/groups/ivy-releases/org.parboiled/parboiled-core/1.1.7/jars/parboiled-core.jar[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/org/parboiled/parboiled-core/1.1.7/parboiled-core-1.1.7.jar[0m
+[0m[[0mdebug[0m] [0m	found org.parboiled#parboiled-core;1.1.7 in my-maven-proxy-releases[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.parboiled#parboiled-core;1.1.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.parboiled#parboiled-scala_2.11;1.1.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.parboiled#parboiled-scala_2.11;1.1.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.scala-lang#scala-library;2.11.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.parboiled#parboiled-core;1.1.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.parboiled#parboiled-core;1.1.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-can_2.11;1.3.3 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-can_2.11;1.3.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-io_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-io_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-httpx_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0minfo[0m] [0mResolving io.spray#spray-httpx_2.11;1.3.3 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: io.spray#spray-httpx_2.11;1.3.3 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0minfo[0m] [0mResolving io.spray#spray-httpx_2.11;1.3.3 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: io.spray#spray-httpx_2.11;1.3.3 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m		tried /home/vagrant/.ivy2/local/io.spray/spray-httpx_2.11/1.3.3/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for io.spray#spray-httpx_2.11;1.3.3[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/ivy-releases/io.spray/spray-httpx_2.11/1.3.3/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://127.0.0.1:8081/nexus/content/groups/ivy-releases/io.spray/spray-httpx_2.11/1.3.3/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	my-ivy-proxy-releases: no ivy file found for io.spray#spray-httpx_2.11;1.3.3[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-httpx_2.11/1.3.3/spray-httpx_2.11-1.3.3.pom[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: found md file for io.spray#spray-httpx_2.11;1.3.3[0m
+[0m[[0mdebug[0m] [0m		=> http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-httpx_2.11/1.3.3/spray-httpx_2.11-1.3.3.pom (1.3.3)[0m
+[0m[[0mdebug[0m] [0mdownloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-httpx_2.11/1.3.3/spray-httpx_2.11-1.3.3.pom ...[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: downloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-httpx_2.11/1.3.3/spray-httpx_2.11-1.3.3.pom[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: downloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-httpx_2.11/1.3.3/spray-httpx_2.11-1.3.3.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-httpx_2.11/1.3.3/spray-httpx_2.11-1.3.3.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] io.spray#spray-httpx_2.11;1.3.3!spray-httpx_2.11.pom(pom.original) (38ms)[0m
+[0m[[0mdebug[0m] [0m		tried /home/vagrant/.ivy2/local/io.spray/spray-httpx_2.11/1.3.3/bundles/spray-httpx_2.11.jar[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/ivy-releases/io.spray/spray-httpx_2.11/1.3.3/bundles/spray-httpx_2.11.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://127.0.0.1:8081/nexus/content/groups/ivy-releases/io.spray/spray-httpx_2.11/1.3.3/bundles/spray-httpx_2.11.jar[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-httpx_2.11/1.3.3/spray-httpx_2.11-1.3.3.jar[0m
+[0m[[0mdebug[0m] [0m	found io.spray#spray-httpx_2.11;1.3.3 in my-maven-proxy-releases[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-httpx_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang.modules#scala-xml_2.11;1.0.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang.modules#scala-xml_2.11;1.0.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.jvnet.mimepull#mimepull;1.9.5 [compile->master(compile)][0m
+[0m[[0minfo[0m] [0mResolving org.jvnet.mimepull#mimepull;1.9.5 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.jvnet.mimepull#mimepull;1.9.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0minfo[0m] [0mResolving org.jvnet.mimepull#mimepull;1.9.5 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.jvnet.mimepull#mimepull;1.9.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m		tried /home/vagrant/.ivy2/local/org.jvnet.mimepull/mimepull/1.9.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for org.jvnet.mimepull#mimepull;1.9.5[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/ivy-releases/org.jvnet.mimepull/mimepull/1.9.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://127.0.0.1:8081/nexus/content/groups/ivy-releases/org.jvnet.mimepull/mimepull/1.9.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	my-ivy-proxy-releases: no ivy file found for org.jvnet.mimepull#mimepull;1.9.5[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/org/jvnet/mimepull/mimepull/1.9.5/mimepull-1.9.5.pom[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: found md file for org.jvnet.mimepull#mimepull;1.9.5[0m
+[0m[[0mdebug[0m] [0m		=> http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/org/jvnet/mimepull/mimepull/1.9.5/mimepull-1.9.5.pom (1.9.5)[0m
+[0m[[0mdebug[0m] [0mdownloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/org/jvnet/mimepull/mimepull/1.9.5/mimepull-1.9.5.pom ...[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: downloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/org/jvnet/mimepull/mimepull/1.9.5/mimepull-1.9.5.pom[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: downloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/org/jvnet/mimepull/mimepull/1.9.5/mimepull-1.9.5.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/org/jvnet/mimepull/mimepull/1.9.5/mimepull-1.9.5.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.jvnet.mimepull#mimepull;1.9.5!mimepull.pom(pom.original) (1499ms)[0m
+[0m[[0minfo[0m] [0mResolving net.java#jvnet-parent;4 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: net.java#jvnet-parent;4 {}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: net.java#jvnet-parent;4[0m
+[0m[[0mdebug[0m] [0m		tried /home/vagrant/.ivy2/local/org.jvnet.mimepull/mimepull/1.9.5/jars/mimepull.jar[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/ivy-releases/org.jvnet.mimepull/mimepull/1.9.5/jars/mimepull.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://127.0.0.1:8081/nexus/content/groups/ivy-releases/org.jvnet.mimepull/mimepull/1.9.5/jars/mimepull.jar[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/org/jvnet/mimepull/mimepull/1.9.5/mimepull-1.9.5.jar[0m
+[0m[[0mdebug[0m] [0m	found org.jvnet.mimepull#mimepull;1.9.5 in my-maven-proxy-releases[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.jvnet.mimepull#mimepull;1.9.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-httpx_2.11;1.3.3 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-httpx_2.11;1.3.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang.modules#scala-xml_2.11;1.0.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang.modules#scala-xml_2.11;1.0.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang.modules#scala-xml_2.11;1.0.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.jvnet.mimepull#mimepull;1.9.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.jvnet.mimepull#mimepull;1.9.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-httpx_2.11;1.3.3 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-httpx_2.11;1.3.3 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-httpx_2.11;1.3.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-httpx_2.11;1.3.3 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-can_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-can_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-httpx_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-httpx_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-client_2.11;1.3.3 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-httpx_2.11;1.3.3 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-httpx_2.11;1.3.3 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-httpx_2.11;1.3.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-httpx_2.11;1.3.3 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-http_2.11;1.3.3 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-http_2.11;1.3.3 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-http_2.11;1.3.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-http_2.11;1.3.3 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->com.owlike#genson-scala_2.11;1.3 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.owlike#genson-scala_2.11;1.3 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.owlike#genson-scala_2.11;1.3 {compile=[default(compile)]}[0m
@@ -2341,6 +2685,133 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-http-experimental_2.11;1.0->com.typesafe.akka#akka-http-core-experimental_2.11;1.0 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-http-experimental_2.11;1.0->com.typesafe.akka#akka-http-core-experimental_2.11;1.0 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->com.typesafe.akka#akka-http-experimental_2.11;1.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-client_2.11;1.3.3 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-client_2.11;1.3.3 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-client_2.11;1.3.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-can_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-can_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-io_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-io_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-util_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-util_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-util_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-util_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.parboiled#parboiled-scala_2.11;1.1.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.parboiled#parboiled-scala_2.11;1.1.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.scala-lang#scala-library;2.11.5 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.scala-lang#scala-library;2.11.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.parboiled#parboiled-core;1.1.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.parboiled#parboiled-core;1.1.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-httpx_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-httpx_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang.modules#scala-xml_2.11;1.0.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang.modules#scala-xml_2.11;1.0.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.jvnet.mimepull#mimepull;1.9.5 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.jvnet.mimepull#mimepull;1.9.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-can_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-can_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-io_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-io_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-util_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-util_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-util_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.parboiled#parboiled-scala_2.11;1.1.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.parboiled#parboiled-scala_2.11;1.1.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.scala-lang#scala-library;2.11.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.parboiled#parboiled-core;1.1.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.parboiled#parboiled-core;1.1.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-httpx_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-httpx_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang.modules#scala-xml_2.11;1.0.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang.modules#scala-xml_2.11;1.0.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang.modules#scala-xml_2.11;1.0.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.jvnet.mimepull#mimepull;1.9.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.jvnet.mimepull#mimepull;1.9.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-client_2.11;1.3.3 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-httpx_2.11;1.3.3 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-httpx_2.11;1.3.3 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-httpx_2.11;1.3.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-httpx_2.11;1.3.3 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-http_2.11;1.3.3 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-http_2.11;1.3.3 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-http_2.11;1.3.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-http_2.11;1.3.3 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->com.owlike#genson-scala_2.11;1.3 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->com.owlike#genson-scala_2.11;1.3 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->com.owlike#genson-scala_2.11;1.3 [compile->compile][0m
@@ -3785,6 +4256,133 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-http-experimental_2.11;1.0->com.typesafe.akka#akka-http-core-experimental_2.11;1.0 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-http-experimental_2.11;1.0->com.typesafe.akka#akka-http-core-experimental_2.11;1.0 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->com.typesafe.akka#akka-http-experimental_2.11;1.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-client_2.11;1.3.3 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-client_2.11;1.3.3 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-client_2.11;1.3.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-can_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-can_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-io_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-io_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-util_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-util_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-util_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-util_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.parboiled#parboiled-scala_2.11;1.1.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.parboiled#parboiled-scala_2.11;1.1.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.scala-lang#scala-library;2.11.5 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.scala-lang#scala-library;2.11.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.parboiled#parboiled-core;1.1.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.parboiled#parboiled-core;1.1.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-httpx_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-httpx_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang.modules#scala-xml_2.11;1.0.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang.modules#scala-xml_2.11;1.0.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.jvnet.mimepull#mimepull;1.9.5 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.jvnet.mimepull#mimepull;1.9.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-can_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-can_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-io_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-io_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-util_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-util_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-util_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.parboiled#parboiled-scala_2.11;1.1.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.parboiled#parboiled-scala_2.11;1.1.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.scala-lang#scala-library;2.11.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.parboiled#parboiled-core;1.1.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.parboiled#parboiled-core;1.1.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-httpx_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-httpx_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang.modules#scala-xml_2.11;1.0.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang.modules#scala-xml_2.11;1.0.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang.modules#scala-xml_2.11;1.0.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.jvnet.mimepull#mimepull;1.9.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.jvnet.mimepull#mimepull;1.9.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-client_2.11;1.3.3 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-httpx_2.11;1.3.3 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-httpx_2.11;1.3.3 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-httpx_2.11;1.3.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-httpx_2.11;1.3.3 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-http_2.11;1.3.3 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-http_2.11;1.3.3 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-http_2.11;1.3.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-http_2.11;1.3.3 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->com.owlike#genson-scala_2.11;1.3 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->com.owlike#genson-scala_2.11;1.3 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->com.owlike#genson-scala_2.11;1.3 [compile->compile][0m
@@ -5330,6 +5928,133 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-http-experimental_2.11;1.0->com.typesafe.akka#akka-http-core-experimental_2.11;1.0 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-http-experimental_2.11;1.0->com.typesafe.akka#akka-http-core-experimental_2.11;1.0 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->com.typesafe.akka#akka-http-experimental_2.11;1.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-client_2.11;1.3.3 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-client_2.11;1.3.3 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-client_2.11;1.3.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-can_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-can_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-io_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-io_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-util_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-util_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-util_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-util_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.parboiled#parboiled-scala_2.11;1.1.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.parboiled#parboiled-scala_2.11;1.1.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.scala-lang#scala-library;2.11.5 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.scala-lang#scala-library;2.11.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.parboiled#parboiled-core;1.1.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.parboiled#parboiled-core;1.1.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-httpx_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-httpx_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang.modules#scala-xml_2.11;1.0.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang.modules#scala-xml_2.11;1.0.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.jvnet.mimepull#mimepull;1.9.5 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.jvnet.mimepull#mimepull;1.9.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-can_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-can_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-io_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-io_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-util_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-util_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-util_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.parboiled#parboiled-scala_2.11;1.1.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.parboiled#parboiled-scala_2.11;1.1.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.scala-lang#scala-library;2.11.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.parboiled#parboiled-core;1.1.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.parboiled#parboiled-core;1.1.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-httpx_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-httpx_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang.modules#scala-xml_2.11;1.0.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang.modules#scala-xml_2.11;1.0.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang.modules#scala-xml_2.11;1.0.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.jvnet.mimepull#mimepull;1.9.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.jvnet.mimepull#mimepull;1.9.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-client_2.11;1.3.3 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-httpx_2.11;1.3.3 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-httpx_2.11;1.3.3 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-httpx_2.11;1.3.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-httpx_2.11;1.3.3 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-http_2.11;1.3.3 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-http_2.11;1.3.3 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-http_2.11;1.3.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-http_2.11;1.3.3 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->com.owlike#genson-scala_2.11;1.3 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->com.owlike#genson-scala_2.11;1.3 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->com.owlike#genson-scala_2.11;1.3 [compile->compile][0m
@@ -6776,6 +7501,133 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-http-experimental_2.11;1.0->com.typesafe.akka#akka-http-core-experimental_2.11;1.0 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-http-experimental_2.11;1.0->com.typesafe.akka#akka-http-core-experimental_2.11;1.0 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->com.typesafe.akka#akka-http-experimental_2.11;1.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-client_2.11;1.3.3 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-client_2.11;1.3.3 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-client_2.11;1.3.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-can_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-can_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-io_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-io_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-util_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-util_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-util_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-util_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.parboiled#parboiled-scala_2.11;1.1.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.parboiled#parboiled-scala_2.11;1.1.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.scala-lang#scala-library;2.11.5 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.scala-lang#scala-library;2.11.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.parboiled#parboiled-core;1.1.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.parboiled#parboiled-core;1.1.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-httpx_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-httpx_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang.modules#scala-xml_2.11;1.0.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang.modules#scala-xml_2.11;1.0.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.jvnet.mimepull#mimepull;1.9.5 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.jvnet.mimepull#mimepull;1.9.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-can_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-can_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-io_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-io_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-util_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-util_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-util_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.parboiled#parboiled-scala_2.11;1.1.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.parboiled#parboiled-scala_2.11;1.1.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.scala-lang#scala-library;2.11.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.parboiled#parboiled-core;1.1.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.parboiled#parboiled-core;1.1.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-httpx_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-httpx_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang.modules#scala-xml_2.11;1.0.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang.modules#scala-xml_2.11;1.0.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang.modules#scala-xml_2.11;1.0.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.jvnet.mimepull#mimepull;1.9.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.jvnet.mimepull#mimepull;1.9.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-client_2.11;1.3.3 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-httpx_2.11;1.3.3 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-httpx_2.11;1.3.3 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-httpx_2.11;1.3.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-httpx_2.11;1.3.3 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-http_2.11;1.3.3 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-http_2.11;1.3.3 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-http_2.11;1.3.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-http_2.11;1.3.3 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->com.owlike#genson-scala_2.11;1.3 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->com.owlike#genson-scala_2.11;1.3 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->com.owlike#genson-scala_2.11;1.3 [compile->compile][0m
@@ -8222,6 +9074,133 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-http-experimental_2.11;1.0->com.typesafe.akka#akka-http-core-experimental_2.11;1.0 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-http-experimental_2.11;1.0->com.typesafe.akka#akka-http-core-experimental_2.11;1.0 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->com.typesafe.akka#akka-http-experimental_2.11;1.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-client_2.11;1.3.3 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-client_2.11;1.3.3 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-client_2.11;1.3.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-can_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-can_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-io_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-io_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-util_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-util_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-util_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-util_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.parboiled#parboiled-scala_2.11;1.1.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.parboiled#parboiled-scala_2.11;1.1.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.scala-lang#scala-library;2.11.5 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.scala-lang#scala-library;2.11.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.parboiled#parboiled-core;1.1.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.parboiled#parboiled-core;1.1.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-httpx_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-httpx_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang.modules#scala-xml_2.11;1.0.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang.modules#scala-xml_2.11;1.0.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.jvnet.mimepull#mimepull;1.9.5 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.jvnet.mimepull#mimepull;1.9.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-can_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-can_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-io_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-io_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-util_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-util_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-util_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-io_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.parboiled#parboiled-scala_2.11;1.1.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-http_2.11;1.3.3->org.parboiled#parboiled-scala_2.11;1.1.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.scala-lang#scala-library;2.11.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.parboiled#parboiled-core;1.1.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.parboiled#parboiled-scala_2.11;1.1.7->org.parboiled#parboiled-core;1.1.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-can_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-httpx_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-httpx_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-http_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang.modules#scala-xml_2.11;1.0.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang.modules#scala-xml_2.11;1.0.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.scala-lang.modules#scala-xml_2.11;1.0.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.jvnet.mimepull#mimepull;1.9.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-httpx_2.11;1.3.3->org.jvnet.mimepull#mimepull;1.9.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies io.spray#spray-client_2.11;1.3.3->io.spray#spray-util_2.11;1.3.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-client_2.11;1.3.3 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-httpx_2.11;1.3.3 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-httpx_2.11;1.3.3 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-httpx_2.11;1.3.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-httpx_2.11;1.3.3 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-http_2.11;1.3.3 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-http_2.11;1.3.3 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-http_2.11;1.3.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->io.spray#spray-http_2.11;1.3.3 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->com.owlike#genson-scala_2.11;1.3 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->com.owlike#genson-scala_2.11;1.3 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT->com.owlike#genson-scala_2.11;1.3 [compile->compile][0m
@@ -9424,6 +10403,24 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.akka#akka-stream-experimental_2.11;1.0!akka-stream-experimental_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.akka#akka-http-core-experimental_2.11;1.0!akka-http-core-experimental_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.akka#akka-http-experimental_2.11;1.0!akka-http-experimental_2.11.jar[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-client_2.11/1.3.3/spray-client_2.11-1.3.3.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-client_2.11/1.3.3/spray-client_2.11-1.3.3.jar ...[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: downloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-client_2.11/1.3.3/spray-client_2.11-1.3.3.jar[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: downloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-client_2.11/1.3.3/spray-client_2.11-1.3.3.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-client_2.11/1.3.3/spray-client_2.11-1.3.3.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] io.spray#spray-client_2.11;1.3.3!spray-client_2.11.jar(bundle) (104ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-httpx_2.11/1.3.3/spray-httpx_2.11-1.3.3.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-httpx_2.11/1.3.3/spray-httpx_2.11-1.3.3.jar ...[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: downloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-httpx_2.11/1.3.3/spray-httpx_2.11-1.3.3.jar[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: downloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-httpx_2.11/1.3.3/spray-httpx_2.11-1.3.3.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-httpx_2.11/1.3.3/spray-httpx_2.11-1.3.3.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] io.spray#spray-httpx_2.11;1.3.3!spray-httpx_2.11.jar(bundle) (75ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-http_2.11/1.3.3/spray-http_2.11-1.3.3.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-http_2.11/1.3.3/spray-http_2.11-1.3.3.jar ...[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: downloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-http_2.11/1.3.3/spray-http_2.11-1.3.3.jar[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: downloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-http_2.11/1.3.3/spray-http_2.11-1.3.3.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-http_2.11/1.3.3/spray-http_2.11-1.3.3.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] io.spray#spray-http_2.11;1.3.3!spray-http_2.11.jar(bundle) (89ms)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.owlike#genson-scala_2.11;1.3!genson-scala_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.etaty.rediscala#rediscala_2.11;1.4.0!rediscala_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] redis.clients#jedis;2.7.2!jedis.jar[0m
@@ -9456,6 +10453,42 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.hawtjni#hawtjni-runtime;1.8!hawtjni-runtime.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.reactivestreams#reactive-streams;1.0.0!reactive-streams.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.akka#akka-parsing-experimental_2.11;1.0!akka-parsing-experimental_2.11.jar[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-can_2.11/1.3.3/spray-can_2.11-1.3.3.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-can_2.11/1.3.3/spray-can_2.11-1.3.3.jar ...[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: downloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-can_2.11/1.3.3/spray-can_2.11-1.3.3.jar[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: downloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-can_2.11/1.3.3/spray-can_2.11-1.3.3.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-can_2.11/1.3.3/spray-can_2.11-1.3.3.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] io.spray#spray-can_2.11;1.3.3!spray-can_2.11.jar(bundle) (92ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-util_2.11/1.3.3/spray-util_2.11-1.3.3.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-util_2.11/1.3.3/spray-util_2.11-1.3.3.jar ...[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: downloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-util_2.11/1.3.3/spray-util_2.11-1.3.3.jar[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: downloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-util_2.11/1.3.3/spray-util_2.11-1.3.3.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-util_2.11/1.3.3/spray-util_2.11-1.3.3.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] io.spray#spray-util_2.11;1.3.3!spray-util_2.11.jar(bundle) (49ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-io_2.11/1.3.3/spray-io_2.11-1.3.3.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-io_2.11/1.3.3/spray-io_2.11-1.3.3.jar ...[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: downloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-io_2.11/1.3.3/spray-io_2.11-1.3.3.jar[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: downloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-io_2.11/1.3.3/spray-io_2.11-1.3.3.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/io/spray/spray-io_2.11/1.3.3/spray-io_2.11-1.3.3.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] io.spray#spray-io_2.11;1.3.3!spray-io_2.11.jar(bundle) (52ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/org/parboiled/parboiled-scala_2.11/1.1.7/parboiled-scala_2.11-1.1.7.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/org/parboiled/parboiled-scala_2.11/1.1.7/parboiled-scala_2.11-1.1.7.jar ...[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: downloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/org/parboiled/parboiled-scala_2.11/1.1.7/parboiled-scala_2.11-1.1.7.jar[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: downloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/org/parboiled/parboiled-scala_2.11/1.1.7/parboiled-scala_2.11-1.1.7.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/org/parboiled/parboiled-scala_2.11/1.1.7/parboiled-scala_2.11-1.1.7.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.parboiled#parboiled-scala_2.11;1.1.7!parboiled-scala_2.11.jar (1054ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/org/parboiled/parboiled-core/1.1.7/parboiled-core-1.1.7.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/org/parboiled/parboiled-core/1.1.7/parboiled-core-1.1.7.jar ...[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: downloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/org/parboiled/parboiled-core/1.1.7/parboiled-core-1.1.7.jar[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: downloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/org/parboiled/parboiled-core/1.1.7/parboiled-core-1.1.7.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/org/parboiled/parboiled-core/1.1.7/parboiled-core-1.1.7.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.parboiled#parboiled-core;1.1.7!parboiled-core.jar (988ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/org/jvnet/mimepull/mimepull/1.9.5/mimepull-1.9.5.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/org/jvnet/mimepull/mimepull/1.9.5/mimepull-1.9.5.jar ...[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: downloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/org/jvnet/mimepull/mimepull/1.9.5/mimepull-1.9.5.jar[0m
+[0m[[0mdebug[0m] [0m	my-maven-proxy-releases: downloading http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/org/jvnet/mimepull/mimepull/1.9.5/mimepull-1.9.5.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://127.0.0.1:8081/nexus/content/groups/mvn-repositories/org/jvnet/mimepull/mimepull/1.9.5/mimepull-1.9.5.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.jvnet.mimepull#mimepull;1.9.5!mimepull.jar (1649ms)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.owlike#genson;1.3!genson.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.apache.commons#commons-pool2;2.3!commons-pool2.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.rabbitmq#amqp-client;3.5.3!amqp-client.jar[0m
@@ -9506,7 +10539,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.akka#akka-multi-node-testkit_2.11;2.3.12!akka-multi-node-testkit_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.12.1!jline.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 3689ms :: artifacts dl 43ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 72771ms :: artifacts dl 4282ms[0m
 [0m[[0mdebug[0m] [0m	report for akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT compile produced in /vagrant/scala/akka-scraping/scraper/target/resolution-cache/reports/akka-scraping-akka-scraping_2.11-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT runtime produced in /vagrant/scala/akka-scraping/scraper/target/resolution-cache/reports/akka-scraping-akka-scraping_2.11-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT test produced in /vagrant/scala/akka-scraping/scraper/target/resolution-cache/reports/akka-scraping-akka-scraping_2.11-test.xml[0m
@@ -9520,5 +10553,5 @@
 [0m[[0mdebug[0m] [0m	report for akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT docs produced in /vagrant/scala/akka-scraping/scraper/target/resolution-cache/reports/akka-scraping-akka-scraping_2.11-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT pom produced in /vagrant/scala/akka-scraping/scraper/target/resolution-cache/reports/akka-scraping-akka-scraping_2.11-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for akka-scraping#akka-scraping_2.11;0.1-SNAPSHOT scala-tool produced in /vagrant/scala/akka-scraping/scraper/target/resolution-cache/reports/akka-scraping-akka-scraping_2.11-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (3689ms resolve - 43ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (72771ms resolve - 4282ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m
